@@ -1,0 +1,265 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.grid{
+    display: grid;
+    place-items: center;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+input[type="button"]#euroiniciar {
+    display: inline;
+    position: relative;
+    top: -50px;
+    left: 150px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 50px;
+    font-family: var(--fonte-padrao);
+    font-weight: 900;
+    font-size: 1.1em;
+    background-color: rgb(var(--cvermelho));
+    color: white;
+    transition: all 0.5s;
+}
+input[type="button"]#euroiniciar:hover{
+    background-color: rgb(var(--cazulcl));
+}
+
+h3{
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: white;
+    font-size: 3em;
+    text-shadow: rgba(250, 182, 10, 0.425) 6px 4px 20px, rgb(248 105 26 / 46%) -13px -4px 20px; 
+    transition: all 0.5s;
+}
+h3:hover{
+    text-shadow: rgb(250, 182, 10) 6px 4px 20px, rgba(248, 104, 26, 0.986) -13px -4px 20px; 
+    font-size: 3.3em;
+    transition-duration:0.5s;
+}
+
+h4 {
+    color: white;
+    font-size: 1.5em;
+    font-weight: 700;
+    padding: 7px 200px;
+    border-bottom: 3px solid rgb(34, 48, 248);
+    text-shadow: rgb(34 48 248) 1px 0px 20px;
+}
+
+#fundo{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.900) 97%, transparent);
+    min-height:600px;
+    min-width: 320px;
+    width: 100vw;
+    height: 100%;
+    backdrop-filter: blur(5px);
+}
+div#titulo{
+    height: 250px;
+}
+#euro{
+    position: absolute;
+}
+#star{
+    position: absolute;
+    top: -10px;
+    left: 30vw;
+    max-width: 1000px;
+}
+img#estrelalogo{
+    transition: all 1s;
+    margin: 30px;
+}
+img#estrelalogo:hover{
+    transform: rotate(360deg);
+}
+
+div#eurotexto{
+    color: rgb(255, 255, 255);
+    font-size: 1.3em;
+    margin: 50px auto;
+    transition: all 0.5s;
+    min-width: 290px;
+}
+div#eurotexto:hover{
+    font-size: 1.4em;
+}
+input#euroinput::-webkit-inner-spin-button,
+input#euroinput::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+input#euroinput{
+    display: block;
+    background-color: transparent;
+    font-size: 1.3em;
+    text-align: center;
+    width: 50px;
+    color: white;
+    border: 0px;
+    border-bottom: 3px solid gold;
+    border-radius: 4px;    
+}
+input#euroinput:hover{
+    background-color: rgba(126, 124, 7, 0.281);
+}
+
+p#euroinfo{
+    text-align: center;
+    color: gray; 
+    font-size: 0.8em;
+}
+
+#euroauto{
+    font-family: var(--fonte-padrao);
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 4px;
+    background-color: transparent;
+    color: gray;
+    border-color: rgba(255, 217, 0, 0.562);
+}
+
+#infoicon{
+    background-color: gray;
+    height: 4vh;
+    width: 4vh;
+    margin: 15px;
+    text-align: center;
+    text-indent: 0vw ;
+    border-radius: 50%;
+}
+
+#eurodescriauto{
+    top: 84vh;
+    background-color: black;
+    box-shadow: #ffffff17 0px 0px 13px 0px;
+    padding: 10px;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+     font-size: 0.7em;
+     text-align: center;
+    max-width: 40vw;
+    margin: 0px;
+    display: none;
+}
+
+img#euroloading{
+    border-radius: 50%;
+    padding: 5px;
+    margin: 50px;
+    box-shadow: #ffffff38 0px 1px 20px 11px,#eed7082e 0px 1px 20px 11px;
+    display: none;
+    width: 300px;
+  }
+
+div#estrelas1, div#estrelas2, div#estrelas3,div#estrelas4,div#estrelas5 {
+    display: none;
+    border: 3px solid rgb(34, 48, 248);
+    margin: auto;
+    margin-bottom: 70px;
+    border-radius: 80px;
+    padding: 10px 10px;
+    padding-bottom: 20px;
+    box-shadow: #ffffff21 0px 0px 20px 0px;
+    max-width: 600px;
+    text-align: center;
+}
+.descrbola{
+    color: white;
+    font-size: 1.3em;
+    font-weight: 900;
+    text-shadow: #d15e1abf -20px -4px 20px, #eed708db 7px 1px 20px;
+    text-indent: 0px;
+}
+.numeros{
+    float: left;
+    display: flex;
+    background-color: #ebe0e0;
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 2em;
+    text-indent: 15px;
+    align-items: center;
+    box-shadow: inset rgb(255 254 34) 3px 3px 20px 3px, #da7610 1px 0px 13px 0px;
+    transition: all 0.5s;
+}
+
+.numeros:hover{
+    padding: 15px;
+    box-shadow: inset rgb(255, 255, 34) 3px 3px 20px 3px, #ffffff 1px 0px 13px 0px;
+    transform: rotate(360deg);
+}
+#eurofechar{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}
+
+#eurofechar span{
+    position: absolute;
+    padding: 10px;
+    top: -5px;
+    right: -5px;
+    color: transparent;
+    text-shadow: 0 0 0 rgb(0 0 0), 0px 0px 7px rgb(255 255 255);
+    transition: all 0.5s;
+}
+
+#eurofechar span:hover{
+    transform: rotate(-360deg);
+}
+
+@media(max-width:600px){
+    #fundo{font-size: 60%;
+    }
+    .numeros{
+        padding: 0px;
+        text-indent: 22px;
+    }
+    .numeros:hover{
+        padding: 5px;
+    }
+    img#euroloading{
+        width: 200px;
+      }
+      div#eurotexto{
+        width: 250px;
+    }
+}
+
+@media(max-width:900px){
+    .flex{
+    display: grid;
+    place-items: center;
+    }
+    div#estrelas1, div#estrelas2, div#estrelas3,div#estrelas4,div#estrelas5 {
+        max-width: 130px;
+        border-radius: 40px;
+    }
+    h4{
+        padding: 7px 0px;
+        border: none;
+        text-decoration: underline rgb(34, 48, 248);
+    }
+}

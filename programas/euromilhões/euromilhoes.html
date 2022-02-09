@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="../../imagens/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="../../style/style.css">
+<link rel="stylesheet" href="eurostyle.css">
+    <title>Alleatório</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="../../imagens/logo site85.png" alt="logótipo do site">
+            <h1>AllEatório</h1>
+            <nav>
+                <a href="../../index.html" target="_self" rel="next">Início</a>
+                <a href="../../programas/pag01.html"target="_self" rel="next">Programas</a>
+                <a href="../../agradecimentos/pag01.html" target="_self" rel="next">Agradecimentos</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article id="artigo01">
+            <h1>Euromilhões</h1>
+            <p>Bem vindo ao Euromilhões.
+                Aqui pode vir buscar números aleatórios para cada joga que deseja. Basta clicar no botão abaixo para iniciar
+            </p>
+        </article>
+        <p><input type="button" value="Iniciar" id="euroiniciar" onclick="iniciar()"></p>
+    </main>
+    <footer>
+        <p>Site criado por Ayres Major como Prova de Aptidão Profissional</p>
+    </footer>
+    <div id=fundo>
+        <div class="grid" id="titulo">
+           <img src="../../imagens/estrelas200.png" alt="estrela" id="estrelalogo">
+            <span id="star">
+                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_AwG077.json"  background="transparent"  speed="1"  style="width: 200px; height: 0px;" loop  autoplay class="grid">
+                </lottie-player>
+            </span>
+            <label id="euro" class="grid"><h3>EUROMILHÕES</h3></label>
+            <label id="eurofechar" onclick="fechar()"><span>&#x274C;</span></label>
+        </div>
+        <div class="grid" id="eurotexto">
+            <p style="text-align: center;">Quantos palpites você deseja? ( 1 a 5 jogos):</p>
+            <p><input type="number" id="euroinput"></p>
+            <p id="euroinfo">Pressione a tecla "Enter" &#x21B5; para continuar </p>
+            <span class="flex">
+                <input id="euroauto" type="button" value="Modo Automático*: OFF" onclick="automatizar()">
+                <label class="flex" id="infoicon" onclick="fecharinfo()" >&#8505;*</label>
+            </span>
+            <div id="eurodescriauto">
+                <p>Com o modo automático ligado, deixa de ser necessário pressionar a tecla "Enter" basta colocar o valor válido (1 a 5) que irá ser feito a leitura e análise automaticamente.</p>
+            </div>
+        </div>
+        <div class="grid" >
+			<img id="euroloading" src="../../imagens/eurologo4.gif" alt="LOADING..." srcset="">
+	    </div>
+        <div id="estrelas1" class="grid">
+            <h4> Jogo 1 </h4>
+            <p class="descrbola">Números</p>
+            <div class="flex">
+                <span id="bola0" class="numeros">
+                    <p>01</p>
+                </span>
+                <span id="bola1" class="numeros">
+                    <p>01</p>
+                </span>
+                <span id="bola2" class="numeros">
+                    <p>01</p>
+                </span>
+                <span id="bola3" class="numeros">
+                    <p>01</p>
+                </span>
+                <span id="bola4"class="numeros">
+                    <p>01</p>
+                </span>
+            </div>
+            <p class="descrbola">Estrelas</p>
+            <div class="flex">
+                <span id="bola5" class="numeros">
+                    <p>01</p>
+                </span>
+                <span id="bola6" class="numeros">
+                    <p>01</p>
+                </span>
+            </div>
+        </div>
+        <div id="estrelas2" class="grid">
+            <h4> Jogo 2 </h4>
+            <p class="descrbola">Números</p>
+            <div class="flex">
+                <span id="bola7" class="numeros">
+                    <p>02</p>
+                </span>
+                <span id="bola8" class="numeros">
+                    <p>02</p>
+                </span>
+                <span id="bola9" class="numeros">
+                    <p>02</p>
+                </span>
+                <span id="bola10" class="numeros">
+                    <p>02</p>
+                </span>
+                <span id="bola11"class="numeros">
+                    <p>02</p>
+                </span>
+            </div>
+            <p class="descrbola">Estrelas</p>
+            <div class="flex">
+                <span id="bola12" class="numeros">
+                    <p>02</p>
+                </span>
+                <span id="bola13" class="numeros">
+                    <p>02</p>
+                </span>
+            </div>
+        </div>
+        <div id="estrelas3" class="grid">
+            <h4> Jogo 3 </h4>
+            <p class="descrbola">Números</p>
+            <div class="flex">
+                <span id="bola14" class="numeros">
+                    <p>03</p>
+                </span>
+                <span id="bola15" class="numeros">
+                    <p>03</p>
+                </span>
+                <span id="bola16" class="numeros">
+                    <p>03</p>
+                </span>
+                <span id="bola17" class="numeros">
+                    <p>03</p>
+                </span>
+                <span id="bola18"class="numeros">
+                    <p>03</p>
+                </span>
+            </div>
+            <p class="descrbola">Estrelas</p>
+            <div class="flex">
+                <span id="bola19" class="numeros">
+                    <p>03</p>
+                </span>
+                <span id="bola20" class="numeros">
+                    <p>03</p>
+                </span>
+            </div>
+        </div>
+        <div id="estrelas4" class="grid">
+            <h4> Jogo 4 </h4>
+            <p class="descrbola">Números</p>
+            <div class="flex">
+                <span id="bola21" class="numeros">
+                    <p>04</p>
+                </span>
+                <span id="bola22" class="numeros">
+                    <p>04</p>
+                </span>
+                <span id="bola23" class="numeros">
+                    <p>04</p>
+                </span>
+                <span id="bola24" class="numeros">
+                    <p>04</p>
+                </span>
+                <span id="bola25"class="numeros">
+                    <p>04</p>
+                </span>
+            </div>
+            <p class="descrbola">Estrelas</p>
+            <div class="flex">
+                <span id="bola26" class="numeros">
+                    <p>04</p>
+                </span>
+                <span id="bola27" class="numeros">
+                    <p>04</p>
+                </span>
+            </div>
+        </div>
+        <div id="estrelas5" class="grid">
+            <h4> Jogo 5 </h4>
+            <p class="descrbola">Números</p>
+            <div class="flex">
+                <span id="bola28" class="numeros">
+                    <p>05</p>
+                </span>
+                <span id="bola29" class="numeros">
+                    <p>05</p>
+                </span>
+                <span id="bola30" class="numeros">
+                    <p>05</p>
+                </span>
+                <span id="bola31" class="numeros">
+                    <p>05</p>
+                </span>
+                <span id="bola32"class="numeros">
+                    <p>05</p>
+                </span>
+            </div>
+            <p class="descrbola">Estrelas</p>
+            <div class="flex">
+                <span id="bola33" class="numeros">
+                    <p>05</p>
+                </span>
+                <span id="bola34" class="numeros">
+                    <p>05</p>
+                </span>
+            </div>
+        </div>
+    </div>
+    <script src="euroscript.js"></script>
+</body>
+</html>
