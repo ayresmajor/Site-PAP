@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.grid{
+    display: grid;
+    place-items: center;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+input[type="button"]#iniciar {
+    display: inline;
+    position: relative;
+    top: -50px;
+    left: 150px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 50px;
+    font-family: var(--fonte-padrao);
+    font-weight: 900;
+    font-size: 1.1em;
+    background-color: rgb(var(--cvermelho));
+    color: white;
+    transition: all 0.5s;
+}
+input[type="button"]#iniciar:hover{
+    background-color: rgb(var(--cazulcl));
+}
+
+h3{
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: white;
+    font-size: 3em;
+    text-shadow: rgba(250, 182, 10, 0.425) 6px 4px 20px, rgb(248 105 26 / 46%) -13px -4px 20px; 
+    transition: all 0.5s;
+}
+h3:hover{
+    text-shadow: rgb(250, 182, 10) 6px 4px 20px, rgba(248, 104, 26, 0.986) -13px -4px 20px; 
+    font-size: 3.3em;
+    transition-duration:0.5s;
+}
+
+h4 {
+    color: white;
+    font-size: 1.5em;
+    font-weight: 700;
+    padding: 7px 200px;
+    border-bottom: 3px solid rgb(34, 48, 248);
+    text-shadow: rgb(34 48 248) 1px 0px 20px;
+}
+
+#fundo{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.900) 97%, transparent);
+    min-height:600px;
+    min-width: 320px;
+    width: 100vw;
+    height: 100%;
+    backdrop-filter: blur(5px);
+}
+div#titulo{
+    height: 250px;
+}
+
+#fechar{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}
+
+#fechar span{
+    position: absolute;
+    padding: 10px;
+    top: -5px;
+    right: -5px;
+    color: transparent;
+    text-shadow: 0 0 0 rgb(0 0 0), 0px 0px 7px rgb(255 255 255);
+    transition: all 0.5s;
+}
+
+#fechar span:hover{
+    transform: rotate(-360deg);
+}
+
+@media(max-width:600px){
+    #fundo{font-size: 60%;
+    }   
+}
+
+@media(max-width:900px){
+    
+}
