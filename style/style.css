@@ -30,7 +30,8 @@
     margin: 0px;
     padding: 0px;
 }
-body{
+html,body{
+    min-height: 100vh;
     background-color: rgb(var(--cbranco));
     font-family: var(--fonte-padrao);
 }
