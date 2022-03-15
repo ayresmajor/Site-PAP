@@ -69,6 +69,7 @@ h4 {
     width: 100vw;
     height: 100%;
     backdrop-filter: blur(5px);
+    background-attachment: fixed;
 }
 div#titulo{
     height: 250px;
