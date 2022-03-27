@@ -40,11 +40,11 @@ h3{
     font-weight: bolder;
     color: white;
     font-size: 3em;
-    text-shadow: rgba(250, 182, 10, 0.425) 6px 4px 20px, rgb(248 105 26 / 46%) -13px -4px 20px; 
+    text-shadow: #0e00a378 3px 5px 9px, #ffe03367 -5px -3px 9px;
     transition: all 0.5s;
 }
 h3:hover{
-    text-shadow: rgb(250, 182, 10) 6px 4px 20px, rgba(248, 104, 26, 0.986) -13px -4px 20px; 
+    text-shadow: #0e00a3 3px 5px 20px, #ffe033 -5px -3px 20px; 
     font-size: 3.3em;
     transition-duration:0.5s;
 }
@@ -71,16 +71,19 @@ h4 {
     backdrop-filter: blur(5px);
     background-attachment: fixed;
 }
+div#tituloimg{
+    margin: 50px auto;
+    max-width: 800px;
+    border: 5px solid #efcf17e8;
+    box-shadow: inset #0e00a32e 0px 0px 93px 0px, #a38c08 -15px 0px 50px, #ffe033 17px 0px 50px;
+    border-radius: 10px;
+}
 div#tituloimg img{
     margin: 20px;
     animation-name: roda;
     animation-duration: 2s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
-}
-div#tituloimg img:hover{
-    transform: rotate(360deg);
-    animation-duration: 1s;
 }
 @keyframes roda {
     from {transform: rotate(-10deg);}
@@ -92,6 +95,25 @@ div#titulo{
     height: 250px;
 }
 
+input#startgame::-webkit-inner-spin-button,
+input#startgame::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+#startgame{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 50px;
+    white-space: normal;
+    text-align: center;
+    width:140px;
+    font-size: 1.5em;
+    font-weight: bolder;
+    font-family: var(--fonte-padrao);
+    border: 2px solid #000000e8;
+    box-shadow: inset #0e00a3d2 0px -20px 20px 0px, inset #efcf17e8 0px 20px 20px 0px;
+    transition: all 1s;
+}
 #fechar{
     position: fixed;
     right: 20px;
