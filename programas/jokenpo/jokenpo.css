@@ -40,15 +40,11 @@ h3{
     font-weight: bolder;
     color: white;
     font-size: 3em;
-    text-shadow: #0e00a378 3px 5px 9px, #ffe03367 -5px -3px 9px;
+    text-align: justify;
+    text-shadow: #30eaf071 3px 5px 9px, #ffe03367 -5px -3px 9px;
     transition: all 0.5s;
+    width: 750px;
 }
-h3:hover{
-    text-shadow: #0e00a3 3px 5px 20px, #ffe033 -5px -3px 20px; 
-    font-size: 3.3em;
-    transition-duration:0.5s;
-}
-
 h4 {
     color: white;
     font-size: 1.5em;
@@ -59,7 +55,7 @@ h4 {
 }
 
 #fundo{
-    display: none;
+    display: block;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -73,9 +69,9 @@ h4 {
 }
 div#tituloimg{
     margin: 50px auto;
-    max-width: 800px;
+    width: 750px;
     border: 5px solid #efcf17e8;
-    box-shadow: inset #0e00a32e 0px 0px 93px 0px, #a38c08 -15px 0px 50px, #ffe033 17px 0px 50px;
+    box-shadow: inset #30eaf031 0px 0px 93px 0px, #a38c08 -15px 0px 50px, #ffe033 17px 0px 50px;
     border-radius: 10px;
 }
 div#tituloimg img{
@@ -91,15 +87,30 @@ div#tituloimg img{
 }
 
 
-div#titulo{
-    height: 250px;
+div#titulo span{
+    display: block;
 }
 
+label#pedra{
+    position: relative;
+    right: 40px;
+}
+label#papel{
+    position: relative;
+    left: 25px;
+}
+label#tesoura{
+    position: relative;
+    left: 77px;
+}
 input#startgame::-webkit-inner-spin-button,
 input#startgame::-webkit-outer-spin-button {
     -webkit-appearance: none;
 }
 #startgame{
+    position: relative;
+    top: 20px;
+    left: -10px;
     background-color: black;
     color: white;
     padding: 5px;
@@ -111,13 +122,22 @@ input#startgame::-webkit-outer-spin-button {
     font-weight: bolder;
     font-family: var(--fonte-padrao);
     border: 2px solid #000000e8;
-    box-shadow: inset #0e00a3d2 0px -20px 20px 0px, inset #efcf17e8 0px 20px 20px 0px;
+    box-shadow: inset #f000a06c 0px -20px 20px 0px, inset #30eaf05e 0px 20px 20px 0px;
+    transition: all 0.5s;
+}
+
+#startgame:hover{
+    padding: 10px;
+    width: 150px;
+    font-size: 1.7em;
+    border: 2px solid #000000e8;
+    box-shadow: inset #F000A2 0px -20px 20px 0px, inset #30EAF0 0px 20px 20px 0px;
     transition: all 1s;
 }
 #fechar{
     position: fixed;
     right: 20px;
-    top: 20px;
+    top: 10px;
 }
 
 #fechar span{
