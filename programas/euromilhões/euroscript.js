@@ -24,7 +24,6 @@ function fecharinfo(){
 }
 const sleep = (ms) =>
   new Promise(resolve => setTimeout(resolve, ms));
-
   function randint(min, max){
     return Math.floor(Math.random() * (max - min)) + min;  
 }
