@@ -13,9 +13,26 @@ function iniciar() {
     document.getElementById('euroiniciar').style.display = 'none';
 }
 
-function startgame() {
-    loading = document.getElementById('loadingjokenpo');
-    button = document.getElementById('startgame')
-    button.style.display= 'none'
+async function startgame() {
+    let loading = document.getElementById('loadingjokenpo');
+    button = document.getElementById('startgame');
+    let intrucoes = document.getElementById('intrucoes');
+    button.style.display= 'none';
+    await sleep(500);
+    intrucoes.style.display ='block';
+    await sleep(1500);
+    intrucoes.innerText = '2';
+    await sleep(1500);
+    intrucoes.innerText = '1';
+    await sleep(1500);
+    const styles = {
+        fontSize:'3em', 
+        top: '30px', 
+        left: '10px',
+        animation: 'none',
+        textShadow: '#000000 3px -2px 2px, #a10a7e42 -4px -5px 20px, #ffc10940 5px 4px 20px'
+    }
+    Object.assign(intrucoes.style, styles);
+    intrucoes.innerText='Escolha uma das opções acima';
     loading.style.display= 'grid';
 }
