@@ -139,14 +139,25 @@ input#startgame::-webkit-outer-spin-button {
     position: relative;
     top: 20px;
     height: 10px;
-    width: 90vh;
-    border: 1px solid #f4a261;
+    width: 80%;
+    border: 2.5px double #EFCF17;
     border-radius: 15px;
+    animation: pulse 1500ms infinite ;
+
+}
+@keyframes pulse {
+    0%{
+        box-shadow: #EFCF17 0 0 0 0;
+    }
+    75%{
+        box-shadow:  #ffa0eb23 0 0 0px 10px;
+    }
 }
 .progress .color{
     position: absolute;
-    background-color: #ffffff;
-    width: 0px;
+    background-color: transparent;
+    box-shadow: inset #ffffff 0px 0px 0px 3px,inset #fca2ff 16px 20px 0px 0px;
+    width: 100%;
     height: 10px;
     border-radius: 15px;
     animation: progres 10s infinite linear;    
@@ -168,6 +179,8 @@ input#startgame::-webkit-outer-spin-button {
         width: 100%;
     }
 };
+
+
 #fechar{
     position: fixed;
     right: 20px;
