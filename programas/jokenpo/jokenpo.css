@@ -134,6 +134,40 @@ input#startgame::-webkit-outer-spin-button {
     box-shadow: inset #F000A2 0px -20px 20px 0px, inset #30EAF0 0px 20px 20px 0px;
     transition: all 1s;
 }
+
+.progress{
+    position: relative;
+    top: 20px;
+    height: 10px;
+    width: 90vh;
+    border: 1px solid #f4a261;
+    border-radius: 15px;
+}
+.progress .color{
+    position: absolute;
+    background-color: #ffffff;
+    width: 0px;
+    height: 10px;
+    border-radius: 15px;
+    animation: progres 10s infinite linear;    
+}
+@keyframes progres{
+    0%{
+      width: 0%;
+    }
+    25%{
+        width: 50%;
+    }
+    50%{
+        width: 75%;
+    }
+    75%{
+        width: 85%;
+    }
+    100%{
+        width: 100%;
+    }
+};
 #fechar{
     position: fixed;
     right: 20px;
