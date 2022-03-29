@@ -14,6 +14,11 @@
   justify-content: center;
 }
 
+.center {
+  display: table;
+  margin: auto;
+}
+
 input[type="button"]#iniciar {
   display: inline;
   position: relative;
@@ -58,7 +63,7 @@ h4 {
   position: absolute;
   top: 0px;
   left: 0px;
-  background-color:rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
   min-height: 600px;
   min-width: 320px;
   width: 100vw;
@@ -67,14 +72,17 @@ h4 {
   background-attachment: fixed;
 }
 @keyframes escurecer {
-0% {
-    background-color:rgba(0, 0, 0, 0.9);
+  0% {
+    background-color: rgba(0, 0, 0, 0.9);
   }
   100% {
     background-color: rgba(0, 0, 0, 0.98);
   }
 }
-div#tituloimg {
+div.tituloimg {
+  top: 50%;
+  left: 50%;
+  text-align: center;
   margin: 50px auto;
   width: 750px;
   padding: 10px 10px;
@@ -83,7 +91,8 @@ div#tituloimg {
     #ffe033 17px 0px 50px;
   border-radius: 10px;
 }
-div#tituloimg img {
+div.tituloimg img {
+  display: block;
   margin: 20px;
   animation-name: roda;
   animation-duration: 2s;
@@ -220,6 +229,16 @@ div#intrucoes {
   }
 }
 
+#menu{
+  display: inline;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 750px;
+  height: 295px;
+  transform: translate(-325px, -100px);
+
+}
 #fechar {
   position: fixed;
   right: 20px;
