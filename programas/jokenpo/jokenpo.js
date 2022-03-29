@@ -15,10 +15,12 @@ function iniciar() {
 
 async function startgame() {
     let loading = document.getElementById('loadingjokenpo');
-    button = document.getElementById('startgame');
+    let button = document.getElementById('startgame');
     let intrucoes = document.getElementById('intrucoes');
+    let fundo = document.getElementById('fundo');
     button.style.display= 'none';
     await sleep(500);
+    fundo.style.animation='escurecer 3000ms forwards'
     intrucoes.style.display ='block';
     await sleep(1500);
     intrucoes.innerText = '2';

@@ -54,26 +54,30 @@ h4 {
 }
 
 #fundo {
-  display: none;
+  display: block;
   position: absolute;
   top: 0px;
   left: 0px;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.9) 97%,
-    transparent
-  );
+  background-color:rgba(0, 0, 0, 0.9);
   min-height: 600px;
   min-width: 320px;
   width: 100vw;
   height: 100%;
   backdrop-filter: blur(5px);
   background-attachment: fixed;
-  scroll-behavior: smooth;
+}
+@keyframes escurecer {
+0% {
+    background-color:rgba(0, 0, 0, 0.9);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.98);
+  }
 }
 div#tituloimg {
   margin: 50px auto;
   width: 750px;
+  padding: 10px 10px;
   border: 5px solid #efcf17e8;
   box-shadow: inset #30eaf031 0px 0px 93px 0px, #a38c08 -15px 0px 50px,
     #ffe033 17px 0px 50px;
