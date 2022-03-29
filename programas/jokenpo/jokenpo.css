@@ -80,16 +80,9 @@ h4 {
   }
 }
 div.tituloimg {
-  top: 50%;
-  left: 50%;
-  text-align: center;
   margin: 50px auto;
   width: 750px;
   padding: 10px 10px;
-  border: 5px solid #efcf17e8;
-  box-shadow: inset #30eaf031 0px 0px 93px 0px, #a38c08 -15px 0px 50px,
-    #ffe033 17px 0px 50px;
-  border-radius: 10px;
 }
 div.tituloimg img {
   display: block;
@@ -120,13 +113,10 @@ label#tesoura {
   position: relative;
   left: 77px;
 }
-input#startgame::-webkit-inner-spin-button,
-input#startgame::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-}
+
 #startgame {
   position: relative;
-  top: 20px;
+  top: 40px;
   left: -10px;
   background-color: rgba(0, 0, 0, 0);
   color: white;
@@ -170,7 +160,7 @@ div#intrucoes {
 
 #loadingjokenpo {
   position: relative;
-  top: 40px;
+  top: 80px;
   left: 10px;
   display: none;
   width: auto;
@@ -230,14 +220,31 @@ div#intrucoes {
 }
 
 #menu{
-  display: inline;
   position: absolute;
   top: 50%;
   left: 50%;
   width: 750px;
   height: 295px;
-  transform: translate(-325px, -100px);
+  transform: translate(-380px, -370px);
+  margin: 50px auto;
+  padding: 10px 10px;
+  border: 5px solid #efcf17e8;
+  box-shadow: inset #30eaf031 0px 0px 93px 0px, #a38c08 -15px 0px 50px,
+    #ffe033 17px 0px 50px;
+  border-radius: 10px;
+}
 
+@keyframes crescer{
+  0% {
+    width: 750px;
+    height: 295px;
+    transform: translate(-380px, -370px);
+  }
+  100% {
+    width: 830px;
+    height: 450px;
+    transform: translate(-420px, -385px);
+  }
 }
 #fechar {
   position: fixed;
