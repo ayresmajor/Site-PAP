@@ -12,31 +12,44 @@ function iniciar() {
   document.getElementById("euroiniciar").style.display = "none";
 }
 
-async function startgame() {
-  let loading = document.getElementById("loadingjokenpo");
-  let button = document.getElementById("startgame");
-  let intrucoes = document.getElementById("intrucoes");
-  let fundo = document.getElementById("fundo");
-  let menu = document.getElementById("menu");
-  button.style.display = "none";
-  await sleep(500);
-  fundo.style.animation = "escurecer 3000ms forwards";
-  intrucoes.style.display = "block";
-  await sleep(1500);
-  intrucoes.innerText = "2";
-  await sleep(1500);
-  intrucoes.innerText = "1";
-  await sleep(1500);
-  menu.style.animation = "crescer 1.5s forwards";
-  const styles = {
-    fontSize: "3em",
-    top: "65px",
-    left: "10px",
-    animation: "none",
-    textShadow:
-      "#000000 3px -2px 2px, #a10a7e42 -4px -5px 20px, #ffc10940 5px 4px 20px",
-  };
-  Object.assign(intrucoes.style, styles);
-  intrucoes.innerText = "Escolha uma das opções acima";
-  loading.style.display = "grid";
+function entrar(clickedid) {
+  let algo = document.getElementById(clickedid);
+  algo.style.animation = "aumentartxt 1500ms forwards";
 }
+
+function sair(clickedid) {
+  let algo = document.getElementById(clickedid);
+  algo.style.animation = "diminuirtxt 1500ms forwards";
+}
+
+  async function startgame() {
+    let loading = document.getElementById("loadingjokenpo");
+    let button = document.getElementById("startgame");
+    let intrucoes = document.getElementById("intrucoes");
+    let fundo = document.getElementById("fundo");
+    let menu = document.getElementById("menu");
+    let block = document.getElementById("block");
+    button.style.display = "none";
+    await sleep(500);
+    fundo.style.animation = "escurecer 3000ms forwards";
+    intrucoes.style.display = "block";
+    await sleep(1500);
+    intrucoes.innerText = "2";
+    await sleep(1500);
+    intrucoes.innerText = "1";
+    await sleep(1500);
+    menu.style.animation = "crescer 1.5s forwards";
+    const styles = {
+      fontSize: "3em",
+      top: "65px",
+      left: "10px",
+      animation: "none",
+      textShadow:
+        "#000000 3px -2px 2px, #a10a7e42 -4px -5px 20px, #ffc10940 5px 4px 20px",
+    };
+    Object.assign(intrucoes.style, styles);
+    intrucoes.innerText = "Escolha uma das opções acima";
+    block.style.display = "none";
+    loading.style.display = "grid";
+  }
+

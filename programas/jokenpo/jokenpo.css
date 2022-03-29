@@ -59,7 +59,7 @@ h4 {
 }
 
 #fundo {
-  display: block;
+  display: none;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -87,10 +87,8 @@ div.tituloimg {
 div.tituloimg img {
   display: block;
   margin: 20px;
-  animation-name: roda;
-  animation-duration: 2s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
+  border-radius: 30%;
+  animation: roda 2s alternate infinite;
 }
 @keyframes roda {
   from {
@@ -100,7 +98,6 @@ div.tituloimg img {
     transform: rotate(10deg);
   }
 }
-
 label#pedra {
   position: relative;
   right: 40px;
@@ -113,7 +110,16 @@ label#tesoura {
   position: relative;
   left: 77px;
 }
-
+#block{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 754px;
+  height: 87px;
+  transform: translate(-368px, -45px);
+  margin: 50px auto;
+  padding: 10px 10px;
+}
 #startgame {
   position: relative;
   top: 40px;
@@ -218,8 +224,7 @@ div#intrucoes {
     width: 100%;
   }
 }
-
-#menu{
+#menu {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -234,7 +239,7 @@ div#intrucoes {
   border-radius: 10px;
 }
 
-@keyframes crescer{
+@keyframes crescer {
   0% {
     width: 750px;
     height: 295px;
@@ -243,9 +248,44 @@ div#intrucoes {
   100% {
     width: 830px;
     height: 450px;
-    transform: translate(-420px, -385px);
+    transform: translate(-420px, -365px);
   }
 }
+/* Animações para a seleção dos itens*/
+@keyframes aumentartxt {
+  0% {
+    font-size: 100%;
+  }
+  100% {
+    font-size: 120%;
+  }
+}
+@keyframes shadowin {
+  0% {
+    box-shadow: #ff494900 0px 0px 0px 0px, inset #ff494900 0px 0px 0px 0px;
+  }
+  100% {
+    box-shadow: #ff49496e 1px 1px 17px 15px, inset #ff49498c 1px 1px 78px 18px;
+  }
+}
+@keyframes diminuirtxt {
+  0% {
+    font-size: 120%;
+  }
+  100% {
+    font-size: 100%;
+  }
+}
+@keyframes shadowout {
+  0% {
+    box-shadow: #ff49496e 1px 1px 17px 15px, inset #ff49498c 1px 1px 78px 18px;
+  }
+  100% {
+    box-shadow: #ff494900 0px 0px 0px 0px, inset #ff494900 0px 0px 0px 0px;
+  }
+}
+
+/*fim das animações*/
 #fechar {
   position: fixed;
   right: 20px;

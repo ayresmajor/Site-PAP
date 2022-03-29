@@ -1,61 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" href="../../imagens/favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="../../style/style.css">
-<link rel="stylesheet" href="jokenpo.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../../imagens/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../../style/style.css" />
+    <link rel="stylesheet" href="jokenpo.css" />
     <title>Alleatório</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div>
-            <img src="../../imagens/logo site85.png" alt="logótipo do site">
-            <h1>AllEatório</h1>
-            <nav>
-                <a href="../../index.html" target="_self" rel="next">Início</a>
-                <a href="../../programas/pag01.html"target="_self" rel="next">Programas</a>
-                <a href="../../agradecimentos/pag01.html" target="_self" rel="next">Agradecimentos</a>
-            </nav>
-        </div>
+      <div>
+        <img src="../../imagens/logo site85.png" alt="logótipo do site" />
+        <h1>AllEatório</h1>
+        <nav>
+          <a href="../../index.html" target="_self" rel="next">Início</a>
+          <a href="../../programas/pag01.html" target="_self" rel="next"
+            >Programas</a
+          >
+          <a href="../../agradecimentos/pag01.html" target="_self" rel="next"
+            >Agradecimentos</a
+          >
+        </nav>
+      </div>
     </header>
     <main>
-        <article id="artigo01">
-            <h1>Pedra Papel Tesoura</h1>
-            <p>Bem vindo ao Pedra Papel Tesoura.
-                Joga o pedra papel tesoura com o computador
-            </p>
-        </article>
-        <p><input type="button" value="Iniciar" id="iniciar" onclick="iniciar()"></p>
+      <article id="artigo01">
+        <h1>Pedra Papel Tesoura</h1>
+        <p>
+          Bem vindo ao Pedra Papel Tesoura. Joga o pedra papel tesoura com o
+          computador
+        </p>
+      </article>
+      <p>
+        <input type="button" value="Iniciar" id="iniciar" onclick="iniciar()" />
+      </p>
     </main>
     <footer>
-        <p>Site criado por Ayres Major como Prova de Aptidão Profissional</p>
+      <p>Site criado por Ayres Major como Prova de Aptidão Profissional</p>
     </footer>
     <div id="fundo">
-        <span id='menu'>
-        </span>
-        <div class="tituloimg flex">
-            <img src="../../imagens/pedrar200.png" alt="" srcset="">
-            <img src="../../imagens/papelr200.png" alt="" srcset="">
-            <img src="../../imagens/tesourar200.png" alt="" srcset=""> 
+      <span id="menu"> </span>
+      <div class="tituloimg flex">
+        <img src="../../imagens/pedrar200.png" alt="" srcset="" id="pedraimg" onmouseenter="entrar(this.id)" onmouseout="sair(this.id)"/>
+        <img src="../../imagens/papelr200.png" alt="" srcset="" id="papelimg"/>
+        <img src="../../imagens/tesourar200.png" alt="" srcset="" id="tesouraimg" />
+      </div>
+      <div class="grid" id="titulo">
+        <h3 class="flex">
+          <label id="pedra"onmouseenter="entrar(this.id)" onmouseout="sair(this.id)">Pedra&#128074;</label>
+          <label id="papel" onmouseenter="entrar(this.id)" onmouseout="sair(this.id)">Papel&#128400;</label>
+          <label id="tesoura" onmouseenter="entrar(this.id)" onmouseout="sair(this.id)">Tesoura&#9996;</label>
+        </h3>
+        <div id="block">
         </div>
-        <div class="grid" id="titulo">
-           <h3 class="flex"><label id="pedra">Pedra&#128074;</label><label id="papel">Papel&#128400;</label><label id="tesoura">Tesoura&#9996;</label></h3>
-            <p><input type="button" value="Começar&#128074;&#128400;&#9996;" id="startgame" onclick="startgame()"></p>
-            <div id="intrucoes">
-                3
-            </div>
+        <p>
+          <input
+            type="button"
+            value="Começar&#128074;&#128400;&#9996;"
+            id="startgame"
+            onclick="startgame()"/>
+        </p>
+        <div id="intrucoes">3</div>
+      </div>
+      <div id="loadingjokenpo" class="grid">
+        <div class="progress flex">
+          <div class="color"></div>
         </div>
-        <div id="loadingjokenpo"class="grid">
-            <div class="progress flex">
-                <div class="color"></div>
-              </div>
-        </div>~
-        <label id="fechar" onclick="fechar()"><span>&#x274C;</span></label>
-
+      </div>
+      ~
+      <label id="fechar" onclick="fechar()"><span>&#x274C;</span></label>
     </div>
     <script src="jokenpo.js"></script>
-</body>
+  </body>
 </html>
