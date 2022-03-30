@@ -141,6 +141,9 @@ async function start() {
   block.style.display = "none";
   loading.style.display = "grid";
   for (c = 1; c <= 15; c++) {
+    if(t == 20){
+      window.alert("Bloqueado com sucesso")
+      break;}
     t = c;
     await sleep(1000);
   }
