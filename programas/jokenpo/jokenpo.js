@@ -57,9 +57,20 @@ function sair(clickedid) {
 async function select(clickedid) {
   let algo = document.getElementById(clickedid);
   algo.style.color = "red";
+  /*algo.setAttribute("onmouseout", "")*/
   await sleep(5);
   titulo.style.visibility = "hidden";
   loading.style.display = "none";
+  if (clickedid == "pedra") {
+    pedraimg.style.animation =
+      "shadowout 1500ms forwards, selectedrotation 1s forwards, slidepedra 2s forwards";
+  } else if (clickedid == "papel") {
+    papelimg.style.animation =
+      "roda 2s alternate infinite, shadowout 1500ms forwards";
+  } else {
+    tesouraimg.style.animation =
+      "roda 2s alternate infinite, shadowout 1500ms forwards";
+  }
 }
 async function startgame() {
   button.style.display = "none";
