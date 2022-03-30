@@ -47,15 +47,15 @@
     <div id="fundo">
       <span id="menu"> </span>
       <div class="tituloimg flex">
-        <img src="../../imagens/pedrar200.png" alt="" srcset="" id="pedraimg" onmouseenter="entrar(this.id)" onmouseout="sair(this.id)"/>
-        <img src="../../imagens/papelr200.png" alt="" srcset="" id="papelimg"/>
-        <img src="../../imagens/tesourar200.png" alt="" srcset="" id="tesouraimg" />
+        <img src="../../imagens/pedrar200.png" alt="pedra_png" id="pedraimg"/>
+        <img src="../../imagens/papelr200.png" alt="papel_png" id="papelimg"/>
+        <img src="../../imagens/tesourar200.png" alt="tesoura_png" id="tesouraimg" />
       </div>
       <div class="grid" id="titulo">
         <h3 class="flex">
-          <label id="pedra"onmouseenter="entrar(this.id)" onmouseout="sair(this.id)">Pedra&#128074;</label>
-          <label id="papel" onmouseenter="entrar(this.id)" onmouseout="sair(this.id)">Papel&#128400;</label>
-          <label id="tesoura" onmouseenter="entrar(this.id)" onmouseout="sair(this.id)">Tesoura&#9996;</label>
+          <label id="pedra"onmouseenter="entrar(this.id)" onmouseout="sair(this.id)" onclick="select(this.id)">Pedra&#128074;</label>
+          <label id="papel" onmouseenter="entrar(this.id)" onmouseout="sair(this.id)" onclick="select(this.id)">Papel&#128400;</label>
+          <label id="tesoura" onmouseenter="entrar(this.id)" onmouseout="sair(this.id)" onclick="select(this.id)">Tesoura&#9996;</label>
         </h3>
         <div id="block">
         </div>
