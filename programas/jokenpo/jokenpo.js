@@ -1,3 +1,36 @@
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+function randint(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function jokenpo(computer, user) {
+  // pedra -> 0   papel -> 1  tesoura -> 2
+  if (computer == user) {
+    window.alert("empate");
+  } else {
+    if (user == 0) {
+      if (computer == 1) {
+        window.alert("Derrota Computador jogou papel");
+      } else if (computer == 2) {
+        window.alert("Vitoria Computador jogou tesoura");
+      }
+    } else if (user == 1) {
+      if (computer == 0) {
+        window.alert("Vitoria Computador jogou pedra");
+      } else if (computer == 2) {
+        window.alert("Derrota Computador jogou tesoura");
+      }
+    } else if (user == 2) {
+      if (computer == 0) {
+        window.alert("Derrota Computador jogou pedra");
+      } else if (computer == 1) {
+        window.alert("Vitoria Computador jogou papel");
+      }
+    }
+  }
+}
+
 // Variáveis
 let loading = document.getElementById("loadingjokenpo");
 let button = document.getElementById("startgame");
@@ -9,11 +42,12 @@ let titulo = document.getElementById("titulo");
 let pedraimg = document.getElementById("pedraimg");
 let papelimg = document.getElementById("papelimg");
 let tesouraimg = document.getElementById("tesouraimg");
+let startgame = document.getElementById("startgame");
+var jogador = 7;
+let computador = randint(0, 2);
+var jogavel = false;
+var t = 0;
 
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-function randint(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
-}
 function fechar() {
   document.getElementById("fundo").style.display = "none";
   location.reload();
@@ -53,35 +87,46 @@ function sair(clickedid) {
       "roda 2s alternate infinite, shadowout 1500ms forwards";
   }
 }
-
 async function select(clickedid) {
+  t = 20;
   let algo = document.getElementById(clickedid);
   algo.style.color = "red";
-  /*algo.setAttribute("onmouseout", "")*/
+  algo.setAttribute("onmouseout", "");
   await sleep(5);
   titulo.style.visibility = "hidden";
   loading.style.display = "none";
   if (clickedid == "pedra") {
     pedraimg.style.animation =
-      "shadowout 1500ms forwards, selectedrotation 1s forwards, slidepedra 2s forwards";
+      "shadowout 1500ms forwards, selectedrotation 1s forwards, slidepedra 2s forwards, roda 2s alternate infinite";
+    papelimg.style.animation = "fadeout 1500ms forwards";
+    tesouraimg.style.animation = "fadeout 1500ms forwards";
+    jogador = 0;
   } else if (clickedid == "papel") {
     papelimg.style.animation =
-      "roda 2s alternate infinite, shadowout 1500ms forwards";
+      "shadowout 1500ms forwards, selectedrotation 1s forwards, slidepapel 2s forwards, roda 2s alternate infinite";
+    pedraimg.style.animation = "fadeout 1500ms forwards";
+    tesouraimg.style.animation = "fadeout 1500ms forwards";
+    jogador = 1;
   } else {
     tesouraimg.style.animation =
-      "roda 2s alternate infinite, shadowout 1500ms forwards";
+      "shadowout 1500ms forwards, selectedrotation 1s forwards, slidetesoura 2s forwards, roda 2s alternate infinite";
+    papelimg.style.animation = "fadeout 1500ms forwards";
+    pedraimg.style.animation = "fadeout 1500ms forwards";
+    jogador = 2;
   }
+  jokenpo(computador, jogador);
 }
-async function startgame() {
+
+async function start() {
   button.style.display = "none";
   await sleep(500);
   fundo.style.animation = "escurecer 3000ms forwards";
-  intrucoes.style.display = "block";
+  /*intrucoes.style.display = "block";
   await sleep(1500);
   intrucoes.innerText = "2";
   await sleep(1500);
   intrucoes.innerText = "1";
-  await sleep(1500);
+  await sleep(1500);*/
   menu.style.animation = "crescer 1.5s forwards";
   const styles = {
     fontSize: "3em",
@@ -95,4 +140,11 @@ async function startgame() {
   intrucoes.innerText = "Escolha uma das opções acima";
   block.style.display = "none";
   loading.style.display = "grid";
+  for (c = 1; c <= 15; c++) {
+    t = c;
+    await sleep(1000);
+  }
+  if (t == 15) {
+    window.alert("seu tempo acabou");
+  }
 }

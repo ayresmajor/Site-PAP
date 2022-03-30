@@ -18,15 +18,7 @@
         height: 450px;
         transform: translate(-420px, -365px);
       }
-      #pedraimg {
-        animation: fadeout 3s infinite;
-      }
-      #papelimg {
-        animation: fadeout 3s infinite;
-      }
-      #tesouraimg {
-        animation: slidetesoura 3s infinite;
-      }
+
       @keyframes selectedrotation {
         from {
           transform: rotate(0deg);
@@ -71,8 +63,6 @@
           margin-left: -520px;
         }
       }
-
-
     </style>
   </head>
   <body id="fundo">
@@ -85,6 +75,25 @@
         alt="tesoura_png"
         id="tesouraimg"
       />
+      <p
+        id="teste"
+        style="background-color: white; font-size: 10em"
+        onclick="clicar()"
+      >
+        kkybuin
+      </p>
     </div>
+    <script>
+      const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+      async function clicar() {
+        let teste = document.getElementById("teste");
+        for (c = 1; c <= 15; c++) {
+          var t = c;
+          await sleep(1000);
+          teste.innerHTML = t;
+        }
+      }
+    </script>
   </body>
 </html>
