@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../../imagens/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../programas/jokenpo/jokenpo.css" />
+    <title>Alleatório</title>
+    <style>
+      #menu {
+        width: 830px;
+        height: 450px;
+        transform: translate(-420px, -365px);
+      }
+      #pedraimg {
+        animation: fadeout 3s infinite;
+      }
+      #papelimg {
+        animation: fadeout 3s infinite;
+      }
+      #tesouraimg {
+        animation: slidetesoura 3s infinite;
+      }
+      @keyframes selectedrotation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes fadeout {
+        from {
+          opacity: 100%;
+        }
+        to {
+          opacity: 0%;
+        }
+      }
+      @keyframes slidepedra {
+        from {
+          margin-top: 20px;
+          margin-left: 20px;
+        }
+        to {
+          margin-top: 140px;
+          margin-left: 490px;
+        }
+      }
+      @keyframes slidepapel {
+        from {
+          margin-top: 20px;
+        }
+        to {
+          margin-top: 100px;
+        }
+      }
+      @keyframes slidetesoura {
+        from {
+          margin-top: 20px;
+          margin-left: 20px;
+        }
+        to {
+          margin-top: 100px;
+          margin-left: -520px;
+        }
+      }
+
+
+    </style>
+  </head>
+  <body id="fundo">
+    <span id="menu"> </span>
+    <div class="tituloimg flex">
+      <img src="../../imagens/pedrar200.png" alt="pedra_png" id="pedraimg" />
+      <img src="../../imagens/papelr200.png" alt="papel_png" id="papelimg" />
+      <img
+        src="../../imagens/tesourar200.png"
+        alt="tesoura_png"
+        id="tesouraimg"
+      />
+    </div>
+  </body>
+</html>
