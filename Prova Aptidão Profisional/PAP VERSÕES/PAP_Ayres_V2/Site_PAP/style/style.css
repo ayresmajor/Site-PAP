@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;700&family=Exo:wght@200&display=swap');
+
+
+@font-face {
+    font-family: 'Ahdn';
+    src: url('../fontes/AHDN.ttf') format('truetype');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Crazy';
+    src: url('../fontes/cRAZY\ sTYLE.ttf') format('truetype');
+    font-weight: normal;
+}
+
+:root{
+    --cbranco:245, 245, 245 ;
+    --cazulcl:67, 97, 238 ;
+    --cazules:43, 32, 96 ;
+    --cvermelho:210, 1, 25 ;
+    --cvermelhocl:219, 62, 80;
+    
+    --fonte-aleatorio: 'Ahdn', cursive;
+    --fonte-crazy: 'Crazy', cursive;
+    --fonte-padrao: 'Chakra Petch', 'Verdana','sans-serif', cursive;
+
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: rgb(var(--cbranco));
+    font-family: var(--fonte-padrao);
+}
+
+p{
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 15px;
+    line-height: 2em;
+}
+
+h1, h2{
+    font-weight: 700;
+    font-size: 2em;
+    color: white;
+    background-image: linear-gradient(to right, rgb(var(--cvermelhocl)) 50%, transparent);
+    padding: 10px;
+    border-radius: 0px 30px;
+    box-shadow: inset #00000042 -20px 5px 20px 0px;
+}
+
+header > div{
+    background-image: linear-gradient(to top,rgb(var(--cvermelho)), transparent);
+    padding: 20px 10px;
+    border-radius: 10px; 
+}
+header > div h1 {
+    display: inline;
+    font-family: var(--fonte-aleatorio);
+    font-size: 3.3em;
+    text-align: center;
+    color: rgb(var(--cazules));
+    text-shadow: white 5px 3px 0px; 
+    background: none;
+    box-shadow: none;
+}
+
+header > div nav{
+    margin: auto;
+    font-family: var(--fonte-crazy);
+    margin-top: 10px;
+    padding: 15px;
+    line-height: 2.2em;
+    
+}
+
+header > div nav a{
+    padding: 10px;
+    text-align: justify;
+    color: white;
+    font-size: 1.2em;
+    
+}
+
+header > div nav a:hover{
+    background-color:rgba(var(--cazules), 0.15);
+    text-shadow: rgb(var(--cazulcl)) 0px 1px 9px;
+    transition-duration: 0.5s;
+    border-radius: 20px;
+    font-size: 1.23em;
+
+}
+
+main{
+    background-color: white;
+    min-width: 300px;
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 10px;
+    border-inline: rgb(var(--cvermelho));
+    border-width: thin;
+    border-style: none solid;
+    box-shadow: hsla(0, 0%, 0%, 0.302) 0px 7px 20px 0px;
+
+    
+}
+
+article#artigo01{
+    display: inline-block;
+    padding: 10px;
+    margin: 20px;
+    max-width: 700px;
+    border-radius: 10px;
+}
+
+footer{
+    background-color: rgb(var(--cazules));
+    box-shadow: #00000033 11px 8px 20px 3px;
+    padding: 1px;
+    color: white; 
+    border-radius: 10px 10px 0px 0px;
+}
+footer p{
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.8em;
+}
