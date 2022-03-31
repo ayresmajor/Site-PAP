@@ -121,12 +121,12 @@ async function start() {
   button.style.display = "none";
   await sleep(500);
   fundo.style.animation = "escurecer 3000ms forwards";
-  /*intrucoes.style.display = "block";
+  intrucoes.style.display = "block";
   await sleep(1500);
   intrucoes.innerText = "2";
   await sleep(1500);
   intrucoes.innerText = "1";
-  await sleep(1500);*/
+  await sleep(1500);
   menu.style.animation = "crescer 1.5s forwards";
   const styles = {
     fontSize: "3em",
