@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html style="background-color: black">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,53 +19,21 @@
         transform: translate(-420px, -365px);
       }
 
-      @keyframes selectedrotation {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
+      #firework1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 935px;
+        height: 490px;
+        transform: translate(0px, 0px);
       }
-      @keyframes fadeout {
-        from {
-          opacity: 100%;
-        }
-        to {
-          opacity: 0%;
-        }
+      #firework2 {
       }
-      @keyframes slidepedra {
-        from {
-          margin-top: 20px;
-          margin-left: 20px;
-        }
-        to {
-          margin-top: 140px;
-          margin-left: 490px;
-        }
-      }
-      @keyframes slidepapel {
-        from {
-          margin-top: 20px;
-        }
-        to {
-          margin-top: 100px;
-        }
-      }
-      @keyframes slidetesoura {
-        from {
-          margin-top: 20px;
-          margin-left: 20px;
-        }
-        to {
-          margin-top: 100px;
-          margin-left: -520px;
-        }
+      #confetti {
       }
     </style>
   </head>
-  <body id="fundo">
+  <body style="background-color: black">
     <span id="menu"> </span>
     <div class="tituloimg flex">
       <img src="../../imagens/pedrar200.png" alt="pedra_png" id="pedraimg" />
@@ -75,29 +43,46 @@
         alt="tesoura_png"
         id="tesouraimg"
       />
-      <p
-        id="teste"
-        style="background-color: white; font-size: 10em"
-        onclick="clicar()"
-      >
-        kkybuin
-      </p>
     </div>
-    <script>
-      const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-      function randint(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
-}
-        let fff
-      async function clicar() {
-        let teste = document.getElementById("teste");
-        for (c = 1; c <= 15; c++) {
-          fff = randint(0, 3)
-          var t = fff;
-          await sleep(1000);
-          teste.innerHTML = t;
-        }
-      }
-    </script>
+    <div id="win" class="flex">
+      <!-- firework 1-->
+      <span id=" firework1">
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player
+          src="https://assets10.lottiefiles.com/private_files/lf30_vzqrg39e.json"
+          background="transparent"
+          speed="1"
+          style="width: 1000px; height: 1000px ;transform: translate3d(6px, -568px, 0px)"
+          loop
+          autoplay
+        ></lottie-player>
+      </span>
+
+      <!-- confetti-->
+      <span id="confetti">
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player
+          src="https://assets4.lottiefiles.com/packages/lf20_ISbOsd.json"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px"
+          loop
+          autoplay
+        ></lottie-player>
+      </span>
+
+      <!-- firework 2-->
+      <span id=" firework2">
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player
+          src="https://assets10.lottiefiles.com/private_files/lf30_vzqrg39e.json"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px"
+          loop
+          autoplay
+        ></lottie-player>
+      </span>
+    </div>
   </body>
 </html>
