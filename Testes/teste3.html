@@ -85,11 +85,15 @@
     </div>
     <script>
       const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
+      function randint(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+        let fff
       async function clicar() {
         let teste = document.getElementById("teste");
         for (c = 1; c <= 15; c++) {
-          var t = c;
+          fff = randint(0, 3)
+          var t = fff;
           await sleep(1000);
           teste.innerHTML = t;
         }

@@ -71,9 +71,9 @@ window.addEventListener("keyup", async function (event) {
           c == 33 ||
           c == 34
         ) {
-          numeros.push(randint(1, 12));
+          numeros.push(randint(1, 13));
         } else {
-          numeros.push(randint(1, 50));
+          numeros.push(randint(1, 51));
         }
       }
       for (c = 0; c <= palpite * 7; c++) {

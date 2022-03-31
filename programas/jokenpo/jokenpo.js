@@ -62,9 +62,9 @@ let pedraimg = document.getElementById("pedraimg");
 let papelimg = document.getElementById("papelimg");
 let tesouraimg = document.getElementById("tesouraimg");
 let startgame = document.getElementById("startgame");
-let escolhauto = ""
+let escolhauto = "";
 var jogador = 7;
-let computador = randint(0, 2);
+let computador = randint(0, 3);
 var jogavel = false;
 var t = 0;
 
@@ -112,19 +112,29 @@ async function select(clickedid) {
   let algo = document.getElementById(clickedid);
   algo.style.color = "red";
   algo.setAttribute("onmouseout", "");
-  jokenpo(computador, jogador,clickedid);
+  if (clickedid == "pedra") {
+    jogador = 0;
+  } else if (clickedid == "papel") {
+    jogador = 0;
+  } else {
+    jogador = 0;
+  }
+
+  jokenpo(computador, jogador, clickedid);
 }
 
 async function start() {
   button.style.display = "none";
   await sleep(500);
-  fundo.style.animation = "escurecer 3000ms forwards";
+  fundo.style.animation = "escurecer 1000ms forwards";
+  block.style.animation = "escurecer 1200ms forwards";
   intrucoes.style.display = "block";
   await sleep(1500);
-  intrucoes.innerText = "2";
+  intrucoes.innerText = "PAPEL";
   await sleep(1500);
-  intrucoes.innerText = "1";
+  intrucoes.innerText = "TESOURA";
   await sleep(1500);
+  block.style.animation = "clarear 1200ms forwards";
   menu.style.animation = "crescer 1.5s forwards";
   const styles = {
     fontSize: "3em",
@@ -139,20 +149,21 @@ async function start() {
   block.style.display = "none";
   loading.style.display = "grid";
   for (c = 1; c <= 15; c++) {
-    if(t == 20){
-      break;}
+    if (t == 20) {
+      break;
+    }
     t = c;
     await sleep(1000);
   }
   if (t == 15) {
-    jogador = randint(0, 2);
-    if (jogador ==0){
-      escolhauto = 'pedra'
-    }else if (jogador ==1){
-      escolhauto = 'papel'
-    }else{
-      escolhauto = 'tesoura'
+    jogador = randint(0, 3);
+    if (jogador == 0) {
+      escolhauto = "pedra";
+    } else if (jogador == 1) {
+      escolhauto = "papel";
+    } else {
+      escolhauto = "tesoura";
     }
-    jokenpo(computador, jogador,escolhauto)
+    jokenpo(computador, jogador, escolhauto);
   }
 }
