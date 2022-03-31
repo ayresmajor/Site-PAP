@@ -4,7 +4,26 @@ function randint(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-function jokenpo(computer, user) {
+async function jokenpo(computer, user, selected) {
+  await sleep(5);
+  titulo.style.visibility = "hidden";
+  loading.style.display = "none";
+  if (selected == "pedra") {
+    pedraimg.style.animation =
+      "shadowout 1500ms forwards, selectedrotation 1s forwards, slidepedra 2s forwards, roda 2s alternate infinite";
+    papelimg.style.animation = "fadeout 1500ms forwards";
+    tesouraimg.style.animation = "fadeout 1500ms forwards";
+  } else if (selected == "papel") {
+    papelimg.style.animation =
+      "shadowout 1500ms forwards, selectedrotation 1s forwards, slidepapel 2s forwards, roda 2s alternate infinite";
+    pedraimg.style.animation = "fadeout 1500ms forwards";
+    tesouraimg.style.animation = "fadeout 1500ms forwards";
+  } else {
+    tesouraimg.style.animation =
+      "shadowout 1500ms forwards, selectedrotation 1s forwards, slidetesoura 2s forwards, roda 2s alternate infinite";
+    papelimg.style.animation = "fadeout 1500ms forwards";
+    pedraimg.style.animation = "fadeout 1500ms forwards";
+  }
   // pedra -> 0   papel -> 1  tesoura -> 2
   if (computer == user) {
     window.alert("empate");
@@ -43,6 +62,7 @@ let pedraimg = document.getElementById("pedraimg");
 let papelimg = document.getElementById("papelimg");
 let tesouraimg = document.getElementById("tesouraimg");
 let startgame = document.getElementById("startgame");
+let escolhauto = ""
 var jogador = 7;
 let computador = randint(0, 2);
 var jogavel = false;
@@ -92,29 +112,7 @@ async function select(clickedid) {
   let algo = document.getElementById(clickedid);
   algo.style.color = "red";
   algo.setAttribute("onmouseout", "");
-  await sleep(5);
-  titulo.style.visibility = "hidden";
-  loading.style.display = "none";
-  if (clickedid == "pedra") {
-    pedraimg.style.animation =
-      "shadowout 1500ms forwards, selectedrotation 1s forwards, slidepedra 2s forwards, roda 2s alternate infinite";
-    papelimg.style.animation = "fadeout 1500ms forwards";
-    tesouraimg.style.animation = "fadeout 1500ms forwards";
-    jogador = 0;
-  } else if (clickedid == "papel") {
-    papelimg.style.animation =
-      "shadowout 1500ms forwards, selectedrotation 1s forwards, slidepapel 2s forwards, roda 2s alternate infinite";
-    pedraimg.style.animation = "fadeout 1500ms forwards";
-    tesouraimg.style.animation = "fadeout 1500ms forwards";
-    jogador = 1;
-  } else {
-    tesouraimg.style.animation =
-      "shadowout 1500ms forwards, selectedrotation 1s forwards, slidetesoura 2s forwards, roda 2s alternate infinite";
-    papelimg.style.animation = "fadeout 1500ms forwards";
-    pedraimg.style.animation = "fadeout 1500ms forwards";
-    jogador = 2;
-  }
-  jokenpo(computador, jogador);
+  jokenpo(computador, jogador,clickedid);
 }
 
 async function start() {
@@ -142,12 +140,19 @@ async function start() {
   loading.style.display = "grid";
   for (c = 1; c <= 15; c++) {
     if(t == 20){
-      window.alert("Bloqueado com sucesso")
       break;}
     t = c;
     await sleep(1000);
   }
   if (t == 15) {
-    window.alert("seu tempo acabou");
+    jogador = randint(0, 2);
+    if (jogador ==0){
+      escolhauto = 'pedra'
+    }else if (jogador ==1){
+      escolhauto = 'papel'
+    }else{
+      escolhauto = 'tesoura'
+    }
+    jokenpo(computador, jogador,escolhauto)
   }
 }
