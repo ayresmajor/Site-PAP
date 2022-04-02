@@ -13,6 +13,23 @@
     <link rel="stylesheet" href="../programas/jokenpo/jokenpo.css" />
     <title>Alleatório</title>
     <style>
+      .pedraico,.papelico, .tesouraico {
+        position: relative;
+        background-image: url('../imagens/pedrar100.ico');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100px; height:100px;
+        display: inline-block;
+        transform: translate(0px, 30px);
+      }
+
+      .papelico{
+        background-image: url('../imagens/papelr100.ico');
+      }
+
+      .tesouraico{
+        background-image: url('../imagens/tesourar100.ico');
+      }
       #menu {
         width: 830px;
         height: 450px;
@@ -21,8 +38,15 @@
       #win{
         opacity: 80%;
       }
-
-
+    #intruoes{
+      position: absolute;
+      font-size: 3em;
+      color: white;
+    top: 65px;
+    left: 10px;
+    text-shadow: #000000 3px -2px 2px, #a10a7e42 -4px -5px 20px, #ffc10940 5px 4px 20px;
+    transform: translate(0px, 0px);
+      }
     </style>
   </head>
   <body style="background-color: black">
@@ -36,39 +60,7 @@
         id="tesouraimg"
       />
     </div>
-    <div id="win" class="flex">
-      <!-- firework 1-->
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-        <lottie-player id=" firework1"
-          src="https://assets10.lottiefiles.com/private_files/lf30_vzqrg39e.json"
-          background="transparent"
-          speed="1"
-          style="position: absolute; top:50%; left:50%; display:flex; width: 91vh; height: auto; transform: translate(-830px, -410px);"
-          loop
-          autoplay
-        ></lottie-player>
-
-      <!-- confetti-->
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-        <lottie-player id="confetti"
-          src="https://assets4.lottiefiles.com/packages/lf20_ISbOsd.json"
-          background="transparent"
-          speed="1"
-          style=" position: absolute; top:50%; left:50%;display:flex; width: 80vh; height: auto; transform: translate(-290px, -150px);"
-          loop
-          autoplay
-        ></lottie-player>
-
-      <!-- firework 2-->
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-        <lottie-player
-          src="https://assets10.lottiefiles.com/private_files/lf30_vzqrg39e.json"
-          background="transparent"
-          speed="1"
-          style="position: absolute; top:50%; left:50%;display:flex; width: 90vh; height: auto;  transform: scaleX(-1) translate(-170px, -410px);"
-          loop
-          autoplay
-        ></lottie-player>
-    </div>
+    <div id="intruoes">O computador jogou pedra <i class="papelico"> </i> </div>
+  </div>
   </body>
 </html>

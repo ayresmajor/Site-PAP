@@ -184,8 +184,28 @@ div#intrucoes {
 }
 
 #win{
+  visibility: hidden;
   opacity: 0%;
 }
+
+.pedraico,.papelico, .tesouraico {
+  position: relative;
+  background-image: url('../imagens/pedrar100.ico');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100px; height:100px;
+  display: inline-block;
+  transform: translate(0px, 30px);
+}
+
+.papelico{
+  background-image: url('../imagens/papelr100.ico');
+}
+
+.tesouraico{
+  background-image: url('../imagens/tesourar100.ico');
+}
+
 /* Animações*/
 @keyframes clarear {
   0% {
