@@ -149,7 +149,6 @@ div#intrucoes {
   padding: 0px;
   animation: tpulse 1500ms infinite;
 }
-
 #loadingjokenpo {
   position: relative;
   top: 80px;
@@ -212,7 +211,7 @@ div#intrucoes {
     background-color: rgba(0, 0, 0, 1);
   }
   100% {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.98);
   }
 }
 

@@ -11,7 +11,7 @@
             place-items: center;
         }
         body{
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: rgba(255, 255, 255, 0.9);
         }
         h3{
             display: inline;
@@ -54,7 +54,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	background: #000;
+	background: rgb(0, 0, 0);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -69,7 +69,8 @@ body {
 	text-align: center;
 	font-size: 50px;
 	font-weight: bold;
-	width: 400px;
+	padding: 200px;
+	width: auto;
 	height: 250px;
 	background: linear-gradient(0deg, #000, #262626);
 }
@@ -103,25 +104,21 @@ body {
 	}
 
 }
-img#loading{
-  border-radius: 50%;
-  padding: 5px;
-  box-shadow: #ffffff2e 0px 1px 20px 11px,#eed7082e 0px 1px 20px 11px;
+.ola{
+	height: auto;
+	font-size: 20em;
+	font-weight: 600;
+	-webkit-text-stroke: 3px rgb(255, 255, 255);
+	color: #D5AD6D; /*if no support for background-clip*/
+	background: -webkit-linear-gradient(transparent, transparent), -webkit-linear-gradient(bottom, #fffdba 0%, #fad229 31%, #f9efae 35%, #c18715 45%, #edba13 52%);
+	box-shadow: inset #f000a2 0px -20px 20px 0px, inset #30eaf0 0px 20px 20px 0px;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
     </style>
 </head>
 <body>
-    <div class="grid" id>
-        <span id="star">
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-        <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_AwG077.json"  background="transparent"  speed="1"  style="width: 400px; height: 0px;" loop  autoplay class="grid">
-        </lottie-player>
-        </span>    
-        <span id="euro" class="grid"><h3 >EUROMILHÕES</h3></span>
     </div>
-    <div class="shadow">Welcome</div>
-	<div >
-		<img id="loading" src="/imagens/eurologo4.gif" alt="" srcset="">
-	</div>
+    <div class="ola">Vitória</div>
 </body>
 </html>
