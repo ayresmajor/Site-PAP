@@ -10,6 +10,7 @@ let pedraimg = document.getElementById("pedraimg");
 let papelimg = document.getElementById("papelimg");
 let tesouraimg = document.getElementById("tesouraimg");
 let startgame = document.getElementById("startgame");
+let win = document.getElementById("win");
 let escolhauto = "";
 var jogador = 7;
 let computador = randint(0, 3);
@@ -47,7 +48,7 @@ async function start() {
   menu.style.animation = "crescer 1.5s forwards";
   const styles = {
     fontSize: "3em",
-    top: "65px",
+    top: "10px",
     left: "10px",
     animation: "none",
     textShadow:
@@ -110,19 +111,34 @@ async function select(clickedid) {
   t = 20;
   let algo = document.getElementById(clickedid);
   algo.style.color = "red";
-  algo.setAttribute("onmouseout", "");
+  pedra.setAttribute("onmouseout", "");
+  papel.setAttribute("onmouseout", "");
+  tesoura.setAttribute("onmouseout", "");
+  pedra.setAttribute("onmouseenter", "");
+  papel.setAttribute("onmouseenter", "");
+  tesoura.setAttribute("onmouseenter", "");
   if (clickedid == "pedra") {
     jogador = 0;
   } else if (clickedid == "papel") {
-    jogador = 0;
+    jogador = 1;
   } else {
-    jogador = 0;
+    jogador = 2;
   }
 
   jokenpo(computador, jogador, clickedid);
+
 }
 
 async function jokenpo(computer, user, selected) {
+  pedra.setAttribute("onmouseout", "");
+  papel.setAttribute("onmouseout", "");
+  tesoura.setAttribute("onmouseout", "");
+  pedra.setAttribute("onmouseenter", "");
+  papel.setAttribute("onmouseenter", "");
+  tesoura.setAttribute("onmouseenter", "");
+  pedra.setAttribute("onclick", "");
+  papel.setAttribute("onclick", "");
+  tesoura.setAttribute("onclick", "");
   await sleep(5);
   titulo.style.visibility = "hidden";
   loading.style.display = "none";
@@ -143,27 +159,41 @@ async function jokenpo(computer, user, selected) {
     pedraimg.style.animation = "fadeout 1500ms forwards";
   }
   // pedra -> 0   papel -> 1  tesoura -> 2
+  titulo.style.visibility = "visible";
+  let rescomp = "";
+  if (computer == 0) {
+    rescomp = 'pedra <i class="pedraico"></i>';
+  } else if (computer == 1) {
+    rescomp = 'papel <i class="papelico"></i>';
+  } else {
+    rescomp = 'tesoura<i class="tesouraico"></i>';
+  }
+  let resultado = ""
   if (computer == user) {
-    window.alert("empate");
+    resultado = 'Empate'
   } else {
     if (user == 0) {
       if (computer == 1) {
-        window.alert("Derrota Computador jogou papel");
+        resultado = 'Derrota'
       } else if (computer == 2) {
-        window.alert("Vitoria Computador jogou tesoura");
+        resultado = 'Vitória'
       }
     } else if (user == 1) {
       if (computer == 0) {
-        window.alert("Vitoria Computador jogou pedra");
+        resultado = 'Vitória'
       } else if (computer == 2) {
-        window.alert("Derrota Computador jogou tesoura");
+        resultado = 'Derrota'
       }
     } else if (user == 2) {
       if (computer == 0) {
-        window.alert("Derrota Computador jogou pedra");
+        resultado = 'Derrota'
       } else if (computer == 1) {
-        window.alert("Vitoria Computador jogou papel");
+        resultado = 'Vitória'
       }
     }
   }
+  if (resultado == "Vitória"){
+    win.style.display = 'block'
+  }
+  intrucoes.innerHTML = `${resultado} Computador jogou ${rescomp}`;
 }

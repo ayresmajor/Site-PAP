@@ -135,7 +135,7 @@ label#tesoura {
   transition: all 1s;
 }
 
-div#intrucoes {
+div#intrucoes , #resultado{
   display: none;
   position: relative;
   bottom: 30px;
@@ -151,8 +151,8 @@ div#intrucoes {
 }
 #loadingjokenpo {
   position: relative;
-  top: 80px;
-  left: 10px;
+  top: 50px;
+  left: 5px;
   display: none;
   width: auto;
 }
@@ -171,9 +171,9 @@ div#intrucoes {
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-380px, -370px);
   width: 750px;
   height: 295px;
-  transform: translate(-380px, -370px);
   margin: 50px auto;
   padding: 10px 10px;
   border: 5px solid #efcf17e8;
@@ -183,13 +183,13 @@ div#intrucoes {
 }
 
 #win{
-  visibility: hidden;
-  opacity: 0%;
+  display: none;
+  opacity: 80%;
 }
 
 .pedraico,.papelico, .tesouraico {
   position: relative;
-  background-image: url('../imagens/pedrar100.ico');
+  background-image: url('../../imagens/pedrar100.ico');
   background-repeat: no-repeat;
   background-size: contain;
   width: 100px; height:100px;
@@ -198,13 +198,13 @@ div#intrucoes {
 }
 
 .papelico{
-  background-image: url('../imagens/papelr100.ico');
+  background-image: url('../../imagens/papelr100.ico');
 }
 
 .tesouraico{
-  background-image: url('../imagens/tesourar100.ico');
+  background-image: url('../../imagens/tesourar100.ico');
+  visibility: visible;
 }
-
 /* Animações*/
 @keyframes clarear {
   0% {
@@ -278,7 +278,7 @@ div#intrucoes {
   }
   100% {
     width: 830px;
-    height: 450px;
+    height: 510px;
     transform: translate(-420px, -365px);
   }
 }
@@ -337,7 +337,7 @@ div#intrucoes {
     margin-left: 20px;
   }
   to {
-    margin-top: 140px;
+    margin-top: 100px;
     margin-left: 490px;
   }
 }
