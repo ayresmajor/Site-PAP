@@ -18,6 +18,9 @@
         height: 450px;
         transform: translate(-420px, -365px);
       }
+      #win{
+        opacity: 80%;
+      }
 
 
     </style>
@@ -35,42 +38,37 @@
     </div>
     <div id="win" class="flex">
       <!-- firework 1-->
-      
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <lottie-player id=" firework1"
           src="https://assets10.lottiefiles.com/private_files/lf30_vzqrg39e.json"
           background="transparent"
           speed="1"
-          style="width: 91vh; height: auto; transform: translate(-200px, -450px);"
+          style="position: absolute; top:50%; left:50%; display:flex; width: 91vh; height: auto; transform: translate(-830px, -410px);"
           loop
           autoplay
         ></lottie-player>
 
-
       <!-- confetti-->
-      
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <lottie-player id="confetti"
           src="https://assets4.lottiefiles.com/packages/lf20_ISbOsd.json"
           background="transparent"
           speed="1"
-          style="width: 300px;height: auto; transform: translate(-200px, -450px);"
+          style=" position: absolute; top:50%; left:50%;display:flex; width: 80vh; height: auto; transform: translate(-290px, -150px);"
           loop
           autoplay
         ></lottie-player>
 
       <!-- firework 2-->
-      <span id=" firework2">
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <lottie-player
           src="https://assets10.lottiefiles.com/private_files/lf30_vzqrg39e.json"
           background="transparent"
           speed="1"
-          style="width: 300px; height: 300px"
+          style="position: absolute; top:50%; left:50%;display:flex; width: 90vh; height: auto;  transform: scaleX(-1) translate(-170px, -410px);"
           loop
           autoplay
         ></lottie-player>
-      </span>
     </div>
   </body>
 </html>

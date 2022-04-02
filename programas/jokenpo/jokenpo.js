@@ -126,7 +126,7 @@ async function select(clickedid) {
 async function start() {
   button.style.display = "none";
   await sleep(500);
-  fundo.style.animation = "escurecer 1000ms forwards";
+  fundo.style.backgroundColor = "rgba(0, 0, 0, 1)";
   block.style.animation = "escurecer 1200ms forwards";
   intrucoes.style.display = "block";
   await sleep(1500);
@@ -134,7 +134,7 @@ async function start() {
   await sleep(1500);
   intrucoes.innerText = "TESOURA";
   await sleep(1500);
-  block.style.animation = "clarear 1200ms forwards";
+  fundo.style.animation = "clarear 1200ms forwards";
   menu.style.animation = "crescer 1.5s forwards";
   const styles = {
     fontSize: "3em",

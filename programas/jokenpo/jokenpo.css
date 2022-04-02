@@ -71,22 +71,7 @@ h4 {
   backdrop-filter: blur(5px);
   background-attachment: fixed;
 }
-@keyframes escurecer {
-  0% {
-    background-color: rgba(0, 0, 0, 0.9);
-  }
-  100% {
-    background-color: rgba(0, 0, 0, 0.98);
-  }
-}
-@keyframes clarear {
-  0% {
-    background-color: rgba(0, 0, 0, 0.98);
-  }
-  100% {
-    background-color: rgba(0, 0, 0, 0.0);
-  }
-}
+
 div.tituloimg {
   margin: 50px auto;
   width: 750px;
@@ -98,14 +83,7 @@ div.tituloimg img {
   border-radius: 30%;
   animation: roda 2s alternate infinite;
 }
-@keyframes roda {
-  from {
-    transform: rotate(-10deg);
-  }
-  to {
-    transform: rotate(10deg);
-  }
-}
+
 label#pedra {
   position: relative;
   right: 40px;
@@ -188,6 +166,45 @@ div#intrucoes {
   border-radius: 15px;
   animation: pulse 1500ms infinite;
 }
+
+
+#menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 750px;
+  height: 295px;
+  transform: translate(-380px, -370px);
+  margin: 50px auto;
+  padding: 10px 10px;
+  border: 5px solid #efcf17e8;
+  box-shadow: inset #30eaf031 0px 0px 93px 0px, #a38c08 -15px 0px 50px,
+    #ffe033 17px 0px 50px;
+  border-radius: 10px;
+}
+
+#win{
+  opacity: 0%;
+}
+/* Animações*/
+@keyframes clarear {
+  0% {
+    background-color: rgba(0, 0, 0, 1);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+}
+
+@keyframes roda {
+  from {
+    transform: rotate(-10deg);
+  }
+  to {
+    transform: rotate(10deg);
+  }
+}
+
 @keyframes tpulse {
   0% {
     text-shadow: #a10a7ed3 5px 3px 0px, #ffc109d0 -3px -2px 0px,
@@ -198,6 +215,7 @@ div#intrucoes {
       #ffa0ea 0 0px 30px;
   }
 }
+
 @keyframes pulse {
   0% {
     box-shadow: #efcf17 0 0 0 0;
@@ -232,20 +250,6 @@ div#intrucoes {
     width: 100%;
   }
 }
-#menu {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 750px;
-  height: 295px;
-  transform: translate(-380px, -370px);
-  margin: 50px auto;
-  padding: 10px 10px;
-  border: 5px solid #efcf17e8;
-  box-shadow: inset #30eaf031 0px 0px 93px 0px, #a38c08 -15px 0px 50px,
-    #ffe033 17px 0px 50px;
-  border-radius: 10px;
-}
 
 @keyframes crescer {
   0% {
@@ -259,7 +263,7 @@ div#intrucoes {
     transform: translate(-420px, -365px);
   }
 }
-/* Animações para a seleção dos itens*/
+
 @keyframes aumentartxt {
   0% {
     font-size: 100%;
