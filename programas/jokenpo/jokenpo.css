@@ -19,24 +19,6 @@
   margin: auto;
 }
 
-input[type="button"]#iniciar {
-  display: inline;
-  position: relative;
-  top: -50px;
-  left: 150px;
-  margin: 20px auto;
-  padding: 10px;
-  border-radius: 50px;
-  font-family: var(--fonte-padrao);
-  font-weight: 900;
-  font-size: 1.1em;
-  background-color: rgb(var(--cvermelho));
-  color: white;
-  transition: all 0.5s;
-}
-input[type="button"]#iniciar:hover {
-  background-color: rgb(var(--cazulcl));
-}
 
 h3 {
   display: inline;
@@ -380,25 +362,6 @@ div#intrucoes , #resultado{
   }
 }
 /*fim das animações*/
-#fechar {
-  position: fixed;
-  right: 20px;
-  top: 10px;
-}
-
-#fechar span {
-  position: absolute;
-  padding: 10px;
-  top: -5px;
-  right: 10px;
-  color: transparent;
-  text-shadow: 0 0 0 rgb(0, 0, 0), 0px 0px 7px rgb(255 255 255);
-  transition: all 0.5s;
-}
-
-#fechar span:hover {
-  transform: rotate(-360deg);
-}
 
 @media (max-width: 600px) {
   #fundo {
