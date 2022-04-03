@@ -194,7 +194,9 @@ div#intrucoes , #resultado{
   background-size: contain;
   width: 100px; height:100px;
   display: inline-block;
-  transform: translate(0px, 30px);
+  animation: roda 2s alternate infinite;
+  transform: translate(0px, 60px);
+
 }
 
 .papelico{
@@ -211,7 +213,25 @@ div#intrucoes , #resultado{
     background-color: rgba(0, 0, 0, 1);
   }
   100% {
+    background-color: rgba(0, 0, 0, 0.98)
+  }
+}
+
+@keyframes derrota {
+  0% {
     background-color: rgba(0, 0, 0, 0.98);
+  }
+  100% {
+    background-color: rgba(43, 0, 0, 0.98)
+  }
+}
+
+@keyframes empate {
+  0% {
+    background-color: rgba(0, 0, 0, 0.98);
+  }
+  100% {
+    background-color: rgb(47, 47, 47)
   }
 }
 

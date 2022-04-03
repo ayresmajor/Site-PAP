@@ -109,8 +109,6 @@ function sair(clickedid) {
 }
 async function select(clickedid) {
   t = 20;
-  let algo = document.getElementById(clickedid);
-  algo.style.color = "red";
   pedra.setAttribute("onmouseout", "");
   papel.setAttribute("onmouseout", "");
   tesoura.setAttribute("onmouseout", "");
@@ -143,16 +141,19 @@ async function jokenpo(computer, user, selected) {
   titulo.style.visibility = "hidden";
   loading.style.display = "none";
   if (selected == "pedra") {
+    pedra.style.color = "red";
     pedraimg.style.animation =
       "shadowout 1500ms forwards, selectedrotation 1s forwards, slidepedra 2s forwards, roda 2s alternate infinite";
     papelimg.style.animation = "fadeout 1500ms forwards";
     tesouraimg.style.animation = "fadeout 1500ms forwards";
   } else if (selected == "papel") {
+    papel.style.color = "red";
     papelimg.style.animation =
       "shadowout 1500ms forwards, selectedrotation 1s forwards, slidepapel 2s forwards, roda 2s alternate infinite";
     pedraimg.style.animation = "fadeout 1500ms forwards";
     tesouraimg.style.animation = "fadeout 1500ms forwards";
   } else {
+    tesoura.style.color = "red";
     tesouraimg.style.animation =
       "shadowout 1500ms forwards, selectedrotation 1s forwards, slidetesoura 2s forwards, roda 2s alternate infinite";
     papelimg.style.animation = "fadeout 1500ms forwards";
@@ -170,30 +171,34 @@ async function jokenpo(computer, user, selected) {
   }
   let resultado = ""
   if (computer == user) {
-    resultado = 'Empate'
+    resultado = 'Empataste'
   } else {
     if (user == 0) {
       if (computer == 1) {
-        resultado = 'Derrota'
+        resultado = 'Perdeste'
       } else if (computer == 2) {
-        resultado = 'Vitória'
+        resultado = 'Venceste'
       }
     } else if (user == 1) {
       if (computer == 0) {
-        resultado = 'Vitória'
+        resultado = 'Venceste'
       } else if (computer == 2) {
-        resultado = 'Derrota'
+        resultado = 'Perdeste'
       }
     } else if (user == 2) {
       if (computer == 0) {
-        resultado = 'Derrota'
+        resultado = 'Perdeste'
       } else if (computer == 1) {
-        resultado = 'Vitória'
+        resultado = 'Venceste'
       }
     }
   }
-  if (resultado == "Vitória"){
+  if (resultado == "Venceste"){
     win.style.display = 'block'
+  }else if(resultado == "Perdeste"){
+    fundo.style.animation = "derrota 1200ms forwards";
+  }else{
+    fundo.style.animation = "empate 1200ms forwards";
   }
-  intrucoes.innerHTML = `${resultado} Computador jogou ${rescomp}`;
+  intrucoes.innerHTML = `${resultado}, o computador jogou ${rescomp}`;
 }
