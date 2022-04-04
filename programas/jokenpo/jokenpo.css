@@ -129,7 +129,7 @@ div#intrucoes{
   right: 10px;
   font-family: var(--fonte-padrao);
   color: white;
-  font-size: 9em;
+  font-size: 7em;
   font-weight: 900;
   -webkit-text-stroke: 1px rgb(0, 0, 0);
   text-shadow: #a10a7ed3 5px 3px 0px, #ffc109d0 -3px -2px 0px;
@@ -194,6 +194,7 @@ div#intrucoes{
   background-image: url('../../imagens/tesourar100.ico');
   visibility: visible;
 }
+
 /* Animações*/
 @keyframes clarear {
   0% {
@@ -397,7 +398,7 @@ div#intrucoes{
     display: none;
   }
   #fundo{
-    background-color: black;
+  background-color: black;
   box-shadow: inset #30eaf031 0px 0px 93px 0px, #a38c08 -15px 0px 50px,
     #ffe033 17px 0px 50px;
   overflow: auto;
