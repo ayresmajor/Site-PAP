@@ -1,3 +1,106 @@
-body, html{
-    background-color:black
+* {
+  position: absolute;
+  background-color: white;
+  margin: 0px;
+  padding: 0px;
 }
+body,
+html {
+  background-color: #3c1c15;
+  box-shadow: inset #0d0504 -12px 57px 71px 20px, inset black 0px 0px 500px 20px,
+    inset #2e153c24 0px 0px 1000px 200px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0px 1px 3px 5px rgb(0 0 0 / 71%),
+    inset 1px 20px 0px 0px rgb(216 215 215);
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0px 0px 4px 3px rgb(255 255 255 / 32%);
+  background: rgb(60 0 79);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(114, 114, 114);
+}
+
+.teto {
+  background-color: #b3a9a9;
+  box-shadow: black 0px 0px 20px 0px, inset black 0px 0px 15px 1px;
+  top: -10px;
+  left: 105px;
+  width: 1510px;
+  height: 100px;
+  border: 1px solid;
+  transform: perspective(300px) rotateX(-45deg);
+  z-index: 1;
+}
+
+#paredeesq {
+  transform: perspective(842px) rotateY(45deg);
+  top: 41px;
+  left: -25px;
+  width: 255px;
+  height: 666px;
+  z-index: 0;
+}
+
+#chao {
+  background-color: #515151;
+  box-shadow: black 0px 0px 20px 5px, inset black 0px 0px 20px 3px;
+  bottom: 4px;
+  left: 105px;
+  width: 1510px;
+  height: 100px;
+  border: 1px solid;
+  transform: perspective(300px) rotateX(45deg);
+}
+
+#porta {
+  background-color: cadetblue;
+  top: 280px;
+  left: 300px;
+  width: 220px;
+  height: 400px;
+}
+
+#porta::before {
+    content: "";
+    position: absolute;
+    top: 195px;
+    right: 15px;
+    height: 35px;
+    width: 10px;
+    border-radius: 10px;
+  background: #000000;
+}
+
+#porta::after {
+    content: "";
+    position: absolute;
+    top: 186px;
+    right: 5px;
+    height: 35px;
+    width: 10px;
+    border-radius: 50px;
+    border: 10px solid #006d0d;
+  }
+
+  #altura{
+      top: 75px;
+      left: 800px;
+      width: 80px;
+      height: 600px;
+  }
