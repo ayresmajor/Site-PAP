@@ -209,5 +209,5 @@ async function jokenpo(computer, user, selected) {
     top: "-30px",
   };
   Object.assign(intrucoes.style, styles);
-  intrucoes.innerHTML = `${resultado}, o computador jogou ${rescomp}`;
+  intrucoes.innerHTML = `${resultado}, o Jokenpo jogou ${rescomp}`;
 }
