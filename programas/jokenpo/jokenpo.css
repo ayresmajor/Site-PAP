@@ -400,10 +400,8 @@ div#intrucoes{
     display: none;
   }
   #fundo{
-  border: 5px solid #efcf17e8;
   box-shadow: inset #30eaf031 0px 0px 93px 0px, #a38c08 -15px 0px 50px,
     #ffe033 17px 0px 50px;
-  border-radius: 10px;
   overflow: auto;
   }
 }
