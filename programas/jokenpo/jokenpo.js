@@ -18,8 +18,9 @@ var jogavel = false;
 var t = 0;
 
 function iniciar() {
-  document.getElementById("fundo").style.display = "block";
-  document.getElementById("euroiniciar").style.display = "none";
+  fundo.style.display = "block";
+  fundo.scrollLeft += 210;
+  document.getElementById("euroiniciar").style.display = "none";  
 }
 
 function fechar() {
@@ -27,6 +28,10 @@ function fechar() {
   location.reload();
 }
 
+function restart(){
+  start();
+ 
+}
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 function randint(min, max) {
@@ -46,7 +51,7 @@ async function start() {
   await sleep(1500);
   fundo.style.animation = "clarear 1200ms forwards";
   menu.style.animation = "crescer 1.5s forwards";
-  const styles = {
+  let styles = {
     fontSize: "3em",
     top: "10px",
     left: "10px",
@@ -200,5 +205,9 @@ async function jokenpo(computer, user, selected) {
   }else{
     fundo.style.animation = "empate 1200ms forwards";
   }
+  let styles = {
+    top: "-30px",
+  };
+  Object.assign(intrucoes.style, styles);
   intrucoes.innerHTML = `${resultado}, o computador jogou ${rescomp}`;
 }

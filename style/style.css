@@ -131,19 +131,16 @@ footer p{
 }
 
 /*Outras paginas*/
-#fechar {
-    position: fixed;
-    right: 20px;
-    top: 10px;
-  }
   
-  #fechar span {
-    position: absolute;
+  #fechar {
+    position:sticky;
     padding: 10px;
-    top: -5px;
-    right: 10px;
+    left: 97vw;
+    top: 10px;
+    margin-bottom: 100px;
     color: transparent;
     text-shadow: 0 0 0 rgb(0, 0, 0), 0px 0px 7px rgb(255 255 255);
+    z-index: 99;
     transition: all 0.5s;
   }
   

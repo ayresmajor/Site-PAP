@@ -81,7 +81,7 @@ label#tesoura {
   left: 77px;
 }
 #block{
-  display: none;
+  display: block;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -120,7 +120,7 @@ label#tesoura {
   transition: all 1s;
 }
 
-div#intrucoes , #resultado{
+div#intrucoes{
   display: none;
   position: relative;
   bottom: 30px;
@@ -135,17 +135,17 @@ div#intrucoes , #resultado{
   animation: tpulse 1500ms infinite;
 }
 #loadingjokenpo {
-  position: relative;
-  top: 50px;
+  position: sticky;
+  top: 100px;
   left: 5px;
   display: none;
   width: auto;
 }
 .progress {
   position: relative;
-  top: 20px;
+  top: 50px;
   height: 10px;
-  width: 80%;
+  width: 90vw;
   border: 2.5px double #efcf17;
   border-radius: 15px;
   animation: pulse 1500ms infinite;
@@ -153,14 +153,14 @@ div#intrucoes , #resultado{
 
 
 #menu {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-380px, -370px);
+  transform: translate(calc(-25% - calc(0px + (196 - 0) * (100vw - 300px) / (1616 - 300))), -110%);
   width: 750px;
   height: 295px;
-  margin: 50px auto;
-  padding: 10px 10px;
+  margin-top: 50px;
+  padding: 10px;
   border: 5px solid #efcf17e8;
   box-shadow: inset #30eaf031 0px 0px 93px 0px, #a38c08 -15px 0px 50px,
     #ffe033 17px 0px 50px;
@@ -177,10 +177,10 @@ div#intrucoes , #resultado{
   background-image: url('../../imagens/pedrar100.ico');
   background-repeat: no-repeat;
   background-size: contain;
-  width: 100px; height:100px;
+  width: 100px; 
+  height:100px;
   display: inline-block;
-  animation: roda 2s alternate infinite;
-  transform: translate(0px, 60px);
+  transform: translate(0px, 30px);
 
 }
 
@@ -252,26 +252,26 @@ div#intrucoes , #resultado{
   position: absolute;
   background-color: transparent;
   box-shadow: inset #ffffff 0px 0px 0px 3px, inset #fca2ff 16px 20px 0px 0px;
-  width: 100%;
+  width: 90vw;
   height: 10px;
   border-radius: 15px;
   animation: progres 15s linear;
 }
 @keyframes progres {
   0% {
-    width: 0%;
+    width: 0vw;
   }
   25% {
-    width: 50%;
+    width: 40vw;
   }
   50% {
-    width: 75%;
+    width: 65vw;
   }
   75% {
-    width: 85%;
+    width: 75vw;
   }
   100% {
-    width: 100%;
+    width: 90vw;
   }
 }
 
@@ -279,12 +279,12 @@ div#intrucoes , #resultado{
   0% {
     width: 750px;
     height: 295px;
-    transform: translate(-380px, -370px);
+    transform: translate(calc(-25% - calc(0px + (196 - 0) * (100vw - 300px) / (1616 - 300))), -110%);
   }
   100% {
     width: 830px;
     height: 510px;
-    transform: translate(-420px, -365px);
+    transform: translate(calc(-25% - calc(0px + (220 - 0) * (100vw - 300px) / (1616 - 300))), -68%);
   }
 }
 
@@ -367,18 +367,18 @@ div#intrucoes , #resultado{
 /*fim das animações*/
 
 @media (max-width: 600px) {
-  #fundo {
-    font-size: 60%;
-  }
-  #menu{
-    margin-left: 200px;
-  }
   #startgame{
     display: inline;
     position: sticky;
     top: 40px;
     right:  10px;
     left: 10px;
+  }
+#firework1{
+    display: none;
+  }
+#firework2{
+    display: none;
   }
 }
 
