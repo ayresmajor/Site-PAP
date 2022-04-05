@@ -133,9 +133,9 @@ footer p{
 /*Outras paginas*/
   
   #fechar {
-    position:sticky;
+    position: absolute;
     padding: 10px;
-    left: 97vw;
+    right: 10px;
     top: 10px;
     margin-bottom: 100px;
     color: transparent;

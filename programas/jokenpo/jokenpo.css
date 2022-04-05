@@ -42,6 +42,10 @@ h4 {
   text-shadow: rgb(34 48 248) 1px 0px 20px;
 }
 
+#body{
+  aspect-ratio:  16/9;
+}
+
 #fundo {
   display: none;
   position: absolute;
@@ -53,8 +57,8 @@ h4 {
   backdrop-filter: blur(5px);
   background-attachment: fixed;
   scroll-behavior: smooth;
-  overflow: hidden;
   transition: all 1s;
+  aspect-ratio:  16/9;
 }
 
 div.tituloimg {
@@ -137,9 +141,8 @@ div#intrucoes{
   animation: tpulse 1500ms infinite;
 }
 #loadingjokenpo {
-  position: sticky;
-  top: 100px;
-  left: 5px;
+  position:  relative;
+  bottom:  25px;
   display: none;
   width: auto;
 }
@@ -158,8 +161,8 @@ div#intrucoes{
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(calc(-30% - calc(0px + (196 - 0) * (100vw - 300px) / (1616 - 300))), -110%);
-  width: 55vw;
+  transform: translate(-380px,  -360px);
+  width: 750px;
   height: 295px;
   margin-top: 50px;
   padding: 10px;
@@ -282,12 +285,13 @@ div#intrucoes{
   0% {
     width: 750px;
     height: 295px;
-    transform: translate(calc(-25% - calc(0px + (196 - 0) * (100vw - 300px) / (1616 - 300))), -110%);
+    transform: translate(-380px,  -360px);
+     width: 750px;
   }
   100% {
-    width: 56vw;
-    height: 510px;
-    transform: translate(calc(-25% - calc(0px + (220 - 0) * (100vw - 300px) / (1616 - 300))), -68%);
+    width: 850px;
+    height:  510px;
+    transform: translate(-420px,  -350px);
   }
 }
 
@@ -368,42 +372,3 @@ div#intrucoes{
   }
 }
 /*fim das animações*/
-
-@media (max-width: 600px) {
-  #startgame{
-    display: inline;
-    position: sticky;
-    top: 40px;
-    right:  10px;
-    left: 10px;
-  }
-#firework1{
-    display: none;
-  }
-#firework2{
-    display: none;
-  }
-  #fundo{
-    overflow: auto;
-    }
-}
-@media (max-width: 1260px){
-  #menu{
-    display: none;
-  }
-  #fundo{
-  box-shadow: inset #30eaf031 0px 0px 93px 0px, #a38c08 -15px 0px 50px,
-    #ffe033 17px 0px 50px;
-  }
-}
-@media (max-height: 750px){
-  #menu{
-    display: none;
-  }
-  #fundo{
-  background-color: black;
-  box-shadow: inset #30eaf031 0px 0px 93px 0px, #a38c08 -15px 0px 50px,
-    #ffe033 17px 0px 50px;
-  overflow: auto;
-  }
-}

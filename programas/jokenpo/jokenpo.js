@@ -18,8 +18,9 @@ var jogavel = false;
 var t = 0;
 
 function iniciar() {
+  document.body.style.aspectRatio =  "16/9";
   fundo.style.display = "block";
-  fundo.scrollLeft += 210;
+  fundo.scrollLeft += 2000;
   document.getElementById("euroiniciar").style.display = "none";  
 }
 
