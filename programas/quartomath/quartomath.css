@@ -50,10 +50,10 @@ html {
 
 #paredeesq {
   transform: perspective(842px) rotateY(45deg);
-  top: 41px;
+  top: 40px;
   left: -25px;
   width: 255px;
-  height: 666px;
+  height: 672px;
   z-index: 0;
 }
 
@@ -61,7 +61,7 @@ html {
   background-color: #515151;
   box-shadow: black 0px 0px 20px 5px, inset black 0px 0px 20px 3px;
   bottom: 4px;
-  left: 105px;
+  left: 104px;
   width: 1510px;
   height: 100px;
   border: 1px solid;
@@ -88,14 +88,14 @@ html {
 }
 
 #porta::after {
-    content: "";
-    position: absolute;
-    top: 186px;
-    right: 5px;
-    height: 35px;
-    width: 10px;
-    border-radius: 50px;
-    border: 10px solid #006d0d;
+  content: "";
+  position: absolute;
+  top: 200px;
+  right: 16px;
+  height: 6px;
+  width: 30px;
+  border-radius: 600px 200px 300px 324px;
+  background-color: rgb(255, 0, 0);
   }
 
   #altura{
