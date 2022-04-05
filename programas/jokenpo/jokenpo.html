@@ -46,28 +46,35 @@
     </footer>
     <div id="fundo">
       <label id="fechar"onclick="fechar()"><span>&#x274C;</span></label>
-      <div id="menu" class="center"> </div>
-      <div class="tituloimg flex">
-        <img src="../../imagens/pedrar200.png" alt="pedra_png" id="pedraimg" style="padding: 49.5px 0"/>
-        <img src="../../imagens/papelr200.png" alt="papel_png" id="papelimg"/>
-        <img src="../../imagens/tesourar200.png" alt="tesoura_png" id="tesouraimg" style="padding: 20.5px 0"/>
-      </div>
-      <div class="grid" id="titulo" style="margin: auto;">
-        <h3 class="flex">
-          <label id="pedra"onmouseenter="entrar(this.id)" onmouseout="sair(this.id)" onclick="select(this.id)">Pedra&#128074;</label>
-          <label id="papel" onmouseenter="entrar(this.id)" onmouseout="sair(this.id)" onclick="select(this.id)">Papel&#128400;</label>
-          <label id="tesoura" onmouseenter="entrar(this.id)" onmouseout="sair(this.id)" onclick="select(this.id)">Tesoura&#9996;</label>
-        </h3>
-        <div id="block">
+      <div id="menu" class="center">
+        <div class="tituloimg flex">
+          <img src="../../imagens/pedrar200.png" alt="pedra_png" id="pedraimg" style="padding: 49.5px 0"/>
+          <img src="../../imagens/papelr200.png" alt="papel_png" id="papelimg"/>
+          <img src="../../imagens/tesourar200.png" alt="tesoura_png" id="tesouraimg" style="padding: 20.5px 0"/>
         </div>
-        <p>
-          <input
-            type="button"
-            value="Começar&#128074;&#128400;&#9996;"
-            id="startgame"
-            onclick="start()"/>
-        </p>
-        <div id="intrucoes">PEDRA</div>
+        <div class="grid" id="titulo" style="margin: auto;">
+          <h3 class="flex">
+            <label id="pedra"onmouseenter="entrar(this.id)" onmouseout="sair(this.id)" onclick="select(this.id)">Pedra&#128074;</label>
+            <label id="papel" onmouseenter="entrar(this.id)" onmouseout="sair(this.id)" onclick="select(this.id)">Papel&#128400;</label>
+            <label id="tesoura" onmouseenter="entrar(this.id)" onmouseout="sair(this.id)" onclick="select(this.id)">Tesoura&#9996;</label>
+          </h3>
+          <div id="block">
+          </div>
+        </div>
+      </div>
+      <div class="grid">
+        <input
+          type="button"
+          value="Começar&#128074;&#128400;&#9996;"
+          id="startgame"
+          onclick="start()"/>
+      </div>
+      <div id="intrucoes" class="grid">PEDRA</div>
+      <div id="loadingjokenpo" class="grid">
+        <div class="progress flex">
+          <div class="color">
+          </div>
+        </div>
       </div>
       <div id="win" class="flex">
         <!-- firework 1-->
@@ -105,11 +112,7 @@
             ></lottie-player>
           </div>
       </div>
-      <div id="loadingjokenpo" class="grid">
-        <div class="progress flex">
-          <div class="color"></div>
-        </div>
-      </div>
+    
     </div>
     <script src="jokenpo.js"></script>
   </body>
