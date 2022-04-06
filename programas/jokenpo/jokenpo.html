@@ -48,15 +48,15 @@
       <label id="fechar"onclick="fechar()"><span>&#x274C;</span></label>
       <div id="menu" class="center">
         <div class="tituloimg flex">
-          <img src="../../imagens/pedrar200.png" alt="pedra_png" id="pedraimg" style="padding: 49.5px 0"/>
-          <img src="../../imagens/papelr200.png" alt="papel_png" id="papelimg"/>
-          <img src="../../imagens/tesourar200.png" alt="tesoura_png" id="tesouraimg" style="padding: 20.5px 0"/>
+          <img src="../../imagens/pedrar200.png" alt="pedra_png" id="pedraimg" onclick="select(this.id)" style="padding: 49.5px 0"/>
+          <img src="../../imagens/papelr200.png" alt="papel_png" id="papelimg"onclick="select(this.id)" />
+          <img src="../../imagens/tesourar200.png" alt="tesoura_png" id="tesouraimg" style="padding: 20.5px 0"onclick="select(this.id)" />
         </div>
         <div class="grid" id="titulo" style="margin: auto;">
           <h3 class="flex">
-            <label id="pedra"onmouseenter="entrar(this.id)" onmouseout="sair(this.id)" onclick="select(this.id)">Pedra&#128074;</label>
-            <label id="papel" onmouseenter="entrar(this.id)" onmouseout="sair(this.id)" onclick="select(this.id)">Papel&#128400;</label>
-            <label id="tesoura" onmouseenter="entrar(this.id)" onmouseout="sair(this.id)" onclick="select(this.id)">Tesoura&#9996;</label>
+            <label id="pedra" onclick="select(this.id)">Pedra&#128074;</label>
+            <label id="papel" onclick="select(this.id)">Papel&#128400;</label>
+            <label id="tesoura"  onclick="select(this.id)">Tesoura&#9996;</label>
           </h3>
           <div id="block">
           </div>
@@ -69,7 +69,7 @@
           id="startgame"
           onclick="start()"/>
       </div>
-      <div id="intrucoes" class="grid">PEDRA</div>
+      <div id="intrucoes" class="flex">PEDRA</div>
       <div id="loadingjokenpo" class="grid">
         <div class="progress flex">
           <div class="color">

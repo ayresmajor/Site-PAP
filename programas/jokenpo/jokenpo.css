@@ -64,13 +64,20 @@ h4 {
 #menu {
   position: relative;
   top: 100px;
+  width: 780px;
+  height: 100px;
+  max-height: 900px;
+  max-width: 800px;
   padding: 10px;
   border: 5px solid #efcf17e8;
   box-shadow: inset #30eaf031 0px 0px 93px 0px, #a38c08 -15px 0px 50px,
     #ffe033 17px 0px 50px;
   border-radius: 10px;
 }
-
+#titulo{
+  max-width: 750px;
+  max-height: 75px;
+}
 div.tituloimg img {
   display: block;
   margin: 20px;
@@ -92,14 +99,12 @@ label#tesoura {
   left: 77px;
 }
 #block{
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 935px;
-  height: 490px;
-  transform: translate(-455px, -371px);
-  border-radius: 60px;
+  display:none;
+  position: relative;
+  top: -380px;
+  left: -15px;
+  width: 790px;
+  height: 415px;
 }
 
 #startgame {
@@ -134,17 +139,20 @@ label#tesoura {
 div#intrucoes{
   display: none;
   position: relative;
+  top: 150px;
   font-family: var(--fonte-padrao);
   color: white;
   font-size: 7em;
   font-weight: 900;
   -webkit-text-stroke: 1px rgb(0, 0, 0);
   text-shadow: #a10a7ed3 5px 3px 0px, #ffc109d0 -3px -2px 0px;
+  white-space: nowrap;
   padding: 0px;
   animation: tpulse 1500ms infinite;
 }
 #loadingjokenpo {
   position:  relative;
+  top: 50px;
   bottom:  25px;
   display: none;
   width: auto;
@@ -165,6 +173,7 @@ div#intrucoes{
 }
 
 .pedraico,.papelico, .tesouraico {
+  display: inline;
   position: relative;
   background-image: url('../../imagens/pedrar100.ico');
   background-repeat: no-repeat;
@@ -172,8 +181,7 @@ div#intrucoes{
   width: 100px; 
   height:100px;
   display: inline-block;
-  transform: translate(0px, 30px);
-
+  animation: roda 1s alternate infinite;
 }
 
 .papelico{
@@ -270,15 +278,12 @@ div#intrucoes{
 
 @keyframes crescer {
   0% {
-    width: 750px;
-    height: 295px;
-    transform: translate(-380px,  -360px);
-     width: 750px;
+    width: 780px;
+    height: 360px;
   }
   100% {
-    width: 850px;
-    height:  510px;
-    transform: translate(-420px,  -350px);
+    width: 900px;
+    height: 470px;
   }
 }
 
