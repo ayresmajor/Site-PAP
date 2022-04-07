@@ -15,7 +15,7 @@ html {
   box-shadow: black 0px 0px 20px 0px, inset black 0px 0px 15px 1px;
   top: -10px;
   left: 105px;
-  width: 1510px;
+  width: 1800px;
   height: 100px;
   border: 1px solid;
   transform: perspective(300px) rotateX(-45deg);
@@ -23,10 +23,10 @@ html {
 }
 
 #paredeesq {
-  transform: perspective(842px) rotateY(45deg);
+  transform: perspective(842px) rotateY(40deg);
   top: 40px;
   left: -25px;
-  width: 255px;
+  width: 266px;
   height: 672px;
   z-index: 0;
 }
@@ -35,8 +35,8 @@ html {
   background-color: #515151;
   box-shadow: black 0px 0px 20px 5px, inset black 0px 0px 20px 3px;
 top: 650px;
-  left: 104px;
-  width: 1510px;
+  left: 106px;
+  width: 1800px;
   height: 100px;
   border: 1px solid;
   transform: perspective(300px) rotateX(45deg);
@@ -70,13 +70,6 @@ top: 650px;
   width: 30px;
   border-radius: 600px 200px 300px 324px;
   background-color: rgb(255, 0, 0);
-  }
-
-  #altura{
-      top: 75px;
-      left: 800px;
-      width: 80px;
-      height: 600px;
   }
 
   #cama{
@@ -183,9 +176,9 @@ height: 94px;
 
 /* SWITCH */
 .cube-switch {
-  top: 309px;
+  top: 420px;
   left: 626px;
-  border-radius: 10px;
+  border-radius: 3px;
   border: 1px solid rgba(0,0,0,0.4);
   box-shadow: 0 0 8px rgb(0 0 0 / 60%), inset 0 100px 50px rgb(255 255 255 / 10%);
   cursor: default;
@@ -274,19 +267,10 @@ height: 94px;
   top: 15%;
 }
 
-#light-bulb2 {
-width: 150px;
-height: 150px;
-background: url(https://lh4.googleusercontent.com/-katLGTSCm2Q/UJC0_N7XCrI/AAAAAAAABq0/6GxNfNW-Ra4/s300/lightbulb.png) no-repeat 0 0;
-}
-
-#light-bulb {
-position: absolute;
-width: 150px;
-height: 150px;
-top: 5%;
-left: 40%;
-background: url(https://lh4.googleusercontent.com/-katLGTSCm2Q/UJC0_N7XCrI/AAAAAAAABq0/6GxNfNW-Ra4/s300/lightbulb.png) no-repeat -150px 0;
-cursor: move;
-z-index: 800;
+#paisagem{
+  top: 320px;
+  left: 1300px;
+  width: 250px;
+  height: 150px;
+  background-color: rgb(255, 255, 255);
 }
