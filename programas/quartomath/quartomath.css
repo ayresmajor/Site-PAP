@@ -1,6 +1,5 @@
 * {
   position: absolute;
-  background-color: white;
   margin: 0px;
   padding: 0px;
 }
@@ -9,31 +8,6 @@ html {
   background-color: #3c1c15;
   box-shadow: inset #0d0504 -12px 57px 71px 20px, inset black 0px 0px 500px 20px,
     inset #2e153c24 0px 0px 1000px 200px;
-}
-
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0px 1px 3px 5px rgb(0 0 0 / 71%),
-    inset 1px 20px 0px 0px rgb(216 215 215);
-  border-radius: 10px;
-  background-color: transparent;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  -webkit-box-shadow: inset 0px 0px 4px 3px rgb(255 255 255 / 32%);
-  background: rgb(60 0 79);
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(114, 114, 114);
 }
 
 .teto {
@@ -60,7 +34,7 @@ html {
 #chao {
   background-color: #515151;
   box-shadow: black 0px 0px 20px 5px, inset black 0px 0px 20px 3px;
-  bottom: 4px;
+top: 650px;
   left: 104px;
   width: 1510px;
   height: 100px;
@@ -79,7 +53,7 @@ html {
 #porta::before {
     content: "";
     position: absolute;
-    top: 195px;
+    top: 175px;
     right: 15px;
     height: 35px;
     width: 10px;
@@ -90,8 +64,8 @@ html {
 #porta::after {
   content: "";
   position: absolute;
-  top: 200px;
-  right: 16px;
+  top: 180px;
+  right: 18px;
   height: 6px;
   width: 30px;
   border-radius: 600px 200px 300px 324px;
@@ -104,3 +78,57 @@ html {
       width: 80px;
       height: 600px;
   }
+
+  #cama{
+    top: 690px;
+    left: 800px;
+  }
+
+  .pe {
+    left: 25px;
+    width:15px;
+    height:15px;
+    background-color:black;
+ }
+
+ .pe:after {
+    position:absolute;
+   top:13px;
+    left:0;
+    right:0;
+    height:5px;
+    background-color:#000;
+    content:' ';
+    border-radius:50%;
+ }
+
+#pecama{
+  left:340px;
+}
+
+#camafrt{
+  background-color: #158A5F;
+  top: -70px;
+  width: 380px;
+  height: 70px;
+  border-radius: 10px;
+}
+
+#colchaofrt{
+  background-color: #848484;
+  top: -105px;
+  left: 10px;
+  width: 360px;
+  height: 40px;
+  border-radius: 2px;
+}
+
+#colchao{
+  background-color: #848484;
+    top: -187px;
+    left: 44px;
+    width: 291px;
+    height: 125px;
+    border-radius: 2px;
+    transform: perspective(300px) rotateX(75deg);  
+}
