@@ -4,7 +4,6 @@ let button = document.getElementById("startgame");
 let intrucoes = document.getElementById("intrucoes");
 let fundo = document.getElementById("fundo");
 let menu = document.getElementById("menu");
-let block = document.getElementById("block");
 let titulo = document.getElementById("titulo");
 let pedraimg = document.getElementById("pedraimg");
 let papelimg = document.getElementById("papelimg");
@@ -43,7 +42,6 @@ async function start() {
   button.style.display = "none";
   await sleep(500);
   fundo.style.backgroundColor = "rgba(0, 0, 0, 1)";
-  block.style.animation = "escurecer 1200ms forwards";
   intrucoes.style.display = "flex";
   await sleep(1500);
   intrucoes.innerText = "PAPEL";
@@ -73,7 +71,6 @@ async function start() {
   };
   Object.assign(intrucoes.style, styles);
   intrucoes.innerText = "Escolha uma das opções acima";
-  block.style.display = "none";
   loading.style.display = "grid";
   for (c = 1; c <= 15; c++) {
     if (t == 20) {
@@ -175,7 +172,7 @@ async function jokenpo(computer, user, selected) {
   if (selected == "pedra") {
     pedra.style.color = "red";
     pedraimg.style.animation =
-      "shadowout 1500ms forwards, selectedrotation 1s forwards, slidepedra 2s forwards, roda 2s alternate infinite";
+      "shadowout 1500ms forwards, selectedrotation 1s forwards, slide 2s forwards, roda 2s alternate infinite";
     papelimg.style.animation = "fadeout 1500ms forwards";
     tesouraimg.style.animation = "fadeout 1500ms forwards";
     papelimg.style.display = "none";
@@ -183,7 +180,7 @@ async function jokenpo(computer, user, selected) {
   } else if (selected == "papel") {
     papel.style.color = "red";
     papelimg.style.animation =
-      "shadowout 1500ms forwards, selectedrotation 1s forwards, slidepapel 2s forwards, roda 2s alternate infinite";
+      "shadowout 1500ms forwards, selectedrotation 1s forwards, slidel 2s forwards, roda 2s alternate infinite";
     pedraimg.style.animation = "fadeout 1500ms forwards";
     tesouraimg.style.animation = "fadeout 1500ms forwards";
     pedraimg.style.display = "none";
@@ -191,7 +188,7 @@ async function jokenpo(computer, user, selected) {
   } else {
     tesoura.style.color = "red";
     tesouraimg.style.animation =
-      "shadowout 1500ms forwards, selectedrotation 1s forwards, slidetesoura 2s forwards, roda 2s alternate infinite";
+      "shadowout 1500ms forwards, selectedrotation 1s forwards, slide 2s forwards, roda 2s alternate infinite";
     papelimg.style.animation = "fadeout 1500ms forwards";
     pedraimg.style.animation = "fadeout 1500ms forwards";
     papelimg.style.display = "none";

@@ -48,9 +48,9 @@
       <label id="fechar"onclick="fechar()"><span>&#x274C;</span></label>
       <div id="menu" class="center">
         <div class="tituloimg flex">
-          <img src="../../imagens/pedrar200.png" alt="pedra_png" id="pedraimg" onclick="select(this.id)" style="padding: 49.5px 0"/>
-          <img src="../../imagens/papelr200.png" alt="papel_png" id="papelimg"onclick="select(this.id)" />
-          <img src="../../imagens/tesourar200.png" alt="tesoura_png" id="tesouraimg" style="padding: 20.5px 0"onclick="select(this.id)" />
+          <img src="../../imagens/pedrar200.png" alt="pedra_png" id="pedraimg" onclick="select('pedra')" style="padding: 49.5px 0"/>
+          <img src="../../imagens/papelr200.png" alt="papel_png" id="papelimg"onclick="select('papel')" />
+          <img src="../../imagens/tesourar200.png" alt="tesoura_png" id="tesouraimg" style="padding: 20.5px 0"onclick="select('tesoura')" />
         </div>
         <div class="grid" id="titulo" style="margin: auto;">
           <h3 class="flex">
@@ -58,7 +58,7 @@
             <label id="papel" onclick="select(this.id)">Papel&#128400;</label>
             <label id="tesoura"  onclick="select(this.id)">Tesoura&#9996;</label>
           </h3>
-          <div id="block">
+          <div >
           </div>
         </div>
       </div>

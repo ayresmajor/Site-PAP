@@ -98,14 +98,6 @@ label#tesoura {
   position: relative;
   left: 77px;
 }
-#block{
-  display:none;
-  position: relative;
-  top: -380px;
-  left: -15px;
-  width: 790px;
-  height: 415px;
-}
 
 #startgame {
   position: relative;
@@ -345,7 +337,7 @@ div#intrucoes{
     margin-left: 490px;
   }
 }
-@keyframes slidepapel {
+@keyframes slide {
   from {
     margin-top: 20px;
   }
