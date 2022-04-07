@@ -45,8 +45,8 @@ top: 650px;
 #porta {
   background-color: cadetblue;
   top: 280px;
-  left: 300px;
-  width: 220px;
+  left: 400px;
+  width: 200px;
   height: 400px;
 }
 
@@ -108,27 +108,185 @@ top: 650px;
 
 #camafrt{
   background-color: #158A5F;
-  top: -70px;
+  top: -60px;
   width: 380px;
-  height: 70px;
+  height: 60px;
   border-radius: 10px;
 }
 
 #colchaofrt{
   background-color: #848484;
-  top: -105px;
+  top: -90px;
   left: 10px;
   width: 360px;
-  height: 40px;
+  height: 34px;
   border-radius: 2px;
 }
 
 #colchao{
   background-color: #848484;
-    top: -187px;
-    left: 44px;
-    width: 291px;
-    height: 125px;
-    border-radius: 2px;
-    transform: perspective(300px) rotateX(75deg);  
+  top: -159px;
+  left: 41px;
+  width: 299px;
+  height: 106px;
+  border-radius: 2px;
+  transform: perspective(300px) rotateX(75deg);
+}
+
+#colchao2{
+  background-color: #412681;
+  top: -159px;
+  left: 73px;
+  width: 237px;
+  height: 73px;
+  border-radius: 2px;
+  transform: perspective(300px) rotateX(75deg);
+}
+
+#cobertor{
+background-color: #802929;
+top: -154px;
+left: 42px;
+width: 297px;
+height: 94px;
+    transform: perspective(300px) rotateX(75deg);
+}
+
+#cabeceira{
+  background-color: #03dd36;
+  top: -200px;
+  left: 82px;
+  width: 217px;
+  height: 75px;
+  border-radius: 8px;
+}
+#cabeceira::after{
+  position: absolute;
+  top: 19px;
+  left: 104px;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  content: ' ';
+  border-radius: 50%;
+  box-shadow: black -70px 0px 0px 0px, black 70px 0px 0px;
+  }
+
+#almofada{
+  background-color: white;
+  top: -153px;
+  left: 122px;
+  width: 134px;
+  height: 119px;
+  border-radius: 50px;
+}
+
+/* SWITCH */
+.cube-switch {
+  top: 309px;
+  left: 626px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.4);
+  box-shadow: 0 0 8px rgb(0 0 0 / 60%), inset 0 100px 50px rgb(255 255 255 / 10%);
+  cursor: default;
+  display: block;
+  width: 60px;
+  height: 29px;
+  margin: 5% 0px 0px 10%;
+  overflow: hidden;
+  pointer-events: none;
+  width: 25px;
+  white-space: nowrap;
+  background: #333;
+}
+
+/* The switch */
+.cube-switch .switch {
+  border: 1px solid rgba(0,0,0,0.6);
+  border-radius: 6px;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 30%), inset 0 -7px 0 rgb(0 0 0 / 20%), inset 0 50px 10px rgb(0 0 0 / 20%), 0 1px 0 rgb(255 255 255 / 20%);
+  display: block;
+  height: 20px;
+  margin-left: -30px;
+  margin-top: -30px;
+  position: absolute;
+  top: 33px;
+  left: 35px;
+  width: 14px;
+  background: #666;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+/* SWITCH Active State */
+.cube-switch.active {
+  /*background:#222;
+  box-shadow:
+  0 0 5px rgba(0,0,0,0.5),
+  inset 0 50px 50px rgba(55,55,55,0.1);*/
+}
+
+.cube-switch.active .switch {
+  background:#333;
+  box-shadow:
+  inset 0 6px 0 rgba(255,255,255,0.1),
+  inset 0 7px 0 rgba(0,0,0,0.2),
+  inset 0 -50px 10px rgba(0,0,0,0.1),
+  0 1px 0 rgba(205,205,205,0.1);
+}
+
+.cube-switch.active:after,
+.cube-switch.active:before {
+  background:#333; 
+  box-shadow:
+  0 1px 0 rgba(255,255,255,0.1),
+  inset 1px 2px 1px rgba(0,0,0,0.5),
+  inset 3px 6px 2px rgba(200,200,200,0.1),
+  inset -1px -2px 1px rgba(0,0,0,0.3);
+}
+
+.cube-switch.active .switch:after,
+.cube-switch.active .switch:before {
+  background:#222;
+  border:none;
+  margin-top:0;
+  height:1px;
+}
+
+.cube-switch .switch-state {
+  display: block;
+  position: absolute;
+  left: 40%;
+  color: #FFF;
+
+  font-size: .5em;
+  text-align: center;
+}
+
+/* SWITCH On State */
+.cube-switch .switch-state.on {
+  bottom: 15%;
+}
+
+/* SWITCH Off State */
+.cube-switch .switch-state.off {
+  top: 15%;
+}
+
+#light-bulb2 {
+width: 150px;
+height: 150px;
+background: url(https://lh4.googleusercontent.com/-katLGTSCm2Q/UJC0_N7XCrI/AAAAAAAABq0/6GxNfNW-Ra4/s300/lightbulb.png) no-repeat 0 0;
+}
+
+#light-bulb {
+position: absolute;
+width: 150px;
+height: 150px;
+top: 5%;
+left: 40%;
+background: url(https://lh4.googleusercontent.com/-katLGTSCm2Q/UJC0_N7XCrI/AAAAAAAABq0/6GxNfNW-Ra4/s300/lightbulb.png) no-repeat -150px 0;
+cursor: move;
+z-index: 800;
 }
