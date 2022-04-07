@@ -60,6 +60,12 @@ async function start() {
   pedraimg.setAttribute("onmouseenter", "entrar(this.id)");
   papelimg.setAttribute("onmouseenter", "entrar(this.id)");
   tesouraimg.setAttribute("onmouseenter", "entrar(this.id)");
+  pedra.setAttribute("onclick", "select(this.id)");
+  papel.setAttribute("onclick", "select(this.id)");
+  tesoura.setAttribute("onclick", "select(this.id)");
+  pedraimg.setAttribute("onclick", "select('pedra')");
+  papelimg.setAttribute("onclick",  "select('papel')");
+  tesouraimg.setAttribute("onclick",  "select('tesoura')");
   fundo.style.animation = "clarear 1200ms forwards";
   menu.style.animation = "crescer 1.5s forwards";
   let styles = {
