@@ -1,10 +1,10 @@
-console.log('euromilhoẽs');
 function randint(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 let njogos = 1;
 let numeros = [];
 let block = [];
+let block2 = [];
 let n = 0;
 for (var c = 1; c <= njogos; c++) {
   for (cont = 0; c <= 7; c++) {
