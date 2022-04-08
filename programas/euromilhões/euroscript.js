@@ -57,25 +57,22 @@ window.addEventListener("keyup", async function (event) {
       for (c = 1; c <= palpite; c++) {
         this.window["estrelas" + c].style.display = "grid";
       }
+      for (c = 0 ; c<= palpite; c++) {
+        for(cont = 0;c <=7; c++){
+          
+        }
+      }
+      /*
       let numeros = [];
       for (c = 0; c <= palpite * 7; c++) {
         if (
-          c == 5 ||
-          c == 6 ||
-          c == 12 ||
-          c == 13 ||
-          c == 19 ||
-          c == 20 ||
-          c == 26 ||
-          c == 27 ||
-          c == 33 ||
-          c == 34
+          c == 5 || c == 6 || c == 12 || c == 13 ||c == 19 ||c == 20 ||c == 26 ||c == 27 |c== 33 ||c == 34
         ) {
           numeros.push(randint(1, 13));
         } else {
           numeros.push(randint(1, 51));
         }
-      }
+      }*/
       for (c = 0; c <= palpite * 7; c++) {
         if (numeros[c] < 10) {
           numeros[c] = "0" + numeros[c];

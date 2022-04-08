@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="import" href="/index.html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="import" href="/index.html" />
     <title>Document</title>
-</head>
-<body>
-    <div class="grid">
-        <span id="bola0" class="numeros">
-            <p>01</p>
-        </span>
-        <span id="bola1" class="numeros">
-            <p>01</p>
-        </span>
-        <span id="bola2" class="numeros">
-            <p>01</p>
-        </span>
-        <span id="bola3" class="numeros">
-            <p>01</p>
-        </span>
-        <span id="bola4"class="numeros">
-            <p>01</p>
-        </span>
-    </div>
-    <script src="../programas/jokenpo/jokenpo.js"></script>
-</body>
+  </head>
+  <body>
+    <div id="teste" class="grid" style="font-size: 5em">dcwv4w</div>
+    <script>
+      function randint(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+      }
+      let njogos = 1;
+      let numeros = [];
+      let block = [];
+      let block2 = [];
+      let n = 0;
+
+      for (let c = 0; c <= 7; c++) {
+        n = randint(1, 8);
+        block.push(n);
+        if (block.length > 1) {
+          while (true) {
+            for (cont == 0; cont <= c - 1; cont++) {
+              block2.push(block[cont]);
+            }
+            if (block2.indexOf(n) == -1) {
+              break;
+            } else {
+              block.pop();
+              n = randint(1, 8);
+              block.push(n);
+            }
+          }
+        }
+      }
+      teste.innerText = "srgljrngj";
+    </script>
+  </body>
 </html>
