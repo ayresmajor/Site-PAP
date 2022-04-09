@@ -33,7 +33,7 @@ for (let c = 0; c < 6; c++) {
   if (block.length == 2) {
     block2 = block[0];
   } else if (block.length > 2) {
-    block2 = block.slice(0, c  - 1);
+    block2 = block.slice(0, block.length  - 1);
     console.log("Block2: ", block2)
     while (block2.includes(n)) {
       d = block.indexOf(n);
