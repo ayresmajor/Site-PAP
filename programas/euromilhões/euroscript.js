@@ -93,14 +93,13 @@ window.addEventListener("keyup", async function (event) {
         });
         return num;
       }
-
       let numstr = [];
       for (let i = 0; i < palpite; i++) {
-        let numeros = seqrandom(5, 51);
+        let numeros = seqrandom(5, 50);
         let estrelas = seqrandom(2, 12);
         numstr += numeros.concat(estrelas) + ",";
       }
-     let jogo = numstr.split(",");
+      let jogo = numstr.split(",");
       jogo.pop();
 
       for (c = 0; c <= palpite * 7; c++) {
