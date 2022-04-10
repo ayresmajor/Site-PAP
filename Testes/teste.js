@@ -5,6 +5,9 @@ function randint(min, max) {
 function seqrandom(numl, maxrand) {
   numl += 1;
   maxrand += 1;
+  if(maxrand < numl){
+    maxrand = numl;
+  }
   let num = [];
   let compar = [];
   let d = 0;

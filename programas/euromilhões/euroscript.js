@@ -7,6 +7,7 @@ function fechar() {
   location.reload();
 }
 
+
 function iniciar() {
   document.getElementById("fundo").style.display = "block";
   document.getElementById("euroiniciar").style.display = "none";
@@ -22,6 +23,7 @@ function fecharinfo() {
     eurodescriauto.style.display = "block";
   }
 }
+
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 function randint(min, max) {
@@ -60,6 +62,9 @@ window.addEventListener("keyup", async function (event) {
       function seqrandom(numl, maxrand) {
         numl += 1;
         maxrand += 1;
+        if(maxrand < numl){
+          maxrand = numl;
+        }
         let num = [];
         let compar = [];
         let d = 0;
