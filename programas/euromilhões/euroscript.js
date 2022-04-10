@@ -62,7 +62,10 @@ window.addEventListener("keyup", async function (event) {
       function seqrandom(numl, maxrand) {
         numl += 1;
         maxrand += 1;
-        if(maxrand < numl){
+        if( ! Number.isInteger(numl)){
+          numl = 2
+        }
+        if(maxrand < numl  || ! Number.isInteger(maxrand)){
           maxrand = numl;
         }
         let num = [];

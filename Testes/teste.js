@@ -5,7 +5,10 @@ function randint(min, max) {
 function seqrandom(numl, maxrand) {
   numl += 1;
   maxrand += 1;
-  if(maxrand < numl){
+  if( ! Number.isInteger(numl)){
+    numl = 2
+  }
+  if(maxrand < numl  || ! Number.isInteger(maxrand)){
     maxrand = numl;
   }
   let num = [];
@@ -33,11 +36,12 @@ function seqrandom(numl, maxrand) {
 }
 
 let numstr = []
-for (let i = 0; i < 6; i++) {
+for (let i = 0; i < 5; i++) {
  let numeros = seqrandom(5, 51);
  let estrelas = seqrandom(2, 12);
   numstr += numeros.concat(estrelas) +  ',';
 }
  jogo = numstr.split(',');
  jogo.pop();
+ console.log(jogo)
 
