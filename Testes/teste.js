@@ -11,23 +11,13 @@ function seqrandom(numl, maxrand) {
   let num = [];
   let compar = [];
   let d = 0;
-  let pos1 = 0;
-  let pos2 = 0;
   let n = 0;
   for (let c = 0; c < numl; c++) {
-    pos1 = c - 2;
-    pos2 = c - 1;
     n = randint(1, maxrand);
     if (c > 0) {
       num.push(n);
-      if (c > 1) {
-        while (num[pos1] == num[pos2]) {
-          n = randint(1, maxrand);
-          num[pos2] = n;
-        }
-      }
     }
-    if (num.length > 2) {
+    if (num.length >= 2) {
       compar = num.slice(0, c - 1);
       while (compar.includes(n)) {
         d = num.indexOf(n);
