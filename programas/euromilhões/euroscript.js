@@ -57,27 +57,57 @@ window.addEventListener("keyup", async function (event) {
       for (c = 1; c <= palpite; c++) {
         this.window["estrelas" + c].style.display = "grid";
       }
-      for (c = 0 ; c<= palpite; c++) {
-        for(cont = 0;c <=7; c++){
-          
+      function seqrandom(numl, maxrand) {
+        numl += 1;
+        maxrand += 1;
+        let num = [];
+        let compar = [];
+        let d = 0;
+        let pos1 = 0;
+        let pos2 = 0;
+        let n = 0;
+        for (let c = 0; c < numl; c++) {
+          pos1 = c - 2;
+          pos2 = c - 1;
+          n = randint(1, maxrand);
+          if (c > 0) {
+            num.push(n);
+            if (c > 1) {
+              while (num[pos1] == num[pos2]) {
+                n = randint(1, maxrand);
+                num[pos2] = n;
+              }
+            }
+          }
+          if (num.length > 2) {
+            compar = num.slice(0, c - 1);
+            while (compar.includes(n)) {
+              d = num.indexOf(n);
+              n = randint(1, maxrand);
+              num[d] = n;
+            }
+          }
         }
+        num.sort(function (a, b) {
+          return a - b;
+        });
+        return num;
       }
-      /*
-      let numeros = [];
+
+      let numstr = [];
+      for (let i = 0; i < palpite; i++) {
+        let numeros = seqrandom(5, 51);
+        let estrelas = seqrandom(2, 12);
+        numstr += numeros.concat(estrelas) + ",";
+      }
+     let jogo = numstr.split(",");
+      jogo.pop();
+
       for (c = 0; c <= palpite * 7; c++) {
-        if (
-          c == 5 || c == 6 || c == 12 || c == 13 ||c == 19 ||c == 20 ||c == 26 ||c == 27 |c== 33 ||c == 34
-        ) {
-          numeros.push(randint(1, 13));
-        } else {
-          numeros.push(randint(1, 51));
+        if (jogo[c] < 10) {
+          jogo[c] = "0" + jogo[c];
         }
-      }*/
-      for (c = 0; c <= palpite * 7; c++) {
-        if (numeros[c] < 10) {
-          numeros[c] = "0" + numeros[c];
-        }
-        window["bola" + c].innerText = numeros[c];
+        window["bola" + c].innerText = jogo[c];
       }
     } else {
       fundo.style.height = "100vh";
