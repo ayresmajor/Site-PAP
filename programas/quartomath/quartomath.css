@@ -5,11 +5,16 @@
 }
 body,
 html {
-  background-color: #3c1c15;
-  box-shadow: inset #0d0504 -12px 57px 71px 20px, inset black 0px 0px 500px 20px,
-    inset #2e153c24 0px 0px 1000px 200px;
+  background-color: #515151;
 }
 
+#paredefrt{
+  top: 0px;
+  left: 0px;
+  background-color: #3c1c15;;
+  width: 1810px;
+  height: 680px;
+}
 .teto {
   background-color: #b3a9a9;
   box-shadow: black 0px 0px 20px 0px, inset black 0px 0px 15px 1px;
@@ -34,10 +39,10 @@ html {
 #chao {
   background-color: #515151;
   box-shadow: black 0px 0px 20px 5px, inset black 0px 0px 20px 3px;
-top: 650px;
-  left: 106px;
-  width: 1800px;
-  height: 100px;
+  top: 650px;
+  left: 84px;
+  width: 1841px;
+  height: 124px;
   border: 1px solid;
   transform: perspective(300px) rotateX(45deg);
 }
@@ -73,7 +78,7 @@ top: 650px;
   }
 
   #cama{
-    top: 690px;
+    top: 720px;
     left: 800px;
   }
 
@@ -137,20 +142,20 @@ top: 650px;
 }
 
 #cobertor{
-background-color: #802929;
-top: -154px;
-left: 42px;
-width: 297px;
-height: 94px;
-    transform: perspective(300px) rotateX(75deg);
+  background-color: #802929;
+  top: -155px;
+  left: 40px;
+  width: 300px;
+  height: 97px;
+  transform: perspective(300px) rotateX(75deg);
 }
 
 #cabeceira{
   background-color: #03dd36;
-  top: -200px;
+  top: -220px;
   left: 82px;
   width: 217px;
-  height: 75px;
+  height: 92px;
   border-radius: 8px;
 }
 #cabeceira::after{
@@ -270,7 +275,32 @@ height: 94px;
 #paisagem{
   top: 320px;
   left: 1300px;
-  width: 250px;
-  height: 150px;
-  background-color: rgb(255, 255, 255);
+  width: 248px;
+  height: 168px;
+  background-image: url(../../imagens/paisagem.jpg);
+  box-shadow: #00000070 0px 0px 20px 0px;
+  border: 8px solid #7c624e;
+  background-size: contain;
+}
+
+#paisagem::before {
+  content: "";
+  position: absolute;
+  top: 141px;
+  left: 2px;
+  height: 46px;
+  width: 243px;
+  border-radius: 5px 5px 0px 0px;
+  background: #7c624e;
+  box-shadow: inset #fff2e8 0px 29px 43px -40px;
+  transform: perspective(300px) rotateX(80deg);
+}
+
+#tampasecre{
+  background-color: #d80000;
+  top: 536px;
+  left: 1511px;
+  width: 292px;
+  height: 124px;
+  border: 1px solid;
 }
