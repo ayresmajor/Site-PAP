@@ -10,6 +10,7 @@ html {
 #fechar {
   position: fixed;
   left: 0;
+  width: 20px;
 }
 #paredefrt{
   top: 0px;
@@ -40,15 +41,25 @@ html {
   z-index: 0;
 }
 
+#parededir{
+background-color: #412681;
+    transform: perspective(1237px) rotateY(-40deg);
+    top: 14px;
+    left: 1734px;
+    width: 454px;
+    height: 708px;
+    z-index: 0;
+}
+
 #chao {
   background-color: #515151;
   box-shadow: black 0px 0px 20px 5px, inset black 0px 0px 20px 3px;
-  top: 650px;
-  left: 84px;
-  width: 1841px;
-  height: 124px;
+  top: 652px;
+  left: 61px;
+  width: 1893px;
+  height: 125px;
   border: 1px solid;
-  transform: perspective(300px) rotateX(45deg);
+  transform: perspective(252px) rotateX(45deg);
 }
 
 #porta {
@@ -302,11 +313,11 @@ html {
 
 #tampasecre{
   background-color: #d80000;
-  top: 90px;
-  left: 1760px;
+  top: 119px;
+  left: 1748px;
   width: 220px;
-  height: 1004px;
-  border: 1px solid;
+  height: 938px;
+
   transform: rotateX(86deg) skewY(9deg) skewX(19deg);
   
 }
@@ -315,22 +326,20 @@ html {
   content: "";
   position: absolute;
   background-color: #00d841;
-  top: -6560px;
-  left: -171px;
-  width: 242px;
-  height: 14402px;;
-  border: 1px solid;
-  transform: rotateX(86deg) rotateY(-67deg) skewY(-72deg) skewX(0deg); 
+  top: -6142px;
+  left: -163px;
+  width: 235px;
+  height: 13485px;
+  transform: rotateX(86deg) rotateY(-67deg) skewY(-72deg) skewX(0deg);
 }
 
 #mesafrt{
-  top: 628px;
-  left: 1933.5px;
+  top: 620px;
+  left: 1908.5px;
   width: 222px;
   height: 16px;
   background-color: yellow;
   transform: rotate(2deg);
-  z-index: -1;
 }
 
 #mesafrt::after{
@@ -345,17 +354,24 @@ html {
 }
 
 #pesecre{
-  top: 622px;
-  left: 1820.5px;
-  width: 75px;
-  height: 100px;
-  transform: rotate(0deg);
+  top: 600px;
+  left: 1802px;
+  width: 0;
+  height: 0;
+  border-left: 113px solid transparent;
+  border-right: 23px solid transparent;
+  border-top: 92px solid red;
+  border-radius: 20px 0px 0px 0px;
+}
+#pesecre::after{
+  content: "";
+  position: absolute;
+  top: -111px;
+  left: -6px;
+  width: 1px;
+  height: 111px;
+  background-color: yellow;
+  transform: rotate(-6deg);
+  border-radius: 20px;
 }
 
-#basesecre{
-  top: 647px;
-  left: 1722px;
-  width: 75px;
-  height: 100px;
-  background-color: yellow;
-}
