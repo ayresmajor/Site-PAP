@@ -7,13 +7,17 @@ body,
 html {
   background-color: #515151;
 }
-
+#fechar {
+  position: fixed;
+  left: 0;
+}
 #paredefrt{
   top: 0px;
   left: 0px;
-  background-color: #3c1c15;;
+  background-color: #3c1c15;
   width: 1810px;
   height: 680px;
+  z-index: -20;
 }
 .teto {
   background-color: #b3a9a9;
@@ -48,7 +52,7 @@ html {
 }
 
 #porta {
-  background-color: cadetblue;
+  background-color: rgb(159, 128, 128);
   top: 280px;
   left: 400px;
   width: 200px;
@@ -91,7 +95,7 @@ html {
 
  .pe:after {
     position:absolute;
-   top:13px;
+    bottom: -3px;
     left:0;
     right:0;
     height:5px;
@@ -298,9 +302,60 @@ html {
 
 #tampasecre{
   background-color: #d80000;
-  top: 536px;
-  left: 1511px;
-  width: 292px;
-  height: 124px;
+  top: 90px;
+  left: 1760px;
+  width: 220px;
+  height: 1004px;
   border: 1px solid;
+  transform: rotateX(86deg) skewY(9deg) skewX(19deg);
+  
+}
+
+#tampasecre::before{
+  content: "";
+  position: absolute;
+  background-color: #00d841;
+  top: -6560px;
+  left: -171px;
+  width: 242px;
+  height: 14402px;;
+  border: 1px solid;
+  transform: rotateX(86deg) rotateY(-67deg) skewY(-72deg) skewX(0deg); 
+}
+
+#mesafrt{
+  top: 628px;
+  left: 1933.5px;
+  width: 222px;
+  height: 16px;
+  background-color: yellow;
+  transform: rotate(2deg);
+  z-index: -1;
+}
+
+#mesafrt::after{
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 0px;
+  width: 222px;
+  height: 8px;
+  background-color: yellow;
+  transform: rotate(-2deg);
+}
+
+#pesecre{
+  top: 622px;
+  left: 1820.5px;
+  width: 75px;
+  height: 100px;
+  transform: rotate(0deg);
+}
+
+#basesecre{
+  top: 647px;
+  left: 1722px;
+  width: 75px;
+  height: 100px;
+  background-color: yellow;
 }
