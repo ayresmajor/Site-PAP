@@ -5,7 +5,7 @@
 }
 body,
 html {
-  background-color: #515151;
+  background-color: #000000;
 }
 #fechar {
   position: fixed;
@@ -27,9 +27,19 @@ html {
   left: 105px;
   width: 1800px;
   height: 100px;
-  border: 1px solid;
   transform: perspective(300px) rotateX(-45deg);
-  z-index: 1;
+}
+
+#luz{
+  box-shadow: rgb(255, 255, 255) 0px 0px 20px 0px, inset rgba(0, 0, 0, 0.468) 0px 0px 15px 1px; 
+  border: white solid 16px;
+  border-left: white solid 26px;
+  border-right: white solid 26px;
+  top: 17px;
+  left: 535px;
+  width: 942px;
+  height: 20px;
+  transform: perspective(300px) rotateX(-45deg);
 }
 
 #paredeesq {
@@ -42,7 +52,6 @@ html {
 }
 
 #parededir{
-background-color: #412681;
     transform: perspective(1237px) rotateY(-40deg);
     top: 14px;
     left: 1734px;
@@ -318,7 +327,7 @@ background-color: #412681;
   width: 220px;
   height: 938px;
 
-  transform: rotateX(86deg) skewY(9deg) skewX(19deg);
+  transform: rotateX(87deg) skewY(0deg) skewX(19deg);
   
 }
 
@@ -326,32 +335,22 @@ background-color: #412681;
   content: "";
   position: absolute;
   background-color: #00d841;
-  top: -6142px;
-  left: -163px;
-  width: 235px;
-  height: 13485px;
+  top: -6098px;
+  left: -219px;
+  width: 315px;
+  height: 13487px;
   transform: rotateX(86deg) rotateY(-67deg) skewY(-72deg) skewX(0deg);
 }
 
 #mesafrt{
-  top: 620px;
+  top: 612px;
   left: 1908.5px;
-  width: 222px;
-  height: 16px;
+  width: 220px;
+  height: 19px;
   background-color: yellow;
-  transform: rotate(2deg);
+  transform: rotate(0deg);
 }
 
-#mesafrt::after{
-  content: "";
-  position: absolute;
-  top: 12px;
-  left: 0px;
-  width: 222px;
-  height: 8px;
-  background-color: yellow;
-  transform: rotate(-2deg);
-}
 
 #pesecre{
   top: 600px;
@@ -375,3 +374,27 @@ background-color: #412681;
   border-radius: 20px;
 }
 
+#mesinha{
+  background-color: yellow;
+  top: 524px;
+  left: 1187px;
+  width: 140px;
+  height: 170px;
+}
+
+#basemesinha{
+  top: 50px;
+  left: 5px;
+  width: 130px;
+  height: 110px;
+  border-bottom: #d80000 5px solid;
+  border-top: #d80000 5px solid;
+  border-right: #d80000 5px solid;
+}
+#topmesinha{
+  top: 0px;
+  width: 135px;
+  height: 50px;
+  border-top: green 5px solid;
+  border-left: green 5px solid;
+}
