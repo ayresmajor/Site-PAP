@@ -6,6 +6,8 @@
 body,
 html {
   background-color: #000000;
+  top: 15px;
+  left: 100px;
 }
 #fechar {
   position: fixed;
@@ -14,20 +16,20 @@ html {
 }
 #paredefrt{
   top: 0px;
-  left: 0px;
+  left: 190px;
   background-color: #3c1c15;
-  width: 1810px;
+  width: 1620px;
   height: 680px;
   z-index: -20;
 }
 .teto {
   background-color: #b3a9a9;
   box-shadow: black 0px 0px 20px 0px, inset black 0px 0px 15px 1px;
-  top: -10px;
-  left: 105px;
-  width: 1800px;
-  height: 100px;
-  transform: perspective(300px) rotateX(-45deg);
+  top: -52px;
+  left: 61px;
+  width: 1890px;
+  height: 143px;
+  transform: perspective(310px) rotateX(-52deg);
 }
 
 #luz{
@@ -35,20 +37,20 @@ html {
   border: white solid 16px;
   border-left: white solid 26px;
   border-right: white solid 26px;
-  top: 17px;
+  top: -16px;
   left: 535px;
   width: 942px;
-  height: 20px;
+  height: 35px;
   transform: perspective(300px) rotateX(-45deg);
 }
 
 #paredeesq {
-  transform: perspective(842px) rotateY(40deg);
-  top: 40px;
-  left: -25px;
-  width: 266px;
-  height: 672px;
+  transform: perspective(1129px) rotateY(40deg);
+  top: 16px;
+  left: -165px;
   z-index: 0;
+  width: 440px;
+  height: 704px;
 }
 
 #parededir{
@@ -74,7 +76,7 @@ html {
 #porta {
   background-color: rgb(159, 128, 128);
   top: 280px;
-  left: 400px;
+  left: 580px;
   width: 200px;
   height: 400px;
 }
@@ -103,7 +105,7 @@ html {
 
   #cama{
     top: 720px;
-    left: 800px;
+    left: 910px;
   }
 
   .pe {
@@ -205,8 +207,8 @@ html {
 
 /* SWITCH */
 .cube-switch {
-  top: 420px;
-  left: 626px;
+  top: 460px;
+  left: 836px;
   border-radius: 3px;
   border: 1px solid rgba(0,0,0,0.4);
   box-shadow: 0 0 8px rgb(0 0 0 / 60%), inset 0 100px 50px rgb(255 255 255 / 10%);
@@ -377,6 +379,9 @@ html {
   border-radius: 20px;
 }
 
+#mesinhaconj{
+  left: 110px;
+}
 .mesinha{
   top: 524px;
   left: 1187px;
@@ -504,7 +509,7 @@ html {
 
 #mesinha3{
 top: 570px;
-    left: 687px;
+    left: 800px;
     width: 100px;
 }
 .bloco{
@@ -542,3 +547,94 @@ top: 570px;
   background-color: black;
   transform: perspective(95px) rotateX(76deg);
 }
+#armario{
+  top: -40px;
+
+}
+#armariobord{
+  top: 280px;
+  left: 217px;
+  width: 332px;
+  height: 425px;
+  border-top: 20px black solid;
+  border-bottom: 12px black solid;
+  border-right: 7px black solid;
+  border-left: 7px black solid;
+}
+
+.armariobott{
+  top: 716px;
+  left: 225px;
+  width: 327px;
+  height: 12px;
+  background-color: black;
+  transform: perspective(304px) rotateX(76deg);
+  border: gray 1px solid;
+}
+#armariobott2{
+  top: 295px;
+  transform: perspective(304px) rotateX(-76deg);
+
+}
+
+.armariowall{
+  position: absolute;
+  content: "";
+  top: 302px;
+  left: 218px;
+  width: 14px;
+  height: 419px;
+  background-color: black;
+  transform: perspective(819px) rotateY(62deg);
+  border: gray 1px solid;
+}
+
+#armariowall2{
+  left: 545px;
+  transform: perspective(819px) rotateY(-62deg);
+}
+
+.armdoor{
+  top: 303px;
+  left: 228px;
+  width: 165px;
+  height: 422px;
+  background-color: purple;
+}
+.armdoor::after{
+  content: "";
+  position: absolute;
+  top: 191px;
+  left: 4px;
+  width: 3px;
+  height: 40px;
+  background-color: white;
+}
+
+#armdoor2{
+  background-color: rgb(24, 24, 2);
+  top: 303px;
+  left: 385px;
+  box-shadow: black -4px 4px 20px 0px;
+}
+#armdoor2::after{
+  left: 158px;
+}
+#espelho{
+  transform: perspective(794px) rotateY(40deg);
+  top: 222px;
+  left: -33px;
+  width: 174px;
+  height: 458px;
+  background-color: rgb(0, 0, 0);
+  border: 10px black solid;
+}
+#espelho::after{
+  position: absolute;
+  content: "";
+  width: 174px;
+  height: 458px;
+  background-color: rgba(255, 255, 255, 0.576);
+  backdrop-filter: blur(5px);
+}
+
