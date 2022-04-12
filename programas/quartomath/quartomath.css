@@ -374,15 +374,74 @@ html {
   border-radius: 20px;
 }
 
-#mesinha{
-  background-color: yellow;
+.mesinha{
   top: 524px;
   left: 1187px;
   width: 140px;
   height: 170px;
 }
 
-#basemesinha{
+.gaveta{
+  top: 50px;
+  left: 5px;
+  width: 130px;
+  height: 75px;
+  background-color: white;
+}
+.gaveta::before{
+  position: absolute;
+  content: " ";
+  top: 0px;
+  left: 55px;
+  width: 28px;
+  height: 11px;
+  background-color: black;
+  box-shadow: black 0px 35px 0px;
+  border-radius: 6px;
+}
+
+.gaveta::after{
+  position: absolute;
+  content: " ";
+  top: 19px;
+  width: 130px;
+  height: 20px;
+  border-bottom: 1px solid;
+  background-color: rgb(255, 255, 255);
+}
+
+.mesback{
+  background-color: gray;
+  left: 14px;
+  width: 118px;
+  height: 170px;
+}
+.mesbot{
+  top: 150px;
+  left: 10px;
+  width: 122px;
+  height: 18px;
+  background-color: purple;
+  transform: perspective(92px) rotateX(45deg);
+}
+.mesright{
+  top: 119px;
+  left: 113px;
+  width: 33px;
+  height: 38px;
+  background-color: rgb(184, 163, 184);
+  transform: perspective(54px) rotateY(-75deg);
+}
+
+.mesleft{
+  top: 5px;
+  left: -7px;
+  width: 34px;
+  height: 46px;
+  transform: rotateY(75deg);
+}
+
+.basemesinha{
   top: 50px;
   left: 5px;
   width: 130px;
@@ -391,10 +450,11 @@ html {
   border-top: #d80000 5px solid;
   border-right: #d80000 5px solid;
 }
-#topmesinha{
+.topmesinha{
   top: 0px;
+  left: 1px;
   width: 135px;
-  height: 50px;
+  height: 120px;
   border-top: green 5px solid;
   border-left: green 5px solid;
 }
