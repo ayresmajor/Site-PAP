@@ -297,7 +297,7 @@ html {
 }
 
 #paisagem{
-  top: 320px;
+  top: 285px;
   left: 1300px;
   width: 248px;
   height: 168px;
@@ -320,6 +320,9 @@ html {
   transform: perspective(300px) rotateX(80deg);
 }
 
+#secretaria{
+  top: -15px;
+}
 #tampasecre{
   background-color: #d80000;
   top: 119px;
@@ -413,7 +416,7 @@ html {
 .mesback{
   background-color: gray;
   left: 14px;
-  width: 118px;
+  width: 132px;
   height: 170px;
 }
 .mesbot{
@@ -425,16 +428,16 @@ html {
   transform: perspective(92px) rotateX(45deg);
 }
 .mesright{
-  top: 119px;
+  top: 120px;
   left: 113px;
-  width: 33px;
+  width: 34px;
   height: 38px;
   background-color: rgb(184, 163, 184);
   transform: perspective(54px) rotateY(-75deg);
 }
 
 .mesleft{
-  top: 5px;
+  top: 4px;
   left: -7px;
   width: 34px;
   height: 46px;
@@ -457,4 +460,85 @@ html {
   height: 120px;
   border-top: green 5px solid;
   border-left: green 5px solid;
+}
+
+#mesinha2{
+  left: 1321px;
+}
+#mesinha2 > div.basemesinha{
+  top: 50px;
+  left: 5px;
+  width: 129px;
+  border-right: none;
+  border-left: #d80000  5px solid;
+}
+
+#mesinha2 > div.topmesinha{
+  left: -1px;
+  width: 135px;
+  border-left: none;
+  border-right: green 5px solid;
+}
+
+#mesinha2 > div.mesright{
+  top: 120px;
+  left: -1px;
+  width: 34px;
+  height: 38px;
+  transform: perspective(54px) rotateY(75deg);
+}
+
+#mesinha2 > div.mesleft{
+  top: 4px;
+  left: 113px;
+  width: 34px;
+  height: 46px;
+  transform: rotateY(-75deg);
+}
+
+#mesinha2 > div.mesback{
+  left: 10px;
+  width: 118px;
+  height: 170px;
+}
+
+#mesinha3{
+top: 570px;
+    left: 687px;
+    width: 100px;
+}
+.bloco{
+  width: 100px;
+  height: 40px;
+  background-color: black;
+}
+
+.bloco::after{
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 39px;
+  width: 20px;
+  height: 3px;
+  background-color: white;
+}
+#bloco2{
+  top: 80px;
+}
+#bloco2::after{
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 2px;
+  width: 3px;
+  height: 20px;
+  background-color: white;
+}
+#blocotop{
+  top: 69px;
+  left: 10px;
+  width: 82px;
+  height: 18px;
+  background-color: black;
+  transform: perspective(95px) rotateX(76deg);
 }
