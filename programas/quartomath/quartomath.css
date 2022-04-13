@@ -586,7 +586,7 @@ top: 570px;
 #armariobord{
   top: 280px;
   left: 217px;
-  width: 332px;
+  width: 278px;
   height: 425px;
   border-top: 20px black solid;
   border-bottom: 12px black solid;
@@ -597,7 +597,7 @@ top: 570px;
 .armariobott{
   top: 716px;
   left: 225px;
-  width: 327px;
+  width: 273px;
   height: 12px;
   background-color: black;
   transform: perspective(304px) rotateX(76deg);
@@ -622,35 +622,37 @@ top: 570px;
 }
 
 #armariowall2{
-  left: 545px;
+  left: 491px;
   transform: perspective(819px) rotateY(-62deg);
 }
 
 .armdoor{
   top: 303px;
   left: 228px;
-  width: 165px;
+  width: 134px;
   height: 422px;
-  background-color: purple;
+  background-color: #5c4f49
 }
 .armdoor::after{
   content: "";
   position: absolute;
   top: 191px;
-  left: 4px;
-  width: 3px;
-  height: 40px;
-  background-color: white;
+  left: 5px;
+  width: 2px;
+  height: 27px;
+  border: rgb(177, 177, 177) solid 3px;
+  border-radius: 20px;
+  box-shadow: inset #000000f2 0px 0px 4px 0px;
 }
 
 #armdoor2{
-  background-color: rgb(24, 24, 2);
+  background-color: #5A4D47;
   top: 303px;
-  left: 385px;
-  box-shadow: black -4px 4px 20px 0px;
+  left: 362px;
+  box-shadow: #000000ad -7px 6px 20px 0px;;
 }
 #armdoor2::after{
-  left: 158px;
+  left: 122px;
 }
 #espelho{
   transform: perspective(794px) rotateY(40deg);
