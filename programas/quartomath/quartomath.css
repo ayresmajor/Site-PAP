@@ -298,18 +298,27 @@ html {
   top: 15%;
 }
 
+#janela{
+left: 9px;
+}
 #paisagem{
   top: 285px;
   left: 1300px;
   width: 248px;
   height: 168px;
   background-image: url(../../imagens/paisagem.jpg);
-  box-shadow: #00000070 0px 0px 20px 0px;
-  border: 8px solid #7c624e;
   background-size: contain;
 }
 
-#paisagem::before {
+#janelasbord{
+  top: 279px;
+  left: 1292px;
+  width: 248px;
+  height: 168px;
+  border: 8px solid #7c624e;
+}
+
+#janelasbord::before {
   content: "";
   position: absolute;
   top: 141px;
@@ -320,6 +329,15 @@ html {
   background: #7c624e;
   box-shadow: inset #fff2e8 0px 29px 43px -40px;
   transform: perspective(300px) rotateX(80deg);
+}
+#janelasbord::after{
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 120px;
+  height: 176px;
+  width: 9px;
+  background: #7c624e;
 }
 
 #secretaria{
@@ -507,6 +525,20 @@ html {
   height: 170px;
 }
 
+#lavalamp{
+  top:516px;
+  left: 816px;
+  box-shadow: blue 36px 16px 20px 8px, #00a8ff 34px 33px 20px 8px;
+  animation: bolhasmov 8s alternate infinite;
+}
+@keyframes bolhasmov{
+  0% {
+    box-shadow: blue 36px 16px 20px 8px, #00a8ff 34px 33px 20px 8px;
+  }
+  70%{
+    box-shadow: blue 34px 33px 20px 8px, #00a8ff 36px 16px 20px 8px;
+  }
+}
 #mesinha3{
 top: 570px;
     left: 800px;
@@ -663,4 +695,64 @@ top: 570px;
   left: 1738px;
   width: 164px;
   height: 114px;
+}
+
+#calculadora {
+  top: 534px;
+  left: 1839px;
+  width: 90px;
+}
+
+#tabuada{
+  top: 587px;
+  left: 998px;
+  width: 29px;
+  transform: rotate(71deg);
+  z-index: 30;
+}
+
+#snail {
+  top: 574px;
+    left: 2067px;
+    width: 40px;
+}
+
+#pot{
+  top: 210px;
+  left: 1169px;
+}
+
+.pot-top{
+  top: 219px;
+  left: 331px;
+  width: 34.5px;
+  height: 4px;
+  background-color: #FF7043;
+  border-radius: 10px;
+}
+.pot-bot{
+  top: 223px;
+  left: 335px;
+  width: 15px;
+  height: 0px;
+  position: absolute;
+  border-left: 5px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 18px solid #f99474;
+  box-shadow: #0000004f 0px 14px 9px -3px;
+}
+.pot-top-shadow{
+  top: 223px;
+  left: 333px;
+  width: 24px;
+  height: 0px;
+  position: absolute;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 4px solid #F4511E;
+}
+
+#flowers{
+  top: 386px;
+  left: 1493px;
 }
