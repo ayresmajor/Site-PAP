@@ -638,3 +638,29 @@ top: 570px;
   backdrop-filter: blur(5px);
 }
 
+#tapete > img{
+  top: 687px;
+  left: 1315px;
+  width: 248px;
+  height: 71px;
+  transform: perspective(252px) rotateX(45deg);
+}
+#tapete2 > img{
+  top: 678px;
+  left: 561px;
+  width: 248px;
+  transform: perspective(252px) rotateX(45deg);
+}
+
+#cadeirag > img{
+  top: 459px;
+  left: 1526px;
+  width: 304px;
+}
+
+#computador > img{
+  top: 467px;
+  left: 1738px;
+  width: 164px;
+  height: 114px;
+}
