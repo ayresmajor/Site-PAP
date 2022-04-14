@@ -10,6 +10,7 @@ function fechar() {
 
 function iniciar() {
   document.getElementById("fundo").style.display = "block";
+  document.getElementById("euroinput").focus();
   document.getElementById("euroiniciar").style.display = "none";
 }
 
@@ -99,7 +100,6 @@ window.addEventListener("keyup", async function (event) {
       }
       let jogo = numstr.split(",");
       jogo.pop();
-
       for (c = 0; c <= palpite * 7; c++) {
         if (jogo[c] < 10) {
           jogo[c] = "0" + jogo[c];

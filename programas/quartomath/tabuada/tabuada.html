@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - CSS-only Foundation book preview</title>
+    <link rel="stylesheet" href="./tabuadastyle.css" />
+  </head>
+  <body  >
+    <div class="cover">
+      <div class="book">
+        <label for="page-1" class="book__page book__page--1"> </label>
+        <label for="page-2" class="book__page book__page--4">
+          <div class="page__content">
+            <h1 class="page__content-title">Exemplo de tabuada</h1>
+            <div class="flex">
+              <label for="fname">Tabuada de:</label>
+              <select id="operadores" class">
+                <option value="multiplicar"> multiplicação</option>
+                <option value="somar">adição</option>
+                <option value="subtrair">subtração</option>
+                <option value="dividir">divisão</option>
+              </select>
+            </div>
+            <input type="number" id="num"/>
+            <div id="tabuada">
+            </div>
+            <div class="page__number">2</div>
+          </div>
+        </label>
+
+        <!-- Resets the page -->
+        <input type="radio" name="page" id="page-1" />
+
+        <!-- Goes to the second page -->
+        <input type="radio" name="page" id="page-2" />
+        <label class="book__page book__page--2">
+          <div class="book__page-front">
+            <div class="page__content">
+              <img id="capa" src="../../../imagens/tabuadacapa.png" />
+            </div>
+          </div>
+          <div class="book__page-back">
+            <div class="page__content">
+              <h1 class="page__content-title">Índice</h1>
+              <table class="page__content-table">
+                <tr>
+                  <td align="left" style="font-size: calc(var(--base-size) *1.1);">Exemplo de Tabuada</td>
+                  <td align="left"></td>
+                  <td align="right">2</td>
+                </tr>
+                <tr>
+                  <td align="left">Contagem</td>
+                  <td align="left"></td>
+                  <td align="right">5</td>
+                </tr>
+                <tr>
+                  <td align="left">Operações</td>
+                  <td align="left"></td>
+                  <td align="right">22</td>
+                </tr>
+                <tr>
+                  <td align="left">Geometria</td>
+                  <td align="left"></td>
+                  <td align="right">23</td>
+                </tr>
+                <tr>
+                  <td align="left">Área e volumes</td>
+                  <td align="left"></td>
+                  <td align="right">50</td>
+                </tr>
+                <tr>
+                  <td align="left">Economia</td>
+                  <td align="left"></td>
+                  <td align="right">51</td>
+                </tr>
+              </table>
+              <div class="page__number">1</div>
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+    <script src="tabuadascript.js"></script>
+  </body>
+</html>
