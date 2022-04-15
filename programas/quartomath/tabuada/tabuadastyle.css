@@ -200,7 +200,6 @@ select {
   border: thin solid rgb(0, 0, 0);
   border-radius: 4px;
   display: inline-block;
-  font: inherit;
   padding: 0em 1.71em 0em 0.3em;
   text-align: center;
   position: relative;
@@ -211,7 +210,6 @@ select {
   text-transform: uppercase;
 
   /* reset */
-
   margin: 0;      
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -222,7 +220,6 @@ select {
 
 
 /* arrows */
-
 select.classic {
   background-image:
     linear-gradient(45deg, transparent 50%, rgb(0, 0, 0) 50%),
