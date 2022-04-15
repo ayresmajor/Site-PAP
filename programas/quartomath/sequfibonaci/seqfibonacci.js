@@ -50,11 +50,9 @@ async function sequenciar() {
       if (cont % 2 == 0) {
         numesq.innerHTML = `${t1}`;
         folha1.style.animation = "fadeout 500ms forwards infinite";
-        folha1.style.animationDelay = "4s";
       } else {
         numdir.innerHTML = `${t1}`;
         folha2.style.animation = "fadeout 500ms forwards infinite";
-        folha2.style.animationDelay = "4s";
       }
       resultado.innerHTML = `${t3}`;
       await sleep(tempo);
