@@ -438,7 +438,7 @@ text-shadow: 0px 0px 20px black
   right: 1.5vw;
   background-image: linear-gradient(to right, #5A3F37 0%, #2C7744  51%, #5A3F37  100%);
   font-family: consolas, "Courier New", monospace;
-  font-size: 0.6em;
+  font-size: 0.5em;
   font-weight: bold;
   border-radius: 20px;
   padding: 5px;
@@ -446,14 +446,14 @@ text-shadow: 0px 0px 20px black
 }
 
 #formato{
-  display:none;
+  display: none;
   position: absolute;
-  top: calc(50vh - 50vw);
-  width: 250px;
+  top: 1.5vh;
+  right:10vw;
   background-image: linear-gradient(to right, #000000 0%, #434343  51%, #000000  100%);
   box-shadow: rgb(0 0 0 / 87%) 0 2px 20px 0px;
   font-family: consolas, "Courier New", monospace;
-  font-size: 1.5em;
+  font-size: 0.5em;
   font-weight: bold;
   padding: 5px;
   height: auto

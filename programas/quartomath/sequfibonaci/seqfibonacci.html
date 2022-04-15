@@ -8,6 +8,7 @@
   <body>
     <div id="background" class="grid">
       <button id="voltar" class="button-29" role="button"  onclick="history.back()">VOLTAR</button>
+      <button id="formato" class="button-29" role="button"  onclick="format()">Mudar formato: ,&nbsp;</button>
   <h1 id="titulo">Sequencia de fibonacci</h1>
   <div  id="lgbtsnail" >
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -15,7 +16,7 @@
   </div>
   <span id="menu" class="grid">
     <label >Quantos termos deseja?:</label>
-     <input type="number" id="num">
+     <input type="number" id="num" min="3">
        <button class="button-29" role="button" onclick="sequenciar()"> INICIAR</button>
   </span>
       <span id="folha2" class="number numberdir"> <p>99999</p></span>
@@ -30,7 +31,6 @@
       <span id="resultado">0</span>
       <button id="pular" class="button-29" role="button" onclick="skip()">Pula</button>
     </div>
-    <button id="formato" class="button-29 grid" role="button"  onclick="format()">Mudar formato: ,&nbsp;</button>
     <script src="seqfibonacci.js"></script>
   </body>
 </html>
