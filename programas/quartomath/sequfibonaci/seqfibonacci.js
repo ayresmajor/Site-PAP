@@ -3,7 +3,7 @@ var lista = [0, 1];
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 let pular = document.getElementById("pular");
-var tempo = 5000;
+var tempo = 2500;
 function skip(){
     tempo = 0;
     pular.innerText="Aguarde..."

@@ -2,6 +2,9 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 let num = document.getElementById("num");
 window.addEventListener("click", async function () {
+  if (document.activeElement.id == "voltar") {
+    history.back()
+  }
   if (document.activeElement.id == "operadores") {
     num.blur();
   }else{

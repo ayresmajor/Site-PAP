@@ -585,6 +585,7 @@ html {
   border-right: 7px #121212 solid;
   border-left: 7px #121212 solid;
   box-shadow: #060606 0px 0px 0px 1px;
+  cursor: pointer;
 }
 
 .armariobott {

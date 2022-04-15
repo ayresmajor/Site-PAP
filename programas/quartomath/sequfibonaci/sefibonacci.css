@@ -55,7 +55,7 @@ h1 {
   width: 120px;
   position: absolute;
   z-index: 1;
-  animation: 5s snailCrawl linear alternate infinite;
+  animation: 2.5s snailCrawl linear alternate infinite;
 }
 #snail #shell {
     top: 10px;
@@ -79,7 +79,7 @@ h1 {
   right: 0;
   background: green;
   border-radius: 0 15px 5px 0;
-  animation: 0.4s slugSquish ease-in-out infinite;
+  animation: 0.2s slugSquish ease-in-out infinite;
 }
 #snail #slug:before {
   /* creates antennae */
@@ -120,7 +120,7 @@ h1 {
   background: linear-gradient(to right, rgba(183, 223, 45, 0) 0%, #b7df2d 100%);
   position: absolute;
   z-index: 0;
-  animation: 5s slimeSpread linear  alternate infinite;
+  animation: 2.5s slimeSpread linear  alternate infinite;
   border-radius: 3px;
 }
 /* animações*/
@@ -371,11 +371,11 @@ h1 {
 .numberdir{
   text-align: right;
   margin-right: 10vw;
-  margin-left: 80vw;
+  margin-left: 70vw;
 }
 .numberesq{
   margin-right: -10vw;
-  margin-left: -80vw;
+  margin-left: -70vw;
   padding-left: 0px;
   transform: scaleX(-1) rotate(26deg);
 }
