@@ -55,6 +55,7 @@ html,body{
     min-height: 100vh;
     background-color: rgb(var(--cbranco));
     font-family: var(--fonte-padrao);
+    transition: all 0.5s;
 }
 
 p{
@@ -159,33 +160,40 @@ footer p{
     padding: 10px;
     right: 10px;
     top: 10px;
-    margin-bottom: 100px;
     color: transparent;
-    text-shadow: 0 0 0 rgb(0, 0, 0), 0px 0px 7px rgb(255 255 255);
+    text-shadow: 0 0 0 rgb(0 0 0), 0px 0px 7px rgb(255 255 255), 0px 0px 20px rgb(255 255 255), 0px 0px 15px rgb(255 255 255);
     z-index: 99;
     transition: all 0.5s;
   }
-  
-  #fechar span:hover {
+  #fechar:hover {
     transform: rotate(-360deg);
+    text-shadow: 0 0 0 rgb(255, 255, 255), 0px 0px 7px rgb(0, 0, 0);
   }
 
-  input[type="button"]#iniciar {
-    text-decoration: none;
-    display: inline;
-    position: relative;
-    top: -50px;
-    left: 150px;
-    margin: 20px auto;
-    padding: 10px;
-    border-radius: 50px;
-    font-family: var(--fonte-padrao);
-    font-weight: 900;
-    font-size: 1.1em;
-    background-color: rgb(var(--cvermelho));
-    color: white;
-    transition: all 0.5s;
-  }
-  input[type="button"]#iniciar:hover {
-    background-color: rgb(var(--cazulcl));
-  }
+#iniciar {
+  position: relative;
+  top: -35px;
+  left: 18vw;
+  background-color: rgb(var(--cvermelho), 0.5);
+  border-radius: 100px;
+  box-shadow: black 0 -24px 44px -44px inset,rgba(var(--cvermelhocl), .15) 0 1px 2px,rgba(var(--cvermelhocl), .15) 0 2px 4px,rgba(var(--cvermelhocl), .15) 0 4px 8px,rgba(var(--cvermelhocl), .15) 0 8px 16px,rgba(var(--cvermelhocl), .15) 0 16px 32px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--fonte-padrao);
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  font-weight: bold;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#iniciar:hover {
+  box-shadow: rgba(var(--cvermelhocl),.35) 0 -25px 18px -14px inset,rgba(var(--cvermelhocl),.25) 0 1px 2px,rgba(var(--cvermelhocl),.25) 0 2px 4px,rgba(var(--cvermelhocl),.25) 0 4px 8px,rgba(var(--cvermelhocl),.25) 0 8px 16px,rgba(var(--cvermelhocl),.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}

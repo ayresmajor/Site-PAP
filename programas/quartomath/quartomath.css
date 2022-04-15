@@ -11,8 +11,8 @@ html {
 }
 #fechar {
   position: fixed;
-  left: 0;
-  width: 20px;
+  margin-top:20px;
+  margin-right: 40px;
 }
 #paredefrt {
   top: 0px;
