@@ -1,5 +1,8 @@
 
 var lista = [0, 1];
+var lista2 = [];
+let form= 1;
+let formato = document.getElementById("formato");
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 let pular = document.getElementById("pular");
@@ -83,11 +86,34 @@ async function sequenciar() {
       Object.assign( background.style, styles);
       for(let pos in lista){
            background.innerHTML+= `${lista[pos]} &#x2192; `
-    }
+          }
     background.innerHTML+= `Fim da sequência &#128012;`
+    formato.style.display="grid"
   } else {
     num.value = "";
     window.alert("Valor inválido");
   }
 }
+
+function format(){
+  form += 1;
+  if(form %  2 == 0){
+    formato.style.backgroundImage=" linear-gradient(to right, #ffffff 0%, #cecece 51%, #ffffff 100%)"
+    formato.style.boxShadow="inset rgb(0 0 0) 0 2px 3px 0px "
+    formato.style.color="black"
+    background.innerHTML = `${lista}, Fim da sequência &#128012; <button id="voltar" class="button-29" role="button"  onclick="history.back()">VOLTAR</button>`
+    formato.innerHTML="Mudar formato: &#x2192;&nbsp;"
+   }else{
+    formato.style.backgroundImage=" linear-gradient(to right, #000000 0%, #434343  51%, #000000  100%)"
+    formato.style.boxShadow="rgb(0 0 0 / 87%) 0 2px 20px 0px "
+    formato.style.color="white"
+    background.innerHTML ="";
+    for(let pos in lista){
+      background.innerHTML+= `${lista[pos]} &#x2192; `
+     }
+     background.innerHTML += ` Fim da sequência  &#128012;<button id="voltar" class="button-29" role="button"  onclick="history.back()">VOLTAR</button>`
+    formato.innerHTML="Mudar formato: ,&nbsp;"
+   }
+ }
+
 
