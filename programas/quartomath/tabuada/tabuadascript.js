@@ -15,27 +15,35 @@ window.addEventListener("keyup", async function (event) {
     let a = Number(num.value);
     let simbolo = "&#215;";
     let res = 0;
-    let resfinal = 0;
+    //let resfinal = 0;
+    let calc = 0;
     tabuada.innerHTML = "";
     for (var i = 1; i <= 10; i++) {
+
       if (operador == "somar") {
         res = a + i;
         simbolo = "+";
       } else if (operador == "subtrair") {
-        res = a - i;
+        calc = a + i
+        res = calc - a;
         simbolo = "-";
       } else if (operador == "dividir") {
-        res = a / i;
+        calc = i * a
+        res = calc  / a
         simbolo = "&#247;";
       } else {
         res = a * i;
       }
-      if (Number.isInteger(res)) {
+     /* if (Number.isInteger(res)) {
         resfinal = res;
       } else {
         resfinal = res.toFixed(2);
+      }*/ // Só pra colocar no relatorio
+      if(operador=="somar" || operador=="multiplicar"){
+      tabuada.innerHTML += `<p>${a}  ${simbolo} ${i} = ${res}`;
+      } else{
+        tabuada.innerHTML += `<p>${calc}  ${simbolo} ${a} = ${res}`;
       }
-      tabuada.innerHTML += `<p>${a}  ${simbolo} ${i} = ${resfinal}`;
       await sleep(250);
     }
     num.blur();
