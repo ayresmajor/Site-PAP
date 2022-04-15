@@ -27,10 +27,10 @@ async function sequenciar() {
     let cont = 3;
     titulo.style.animation = "fadeout 1500ms forwards";
     menu.style.animation = "fadeout 1500ms forwards";
+    await sleep(1500);
     resultado.style.display = "grid";
     resultado.style.animation =
       "fadein 1500ms forwards, desce2 5s forwards linear alternate infinite";
-    await sleep(1500);
     titulo.style.visibility = "hidden";
     menu.style.visibility = "hidden";
     snail.style.display = "block";
@@ -38,7 +38,7 @@ async function sequenciar() {
     lgbtsnail.style.animation = "desce 2s forwards linear alternate infinite";
     pular.style.display = "block";
     pular.style.animation =
-      "fadein 1500ms forwards"
+      "fadein 15000ms forwards, bounce 4s  infinite"
     while (cont <= quanterm) {
       folha1.style.animation = "none";
       folha2.style.animation = "none";
@@ -77,15 +77,17 @@ async function sequenciar() {
         fontWeight: "bold",
         color: "black",
         textShadow: "white 0px 0px 6px",
-        wordBreak: "break-all" 
+        wordBreak: "break-word",
+        textAlingn: "center"
       };
       Object.assign( background.style, styles);
       for(let pos in lista){
            background.innerHTML+= `${lista[pos]} &#x2192; `
     }
-    background.innerHTML+= `Fim da sequência &#128012; `
+    background.innerHTML+= `Fim da sequência &#128012;`
   } else {
     num.value = "";
     window.alert("Valor inválido");
   }
 }
+
