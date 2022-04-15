@@ -1,3 +1,6 @@
+
+var lista = [0, 1];
+
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 let pular = document.getElementById("pular");
 var tempo = 5000;
@@ -21,7 +24,6 @@ async function sequenciar() {
     let numdir = document.getElementById("numdir");
     let t1 = 0;
     let t2 = 1;
-    let lista = [0, 1];
     let cont = 3;
     titulo.style.animation = "fadeout 1500ms forwards";
     menu.style.animation = "fadeout 1500ms forwards";
