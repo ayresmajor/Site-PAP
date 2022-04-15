@@ -36,6 +36,7 @@ window.addEventListener("keyup", async function (event) {
         resfinal = res.toFixed(2);
       }
       tabuada.innerHTML += `<p>${a}  ${simbolo} ${i} = ${resfinal}`;
+      await sleep(250);
     }
     num.blur();
   }

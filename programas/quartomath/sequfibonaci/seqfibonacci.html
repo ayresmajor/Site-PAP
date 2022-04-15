@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - CSS Snail</title>
+    <link rel="stylesheet" href="sefibonacci.css" />
+  </head>
+  <body>
+    <div id="background" class="grid">
+  <h1 id="titulo">Sequencia de fibonacci</h1>
+  <div  id="lgbtsnail" >
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_b5mxg937.json"  background="transparent"  speed="1"  style=" height: 500px;"  loop  autoplay></lottie-player>
+  </div>
+  <span id="menu" class="grid">
+    <label for="tentacles">Quantos termos deseja?:</label>
+     <input type="number" id="num">
+       <button class="button-29" role="button" onclick="sequenciar()"> INICIAR</button>
+  </span>
+      <span id="folha2" class="number numberdir"> <p>99999</p></span>
+      <span id="folha1"  class="number numberesq"><p> 99888999</p> </span>
+      <span id="numesq" class="numberesq"></span>
+      <span id="numdir" class="numberdir"></span>
+      <div id="snail">
+        <div id="shell"></div>
+        <div id="slug"></div>
+      </div>
+      <div id="slime"></div>
+      <span id="resultado">0</span>
+    </div>
+    <button id="pular" class="button-29" role="button" onclick="skip()">Pular</button>
+    <script src="seqfibonacci.js"></script>
+  </body>
+</html>
+
