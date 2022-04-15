@@ -405,6 +405,7 @@ text-shadow: 0px 0px 20px black
 #resultado{
   opacity: 0%;
   display: none;
+  animation: fadein 1500ms forwards, desce2 5s forwards linear alternate infinite;
  background-color: #0000008e;
  box-shadow: rgba(0, 0, 0, 0.969) 0px 0px 20px 0px;
  padding: 1em;
@@ -419,21 +420,21 @@ text-shadow: 0px 0px 20px black
 }
 
 #pular{
-  display: none;
+  position:absolute;
   opacity: 0%;
-  top: 0px;
-  right: 15vw;
+  top: 500px;
+  right: 12.5vw;
+  text-align: center;
   font-size: 1.1em;
   border-radius: 50px;
  padding: 10px;
  background-image: linear-gradient(20deg, purple, blue);
- position: relative;
  box-shadow: rgba(0, 0, 0, 0.67) 0px 0px 12px;
 }
 
 #voltar{
   position: absolute;
-  top: 1.5vw;
+  top: 1.5vh;
   right: 1.5vw;
   background-image: linear-gradient(to right, #5A3F37 0%, #2C7744  51%, #5A3F37  100%);
   font-family: consolas, "Courier New", monospace;
@@ -445,9 +446,9 @@ text-shadow: 0px 0px 20px black
 }
 
 #formato{
-  display: none;
+  display:none;
   position: absolute;
-  top: 5vw;
+  top: calc(50vh - 50vw);
   width: 250px;
   background-image: linear-gradient(to right, #000000 0%, #434343  51%, #000000  100%);
   box-shadow: rgb(0 0 0 / 87%) 0 2px 20px 0px;

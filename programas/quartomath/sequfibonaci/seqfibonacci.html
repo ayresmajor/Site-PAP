@@ -14,7 +14,7 @@
     <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_b5mxg937.json"  background="transparent"  speed="1"  style=" height: 500px;"  loop  autoplay></lottie-player>
   </div>
   <span id="menu" class="grid">
-    <label for="tentacles">Quantos termos deseja?:</label>
+    <label >Quantos termos deseja?:</label>
      <input type="number" id="num">
        <button class="button-29" role="button" onclick="sequenciar()"> INICIAR</button>
   </span>
@@ -28,9 +28,9 @@
       </div>
       <div id="slime"></div>
       <span id="resultado">0</span>
+      <button id="pular" class="button-29" role="button" onclick="skip()">Pula</button>
     </div>
     <button id="formato" class="button-29 grid" role="button"  onclick="format()">Mudar formato: ,&nbsp;</button>
-    <button id="pular" class="button-29" role="button" onclick="skip()">Pular</button>
     <script src="seqfibonacci.js"></script>
   </body>
 </html>

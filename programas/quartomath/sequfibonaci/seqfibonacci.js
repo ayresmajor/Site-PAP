@@ -39,7 +39,6 @@ async function sequenciar() {
     snail.style.display = "block";
     slime.style.display = "block";
     lgbtsnail.style.animation = "desce 2s forwards linear alternate infinite";
-    pular.style.display = "block";
     pular.style.animation =
       "fadein 15000ms forwards, bounce 4s  infinite"
     while (cont <= quanterm) {
@@ -84,10 +83,11 @@ async function sequenciar() {
         textAlingn: "center"
       };
       Object.assign( background.style, styles);
+      background.innerHTML ="";
       for(let pos in lista){
-           background.innerHTML+= `${lista[pos]} &#x2192; `
-          }
-    background.innerHTML+= `Fim da sequência &#128012;`
+        background.innerHTML+= `${lista} , `
+       }
+       background.innerHTML += ` Fim da sequência  &#128012;<button id="voltar" class="button-29" role="button"  onclick="history.back()">VOLTAR</button> `
     formato.style.display="grid"
   } else {
     num.value = "";
@@ -101,7 +101,11 @@ function format(){
     formato.style.backgroundImage=" linear-gradient(to right, #ffffff 0%, #cecece 51%, #ffffff 100%)"
     formato.style.boxShadow="inset rgb(0 0 0) 0 2px 3px 0px "
     formato.style.color="black"
-    background.innerHTML = `${lista}, Fim da sequência &#128012; <button id="voltar" class="button-29" role="button"  onclick="history.back()">VOLTAR</button>`
+    background.innerHTML ="";
+    for(let pos in lista){
+      background.innerHTML+= `${lista} , `
+     }
+     background.innerHTML += ` Fim da sequência  &#128012;<button id="voltar" class="button-29" role="button"  onclick="history.back()">VOLTAR</button> `
     formato.innerHTML="Mudar formato: &#x2192;&nbsp;"
    }else{
     formato.style.backgroundImage=" linear-gradient(to right, #000000 0%, #434343  51%, #000000  100%)"
@@ -111,7 +115,7 @@ function format(){
     for(let pos in lista){
       background.innerHTML+= `${lista[pos]} &#x2192; `
      }
-     background.innerHTML += ` Fim da sequência  &#128012;<button id="voltar" class="button-29" role="button"  onclick="history.back()">VOLTAR</button>`
+     background.innerHTML += ` Fim da sequência  &#128012;<button id="voltar" class="button-29" role="button"  onclick="history.back()">VOLTAR</button> `
     formato.innerHTML="Mudar formato: ,&nbsp;"
    }
  }
