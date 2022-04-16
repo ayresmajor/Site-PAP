@@ -19,6 +19,7 @@ async function sequenciar() {
     let titulo = document.getElementById("titulo");
     let menu = document.getElementById("menu");
     let lgbtsnail = document.getElementById("lgbtsnail");
+    let simbolo = document.getElementById("simbolo");
     let folha1 = document.getElementById("folha1");
     let folha2 = document.getElementById("folha2");
     let resultado = document.getElementById("resultado");
@@ -37,6 +38,7 @@ async function sequenciar() {
     menu.style.visibility = "hidden";
     snail.style.display = "block";
     slime.style.display = "block";
+    simbolo.style.display = "block";
     lgbtsnail.style.animation = "desce 2s forwards linear alternate infinite";
     pular.style.animation =
       "fadein 15000ms forwards, bounce 4s  infinite"
@@ -58,17 +60,6 @@ async function sequenciar() {
       await sleep(tempo);
       cont += 1;
     }
-    titulo.style.display = "none";
-    menu.style.display = "none";
-    snail.style.display = "none";
-    slime.style.display = "none";
-    folha2.style.display = "none";
-    folha1.style.display = "none";
-    numesq.style.display = "none";
-    numdir.style.display = "none";
-    pular.style.display = "none";
-    resultado.style.display = "none";
-    lgbtsnail.style.display = "none";
     let background = document.getElementById("background");
     let styles = {
         fontFamily: 'consolas, "Courier New", monospace',
@@ -85,6 +76,7 @@ async function sequenciar() {
       background.innerHTML ="";
       for(let pos in lista){
         background.innerHTML+= `${lista[pos]} , `
+        await sleep(100)
        }
        background.innerHTML += ` Fim da sequência  &#128012;<button id="voltar" class="button-29" role="button"  onclick="history.back()">VOLTAR</button>       <button id="formato" class="button-29" role="button"  onclick="format()" style="  display: grid;">Mudar formato: &#x2192; </button> `
   } else {
@@ -93,7 +85,7 @@ async function sequenciar() {
   }
 }
 
-function format(){
+async function format(){
   form += 1;
   background.innerHTML ="";
   if(form %  2 == 0){
