@@ -152,9 +152,9 @@ let seg_dot = document.querySelector('.seg_dot')
   minutos.innerHTML = m;
   segundos.innerHTML = s;
 
-  hh.style.strokeDashoffset = 251 - (251 * h) / 12; // 12horas
-  mm.style.strokeDashoffset = 251 - (251 * m) / 60;
-  ss.style.strokeDashoffset = 251 - (251 * s) / 60;
+  hh.style.strokeDashoffset = 189 - (189 * h) / 12; // 12horas
+  mm.style.strokeDashoffset = 189 - (189 * m) / 60;
+  ss.style.strokeDashoffset = 189 - (189 * s) / 60;
 
   hr_dot.style.transform = `rotate(${h * 30}deg)`;
   min_dot.style.transform = `rotate(${m * 6}deg)`;
