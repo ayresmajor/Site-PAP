@@ -424,7 +424,7 @@ html {
   width: 130px;
   height: 20px;
   border-bottom: 1px solid;
-  background-color: whitesmoke
+  background-color: whitesmoke;
 }
 
 .mesback {
@@ -851,7 +851,7 @@ html {
   left: 1493px;
 }
 
-#relogio{
+#relogio {
   top: 160px;
   left: 520px;
   width: 312px;
@@ -859,25 +859,26 @@ html {
   background-color: #2c2738;
   /*background-image: linear-gradient(to top, #302f32 0%, #2c3e50 74%);*/
   border-radius: 40px;
-  box-shadow: black 0px 14px 16px -8px; 
+  box-shadow: black 0px 14px 16px -8px;
 }
 
-#time{
+#time {
   top: 50px;
   left: 145px;
-  color: #fff
+  color: #fff;
 }
 
-#time .circle{
+#time .circle {
   width: 90px;
   height: 90px;
 }
-#time .circle svg{
+#time .circle svg {
   width: 90px;
   height: 90px;
+  transform: rotate(270deg);
 }
 
-#time .circle svg circle{
+#time .circle svg circle {
   width: 100%;
   height: 100%;
   fill: transparent;
@@ -885,32 +886,48 @@ html {
   stroke-width: 3;
 }
 
-#time .circle svg circle:nth-child(2){
-  stroke: #f00;
+#time .circle svg circle:nth-child(2) {
+  stroke: var(--clr);
+  stroke-dasharray: 251;
 }
-#time div{
+#time div {
   text-align: center;
   font-weight: 500;
 }
-#hora{
-  left:-100px
+#hora {
+  left: -100px;
 }
-#cir-hora{
+#cir-hora {
   top: -29px;
   left: -129px;
 }
 
-#minutos{
+#minutos {
 }
-#cir-minutos{
+#cir-minutos {
   top: -28px;
   left: -30px;
 }
 
-#segundos{
-left:100px
+#segundos {
+  left: 100px;
 }
-#cir-segundos{
+#cir-segundos {
   top: -29px;
   left: 70px;
+}
+
+.dots {
+  width: 100%;
+  height: 100%;
+}
+
+.dots::before {
+  content: " ";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: var(--clr);
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px var(--clr) , 0px 0px 60px var(--clr);
 }

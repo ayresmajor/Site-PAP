@@ -132,6 +132,14 @@ setInterval(() => {
   let minutos = document.getElementById("minutos");
   let segundos = document.getElementById("segundos");
 
+  let hh = document.getElementById("hh");
+  let mm = document.getElementById("mm");
+  let ss = document.getElementById("ss");
+
+let hr_dot = document.querySelector('.hr_dot')
+let min_dot = document.querySelector('.min_dot')
+let seg_dot = document.querySelector('.seg_dot')
+
   let h = new Date().getHours();
   let m = new Date().getMinutes();
   let s = new Date().getSeconds();
@@ -140,7 +148,15 @@ setInterval(() => {
   m = m < 10 ? "0" + m : m;
   s = s < 10 ? "0" + s : s;
 
-  hora.innerHTML = h;
+  hora.innerHTML = h ;
   minutos.innerHTML = m;
   segundos.innerHTML = s;
+
+  hh.style.strokeDashoffset = 251 - (251 * h) / 12; // 12horas
+  mm.style.strokeDashoffset = 251 - (251 * m) / 60;
+  ss.style.strokeDashoffset = 251 - (251 * s) / 60;
+
+  hr_dot.style.transform = `rotate(${h * 30}deg)`;
+  min_dot.style.transform = `rotate(${m * 6}deg)`;
+  seg_dot.style.transform = `rotate(${s * 6}deg)`;
 });
