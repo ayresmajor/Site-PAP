@@ -160,11 +160,3 @@ let seg_dot = document.querySelector('.seg_dot')
   min_dot.style.transform = `rotate(${-4.5 + (m * 6)}deg)`;
   seg_dot.style.transform = `rotate(${-4.5 + (se * 6)}deg)`;
 });
-
-$('.cube-switch .switch').click(function() {
-  if ($('.cube-switch').hasClass('active')) {
-      $('.cube-switch').removeClass('active');
-  } else {
-      $('.cube-switch').addClass('active');
-  }
-});
