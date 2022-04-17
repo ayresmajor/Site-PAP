@@ -11,7 +11,7 @@ html {
 }
 #fechar {
   position: fixed;
-  margin-top:20px;
+  margin-top: 20px;
   margin-right: 40px;
 }
 #paredefrt {
@@ -75,11 +75,13 @@ html {
 }
 
 #porta {
-  background-color: rgb(159, 128, 128);
-  top: 280px;
-  left: 580px;
-  width: 200px;
-  height: 400px;
+  background-color: rgb(199, 191, 191);
+  top: 288px;
+  left: 570px;
+  width: 190px;
+  height: 390px;
+  border: 10px solid rgb(52, 37, 24);
+  box-shadow: inset black 0px 0px 5px 0px;
 }
 
 #porta::before {
@@ -132,7 +134,7 @@ html {
 }
 
 #camafrt {
-  background-color: #158a5f;
+  background-color: #9da9a5;
   top: -60px;
   width: 380px;
   height: 60px;
@@ -140,7 +142,7 @@ html {
 }
 
 #colchaofrt {
-  background-color: #848484;
+  background-color: #e9c3ff;
   top: -90px;
   left: 10px;
   width: 360px;
@@ -159,7 +161,7 @@ html {
 }
 
 #colchao2 {
-  background-color: #412681;
+  background-color: #e9c3ff;
   top: -159px;
   left: 73px;
   width: 237px;
@@ -169,7 +171,7 @@ html {
 }
 
 #cobertor {
-  background-color: #802929;
+  background-color: #341b44;
   top: -155px;
   left: 40px;
   width: 300px;
@@ -178,7 +180,7 @@ html {
 }
 
 #cabeceira {
-  background-color: #03dd36;
+  background-color: #aab0ac;
   top: -220px;
   left: 82px;
   width: 217px;
@@ -198,7 +200,7 @@ html {
 }
 
 #almofada {
-  background-color: white;
+  background-color: #e8e8e8;
   top: -153px;
   left: 122px;
   width: 134px;
@@ -316,7 +318,7 @@ html {
   left: 1292px;
   width: 248px;
   height: 168px;
-  border: 8px solid #7c624e;
+  border: 8px solid #553d29;
 }
 
 #janelasbord::before {
@@ -327,8 +329,8 @@ html {
   height: 46px;
   width: 243px;
   border-radius: 5px 5px 0px 0px;
-  background: #7c624e;
-  box-shadow: inset #fff2e8 0px 29px 43px -40px;
+  background: #553d29;
+  box-shadow: inset #a57c5b 1px 20px 20px 0px;
   transform: perspective(300px) rotateX(80deg);
 }
 #janelasbord::after {
@@ -338,7 +340,7 @@ html {
   left: 120px;
   height: 176px;
   width: 9px;
-  background: #7c624e;
+  background: #553d29;
 }
 
 #secretaria {
@@ -401,7 +403,7 @@ html {
   left: 5px;
   width: 130px;
   height: 75px;
-  background-color: white;
+  background-color: whitesmoke;
 }
 .gaveta::before {
   position: absolute;
@@ -422,11 +424,11 @@ html {
   width: 130px;
   height: 20px;
   border-bottom: 1px solid;
-  background-color: rgb(255, 255, 255);
+  background-color: whitesmoke
 }
 
 .mesback {
-  background-color: gray;
+  background-color: #767676;
   left: 14px;
   width: 132px;
   height: 170px;
@@ -626,15 +628,15 @@ html {
   box-shadow: #000000ad 2px 10px 3px 0px, inset #000000ad 1px 6px 8px 0px;
 }
 
-@keyframes slide{
-  0%{
+@keyframes slide {
+  0% {
     left: 228px;
   }
-  70%{
-    left: 342px
+  70% {
+    left: 342px;
   }
-  100%{
-    left: 342px
+  100% {
+    left: 342px;
   }
 }
 .armdoor::after {
@@ -669,7 +671,7 @@ html {
   box-shadow: inset black 0px 0px 10px 1px;
   border: none;
 }
-#armarioinback{
+#armarioinback {
   top: 315px;
   left: 247px;
   width: 116px;
@@ -679,7 +681,7 @@ html {
   border: none;
 }
 
-#armarioinbott{
+#armarioinbott {
   background-color: #b6a091;
   top: 661px;
   left: 239px;
@@ -747,6 +749,7 @@ html {
   top: 459px;
   left: 1526px;
   width: 304px;
+  filter: brightness(70%);
 }
 
 #computador > img {
@@ -776,38 +779,37 @@ html {
 
 /* animações para cada posisão de snail*/
 
-@keyframes  snapos0 {
-100%{
-  left: 1900px;
-}
+@keyframes snapos0 {
+  100% {
+    left: 1900px;
+  }
 }
 
 @keyframes snapos1 {
-  100%{
+  100% {
     top: 530px;
   }
 }
 
 @keyframes snapos2 {
-  100%{
+  100% {
     left: 213px;
   }
 }
 
 @keyframes snapos3 {
-  100%{
+  100% {
     left: 1790px;
   }
 }
 
 @keyframes snapos4 {
-  100%{
+  100% {
     left: 484px;
   }
 }
 
 /* fim*/
-
 
 #pot {
   top: 210px;
