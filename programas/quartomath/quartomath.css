@@ -241,64 +241,11 @@ html {
   margin-top: -30px;
   position: absolute;
   top: 33px;
-  left: 35px;
+  left: 34.5px;
   width: 14px;
   background: #666;
-  transition: all 0.2s ease-out;
   cursor: pointer;
   pointer-events: auto;
-}
-
-/* SWITCH Active State */
-.cube-switch.active {
-  /*background:#222;
-  box-shadow:
-  0 0 5px rgba(0,0,0,0.5),
-  inset 0 50px 50px rgba(55,55,55,0.1);*/
-}
-
-.cube-switch.active .switch {
-  background: #333;
-  box-shadow: inset 0 6px 0 rgba(255, 255, 255, 0.1),
-    inset 0 7px 0 rgba(0, 0, 0, 0.2), inset 0 -50px 10px rgba(0, 0, 0, 0.1),
-    0 1px 0 rgba(205, 205, 205, 0.1);
-}
-
-.cube-switch.active:after,
-.cube-switch.active:before {
-  background: #333;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1),
-    inset 1px 2px 1px rgba(0, 0, 0, 0.5),
-    inset 3px 6px 2px rgba(200, 200, 200, 0.1),
-    inset -1px -2px 1px rgba(0, 0, 0, 0.3);
-}
-
-.cube-switch.active .switch:after,
-.cube-switch.active .switch:before {
-  background: #222;
-  border: none;
-  margin-top: 0;
-  height: 1px;
-}
-
-.cube-switch .switch-state {
-  display: block;
-  position: absolute;
-  left: 40%;
-  color: #fff;
-
-  font-size: 0.5em;
-  text-align: center;
-}
-
-/* SWITCH On State */
-.cube-switch .switch-state.on {
-  bottom: 15%;
-}
-
-/* SWITCH Off State */
-.cube-switch .switch-state.off {
-  top: 15%;
 }
 
 #janela {
@@ -576,6 +523,7 @@ html {
 }
 #armario {
   top: -40px;
+  left: 3px;
 }
 #armariobord {
   top: 280px;
@@ -853,13 +801,13 @@ html {
 
 #relogio {
   top: 160px;
-  left: 520px;
+  left: 510px;
   width: 312px;
   height: 115px;
-  background-color: #2c2738;
-  /*background-image: linear-gradient(to top, #302f32 0%, #2c3e50 74%);*/
-  border-radius: 40px;
-  box-shadow: black 0px 14px 16px -8px;
+  background-color: rgb(133, 133, 133);
+  border-radius: 15px;
+  border: 10px solid rgb(52, 37, 24);
+  box-shadow: inset black 0px 0px 5px 0px, inset #00000066 0px 0px 30px 7px;
 }
 
 #time {
@@ -883,7 +831,6 @@ html {
   width: 100%;
   height: 100%;
   fill: transparent;
-  stroke: #131313;
   stroke-width: 3;
   transform:translate(5px,5px);
 }
@@ -895,9 +842,20 @@ html {
 #time div {
   text-align: center;
   font-weight: 500;
+  font-size: 1.25em;
+}
+
+#time div span {
+  position: absolute;
+  top: 2em;
+  font-size: 0.35em;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+
 }
 #hora {
-  left: -100px;
+  top: -5px;
+  left: -104px;
 }
 #cir-hora {
   top: -29px;
@@ -905,6 +863,13 @@ html {
 }
 
 #minutos {
+  top: -5px;
+  left: -7px;
+}
+
+#minutos span{
+  writing-mode: vertical-lr;
+  text-orientation: upright;
 }
 #cir-minutos {
   top: -28px;
@@ -912,7 +877,8 @@ html {
 }
 
 #segundos {
-  left: 100px;
+  top: -5px;
+  left: 92px;
 }
 #cir-segundos {
   top: -29px;
@@ -923,26 +889,31 @@ html {
   top: 10px;
   width: 70px;
   height: 70px;
-  background: black;
+  background: #131313;
   border-radius: 50%;
+  box-shadow: 0px 0px 0px 3px #131313;
 }
 
 .dots::before {
   content: " ";
   position: absolute;
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   background-color: var(--clr);
   border-radius: 50%;
   box-shadow: 0px 0px 20px var(--clr) , 0px 0px 60px var(--clr);
 }
 
 .hr_dot{
-
+  top: -26px;
+  left: -124px
 }
 .min_dot{
+  top: -24px;
+  left: -26px;
   
 }
 .seg_dot{
-  
+  top: -25px;
+  left: 73px;  
 }

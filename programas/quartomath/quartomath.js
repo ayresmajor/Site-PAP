@@ -142,21 +142,29 @@ let seg_dot = document.querySelector('.seg_dot')
 
   let h = new Date().getHours();
   let m = new Date().getMinutes();
-  let s = new Date().getSeconds();
+  let se = new Date().getSeconds();
 
   h = h < 10 ? "0" + h : h;
   m = m < 10 ? "0" + m : m;
-  s = s < 10 ? "0" + s : s;
+  se = se < 10 ? "0" + se : se;
 
-  hora.innerHTML = h ;
-  minutos.innerHTML = m;
-  segundos.innerHTML = s;
+  hora.innerHTML = h + "<span>h</span>";
+  minutos.innerHTML = m + "<span style='top: 0.1em;  letter-spacing: -0.4em;' >min</span>";
+  segundos.innerHTML = se + "<span>s</span>";
 
-  hh.style.strokeDashoffset = 189 - (189 * h) / 12; // 12horas
+  hh.style.strokeDashoffset = 189 - (-189 * h) / 12; // 12horas
   mm.style.strokeDashoffset = 189 - (189 * m) / 60;
-  ss.style.strokeDashoffset = 189 - (189 * s) / 60;
+  ss.style.strokeDashoffset = 189 - (189 * se) / 60;
 
-  hr_dot.style.transform = `rotate(${h * 30}deg)`;
-  min_dot.style.transform = `rotate(${m * 6}deg)`;
-  seg_dot.style.transform = `rotate(${s * 6}deg)`;
+  hr_dot.style.transform = `rotate(${-4.5 + (-h * 30)}deg)`;
+  min_dot.style.transform = `rotate(${-4.5 + (m * 6)}deg)`;
+  seg_dot.style.transform = `rotate(${-4.5 + (se * 6)}deg)`;
+});
+
+$('.cube-switch .switch').click(function() {
+  if ($('.cube-switch').hasClass('active')) {
+      $('.cube-switch').removeClass('active');
+  } else {
+      $('.cube-switch').addClass('active');
+  }
 });
