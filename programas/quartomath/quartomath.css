@@ -212,8 +212,7 @@ html {
   left: 836px;
   border-radius: 3px;
   border: 1px solid rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 8px rgb(0 0 0 / 60%),
-    inset 0 100px 50px rgb(255 255 255 / 10%);
+  box-shadow: 0 0 8px rgb(0 0 0 / 60%), inset 0 100px 50px rgb(255 255 255 / 10%), inset 0px -3px 5px rgb(14 0 255 / 26%);
   cursor: default;
   display: block;
   width: 60px;
@@ -260,6 +259,19 @@ html {
   height: 168px;
   background-image: url(../../imagens/paisagem.jpg);
   background-size: contain;
+  background-color: #9bb2e6;
+  /*filtros pro ciclo-tarde-noite*/
+  filter: brightness(120%);
+
+  filter:saturate(120%);
+  background-color: #ffa50038;
+
+  filter:saturate(120%) brightness(60%);
+  background-color: #ffa60010;
+
+  filter:brightness(20%) grayscale(44%);
+  background-color: #16164c14;
+
 
 }
 
@@ -270,6 +282,7 @@ html {
   height: 168px;
   border: 8px solid #553d29;
   box-shadow: #ffffff1f -1px 6px 20px 0px;
+  background-color: #ffa50038;
 }
 
 #janelasbord::before {
@@ -476,6 +489,7 @@ html {
   left: 816px;
   box-shadow: blue 36px 16px 20px 8px, #00a8ff 34px 33px 20px 8px;
   animation: bolhasmov 8s alternate infinite;
+  z-index: 11;
 }
 @keyframes bolhasmov {
   0% {
@@ -489,11 +503,13 @@ html {
   top: 570px;
   left: 800px;
   width: 100px;
+  z-index: 11;
 }
 .bloco {
   width: 100px;
   height: 40px;
   background-color: black;
+  box-shadow: #0000ff7d 0px 20px 20px -14px;
 }
 
 .bloco::after {
@@ -502,8 +518,9 @@ html {
   top: 2px;
   right: 39px;
   width: 20px;
-  height: 3px;
-  background-color: white;
+  height: 3.5px;
+  background-color: #464646;
+  box-shadow: inset #0000ffa3 -1px 11px 3px -10px;
 }
 #bloco2 {
   top: 80px;
@@ -515,7 +532,7 @@ html {
   right: 2px;
   width: 3px;
   height: 20px;
-  background-color: white;
+  box-shadow: inset #0000ff4f 0px 20px 8px -10px;
 }
 #blocotop {
   top: 69px;
@@ -704,7 +721,7 @@ html {
   top: 459px;
   left: 1526px;
   width: 304px;
-  filter: brightness(70%);
+  filter: brightness(60%) drop-shadow(0px 12px 18px #000);
 }
 
 #computador {

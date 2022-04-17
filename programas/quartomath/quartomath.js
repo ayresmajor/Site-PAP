@@ -158,6 +158,34 @@ let seg_dot = document.querySelector('.seg_dot')
   seg_dot.style.transform = `rotate(${-4.5 + (se * 6)}deg)`;
 });
 
+let paisagem = document.getElementById("paisagem");
+let janelasbord = document.getElementById("janelasbord");
+let h = new Date().getHours();
+if(h > 6 && h <= 11){
+  paisagem.style.filter = "brightness(120%)"
+  janelasbord.style.backgroundColor = "transparent"
+}else if(h > 11 && h <=16){
+  paisagem.style.filter = "saturate(120%)"
+  janelasbord.style.backgroundColor = "#ffa50038"
+}else if(h > 16 && h <=20){
+  paisagem.style.filter = "saturate(120% brightness(60%)"
+  janelasbord.style.backgroundColor = "#ffa60010"
+} else {
+  paisagem.style.filter = "brightness(20%) grayscale(44%)"
+  janelasbord.style.backgroundColor = "#16164c14"
+}
+
+
+
+
+
+
+
+
+
+
+
+
 //iluminação
 let ilumin = 1;
 
