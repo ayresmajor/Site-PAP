@@ -171,7 +171,7 @@ html {
 }
 
 #cobertor {
-  background-color: #341b44;
+  background-color: #201143;
   top: -155px;
   left: 40px;
   width: 300px;
@@ -849,4 +849,50 @@ html {
 #flowers {
   top: 386px;
   left: 1493px;
+}
+
+#relogio{
+  top: 160px;
+  left: 520px;
+  width: 312px;
+  height: 115px;
+  background-color: #2c2738;
+  /*background-image: linear-gradient(to top, #302f32 0%, #2c3e50 74%);*/
+  border-radius: 40px;
+  box-shadow: black 0px 14px 16px -8px; 
+}
+
+#time{
+  top: 50px;
+  left: 145px;
+  color: #fff
+}
+
+#time .circle{
+  width: 90px;
+  height: 90px;
+}
+
+#time div{
+  text-align: center;
+  font-weight: 500;
+}
+#hora{
+  left:-100px
+}
+#cir-hora{
+
+}
+
+#minutos{
+}
+#cir-minutos{
+
+}
+
+#segundos{
+left:100px
+}
+#cir-segundos{
+  
 }
