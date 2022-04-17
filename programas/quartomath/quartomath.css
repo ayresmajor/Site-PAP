@@ -757,25 +757,57 @@ html {
 }
 
 #calculadora {
-  position: absolute;
-  top: 534px;
-  left: 1839px;
-  width: 90px;
+  top: 0px;
+  left: 0px;
+  width: 0px;
 }
 
 #tabuada {
-  top: 587px;
-  left: 998px;
-  width: 29px;
-  transform: rotate(71deg);
-  z-index: 30;
+  top: 0px;
+  left: 0px;
+  width: 0px;
 }
 
 #snail {
-  top: 574px;
-  left: 2067px;
-  width: 40px;
+  top: 0px;
+  left: 0px;
+  width: 0px;
 }
+
+/* animações para cada posisão de snail*/
+
+@keyframes  snapos0 {
+100%{
+  left: 1900px;
+}
+}
+
+@keyframes snapos1 {
+  100%{
+    top: 530px;
+  }
+}
+
+@keyframes snapos2 {
+  100%{
+    left: 213px;
+  }
+}
+
+@keyframes snapos3 {
+  100%{
+    left: 1790px;
+  }
+}
+
+@keyframes snapos4 {
+  100%{
+    left: 484px;
+  }
+}
+
+/* fim*/
+
 
 #pot {
   top: 210px;
