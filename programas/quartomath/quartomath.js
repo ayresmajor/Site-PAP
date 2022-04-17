@@ -51,7 +51,6 @@ switch (calcpos) {
       "top: 534px; left: 1839px;  width: 90px; "
     );
 }
-
 switch (tabupos) {
   case "0":
     tabuada.setAttribute("style", "top: 522px; left: 1969px;  width: 50px; ");
@@ -59,7 +58,7 @@ switch (tabupos) {
   case "1":
     tabuada.setAttribute(
       "style",
-      "top: 587px; left: 998px;  width: 31px; transform: rotate(71deg); z-index: 30; "
+      "top: 587px; left: 998px;  width: 31px; transform: rotate(71deg); z-index: 1; "
     );
     break;
   case "2":
@@ -83,7 +82,6 @@ switch (tabupos) {
   default:
     tabuada.setAttribute("style", "top: 522px; left: 1969px;  width: 50px; ");
 }
-
 switch (snapos) {
   case "0":
     snail.setAttribute(
@@ -126,7 +124,6 @@ async function slide() {
 }
 
 // relogio
-
 setInterval(() => {
   let hora = document.getElementById("hora");
   let minutos = document.getElementById("minutos");
@@ -152,11 +149,45 @@ let seg_dot = document.querySelector('.seg_dot')
   minutos.innerHTML = m + "<span style='top: 0.1em;  letter-spacing: -0.4em;' >min</span>";
   segundos.innerHTML = se + "<span>s</span>";
 
-  hh.style.strokeDashoffset = 189 - (-189 * h) / 12; // 12horas
+  hh.style.strokeDashoffset = 189 - (189 * h) / 12; // 12horas
   mm.style.strokeDashoffset = 189 - (189 * m) / 60;
   ss.style.strokeDashoffset = 189 - (189 * se) / 60;
 
-  hr_dot.style.transform = `rotate(${-4.5 + (-h * 30)}deg)`;
+  hr_dot.style.transform = `rotate(${-4.5 + (h * 30)}deg)`;
   min_dot.style.transform = `rotate(${-4.5 + (m * 6)}deg)`;
   seg_dot.style.transform = `rotate(${-4.5 + (se * 6)}deg)`;
 });
+
+//iluminação
+let ilumin = 1;
+
+function ilumination(){
+  ilumin += 1;
+  let interruptor = document.getElementById("interruptor")
+  let escuro = document.getElementById("escuro");
+  let armariobord = document.getElementById("armariobord");
+  let olho = document.getElementById("olho");
+  let luz = document.getElementById("luz");
+  let relogio = document.getElementById("relogio");
+  let computador = document.getElementById("computador");
+  if(ilumin % 2 == 0){
+    // Luz acesa
+    interruptor.style.transform = "scaleY(1)";
+    escuro.style.display = "none";
+    armariobord.style.background = "transparent";
+    olho.style.display = "none";
+    luz.style.boxShadow = "rgb(255, 255, 255) 0px 0px 20px 0px,inset rgba(0, 0, 0, 0.468) 0px 0px 15px 1px";
+    relogio.style.border= "10px solid rgb(65 51 38)"
+    computador.style.filter = "brightness(100%)"
+  }
+  else{
+    // luz apagada
+    interruptor.style.transform = "scaleY(-1)";
+    escuro.style.display = "block";
+    armariobord.style.background = "#000000bf";
+    olho.style.display = "block";
+    luz.style.boxShadow = "none";
+    relogio.style.border= "10px solid #1a1715";
+    computador.style.filter = "brightness(40%)";
+  }
+}

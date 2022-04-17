@@ -22,61 +22,18 @@
     <div class="linhaparede"></div>
     <div id="porta"></div>
     <div class="cube-switch">
-      <span class="switch" onclick="">
-      </span>
+      <span id="interruptor" class="switch" onclick="ilumination()"> </span>
     </div>
     <div id="chao"></div>
-    <div >
-    <div id="janela">
-      <img id="paisagem"src="../../imagens/paisagem.jpg" alt="">
-      <div id="janelasbord"></div>
-    </div>
-    <div id="flowers">
-      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-      <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_8gjphoi9.json"  background="transparent"  speed="1"  style="width: 50px; height: 30px; margin: 5px"  loop  autoplay></lottie-player>
-      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<lottie-player src="https://assets3.lottiefiles.com/packages/lf20_0esv3qdk.json"  background="transparent"  speed="1"  style="width: 50px; height: 50px; margin-left: -5px"  loop  autoplay></lottie-player>
-    </div>
-    <div id="pot">
-      <div class="pot-bot"></div>
-      <div class="pot-top-shadow"></div>
-      <div class="pot-top"></div>
-    </div>
-    <div id="relogio" >
-      <div id="time">
-        <div class="circle" style="--clr: #ff2972">
-          <div class="dots hr_dot"></div>
-          <svg id="cir-hora">
-            <circle cx="30" cy="30"  r="30"></circle>
-            <circle cx="30" cy="30"  r="30" id="hh"></circle>
-          </svg>
-          <div id="hora">00</div>
-        </div>
-        <div class="circle" style="--clr: #fee800">
-          <div class="dots min_dot"></div>
-          <svg id="cir-minutos">
-            <circle cx="30" cy="30"  r="30"></circle>
-            <circle cx="30" cy="30"  r="30" id="mm"></circle>
-          </svg>
-          <div id="minutos">00</div>
-        </div>
-        <div class="circle" style="--clr: #04fc43">
-          <div class="dots seg_dot"></div>
-          <svg id="cir-segundos">
-            <circle cx="30" cy="30"  r="30"></circle>
-            <circle cx="30" cy="30"  r="30" id="ss"></circle>
-          </svg>
-          <div id="segundos">00</div>
-        </div>
-      </div>
-    </div>
     <div id="secretaria">
-      <div  id="pesecre"></div>
+      <div id="pesecre"></div>
       <div id="mesafrt"></div>
       <div id="tampasecre"></div>
     </div>
-    <a href="tabuada/tabuada.html"><img id="tabuada" src="../../imagens/tabuada.png" alt=""></a>
-    </div>
+    <a href="tabuada/tabuada.html"
+      ><img id="tabuada" src="../../imagens/tabuada.png" alt=""
+    /></a>
+
     <div id="cama">
       <div id="cabeceira"></div>
       <div id="almofada"></div>
@@ -98,7 +55,7 @@
         <div class="basemesinha"></div>
         <div class="topmesinha"></div>
       </div>
-      <div id= "mesinha2" class="mesinha">
+      <div id="mesinha2" class="mesinha">
         <div class="mesback"></div>
         <div class="mesbot"></div>
         <div class="mesright"></div>
@@ -110,47 +67,120 @@
     </div>
     <div id="lavalamp">
       <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-      <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_tx85wgdl.json"  background="transparent"  speed="2"  style="width: 30px; height: 30px;"  loop  autoplay></lottie-player>
+      <lottie-player
+        src="https://assets10.lottiefiles.com/packages/lf20_tx85wgdl.json"
+        background="transparent"
+        speed="2"
+        style="width: 30px; height: 30px"
+        loop
+        autoplay
+      ></lottie-player>
     </div>
     <div id="mesinha3">
-      <div id="blocotop" class=></div>
+      <div id="blocotop"></div>
       <div class="bloco"></div>
       <div id="bloco2" class="bloco"></div>
     </div>
     <div id="espelho"></div>
     <div id="tapete">
-      <img src="../../imagens/tapete.png" alt="">
+      <img src="../../imagens/tapete.png" alt="" />
     </div>
     <div id="tapete2">
-      <img src="../../imagens/tapete2.png" alt="">
+      <img src="../../imagens/tapete2.png" alt="" />
     </div>
     <div id="cadeirag">
-      <img src="../../imagens/cadeirag.png" alt="">
-    </div>
-    <div id="computador">
-      <img src="../../imagens/computador2.png" alt="">
+      <img src="../../imagens/cadeirag.png" alt="" />
     </div>
     <div >
-      <a href="calculadora/calculadora.html"><img id="calculadora" src="../../imagens/calculadora.png" alt=""></a>
+      <img id="computador" src="../../imagens/computador2.png" alt="" />
     </div>
-    <div >
-      <a href="sequfibonaci/seqfibonacci.html"><img id="snail" src="../../imagens/snail.png" alt=""></a>
+    <div>
+      <a href="calculadora/calculadora.html"
+        ><img id="calculadora" src="../../imagens/calculadora.png" alt=""
+      /></a>
+    </div>
+    <div>
+      <a href="sequfibonaci/seqfibonacci.html"
+        ><img id="snail" src="../../imagens/snail.png" alt=""
+      /></a>
+    </div>
+    <div id="relogio">
+      <div id="time">
+        <div class="circle" style="--clr: #ff2972">
+          <div class="dots hr_dot"></div>
+          <svg id="cir-hora">
+            <circle cx="30" cy="30" r="30"></circle>
+            <circle cx="30" cy="30" r="30" id="hh"></circle>
+          </svg>
+          <div id="hora">00</div>
+        </div>
+        <div class="circle" style="--clr: #fee800">
+          <div class="dots min_dot"></div>
+          <svg id="cir-minutos">
+            <circle cx="30" cy="30" r="30"></circle>
+            <circle cx="30" cy="30" r="30" id="mm"></circle>
+          </svg>
+          <div id="minutos">00</div>
+        </div>
+        <div class="circle" style="--clr: #04fc43">
+          <div class="dots seg_dot"></div>
+          <svg id="cir-segundos">
+            <circle cx="30" cy="30" r="30"></circle>
+            <circle cx="30" cy="30" r="30" id="ss"></circle>
+          </svg>
+          <div id="segundos">00</div>
+        </div>
+      </div>
     </div>
     <div id="armario">
       <div id="armarioinback"></div>
       <div id="armarioinwall"></div>
       <div id="armarioinbott"></div>
       <div id="armariointop"></div>
+      <div id="olho">
+        <figure class="ball">
+          <span class="iris"></span>
+        </figure>
+      </div>
       <div id="armdoor2" class="armdoor"></div>
       <div id="armdoor1" class="armdoor"></div>
       <div class="armariobott"></div>
       <div id="armariobott2" class="armariobott"></div>
       <div class="armariowall"></div>
       <div id="armariowall2" class="armariowall"></div>
-      <div id = "armariobord" onclick="slide()"></div>
+      <div id="armariobord" onclick="slide()"></div>
     </div>
     <div id="escuro"></div>
     <a href="quartomath.html"><label id="fechar"><span>&#x274C;</span></label></a>
+    <div id="janela">
+      <img id="paisagem" src="../../imagens/paisagem.jpg" alt="" />
+      <div id="janelasbord"></div>
+      <div id="flowers">
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player
+          src="https://assets7.lottiefiles.com/packages/lf20_8gjphoi9.json"
+          background="transparent"
+          speed="1"
+          style="width: 50px; height: 30px; margin: 5px"
+          loop
+          autoplay
+        ></lottie-player>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player
+          src="https://assets3.lottiefiles.com/packages/lf20_0esv3qdk.json"
+          background="transparent"
+          speed="1"
+          style="width: 50px; height: 50px; margin-left: -5px"
+          loop
+          autoplay
+        ></lottie-player>
+      </div>
+      <div id="pot">
+        <div class="pot-bot"></div>
+        <div class="pot-top-shadow"></div>
+        <div class="pot-top"></div>
+      </div>
+    </div>
     <script src="quartomath.js"></script>
   </body>
 </html>

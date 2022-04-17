@@ -33,8 +33,6 @@ html {
 }
 
 #luz {
-  box-shadow: rgb(255, 255, 255) 0px 0px 20px 0px,
-    inset rgba(0, 0, 0, 0.468) 0px 0px 15px 1px;
   border: white solid 16px;
   border-left: white solid 26px;
   border-right: white solid 26px;
@@ -226,6 +224,7 @@ html {
   width: 25px;
   white-space: nowrap;
   background: #333;
+  z-index: 6;
 }
 
 /* The switch */
@@ -246,10 +245,13 @@ html {
   background: #666;
   cursor: pointer;
   pointer-events: auto;
+  transform: scaleY(-1);
 }
 
 #janela {
   left: 9px;
+  z-index: 20;
+  
 }
 #paisagem {
   top: 285px;
@@ -258,6 +260,7 @@ html {
   height: 168px;
   background-image: url(../../imagens/paisagem.jpg);
   background-size: contain;
+
 }
 
 #janelasbord {
@@ -266,6 +269,7 @@ html {
   width: 248px;
   height: 168px;
   border: 8px solid #553d29;
+  box-shadow: #ffffff1f -1px 6px 20px 0px;
 }
 
 #janelasbord::before {
@@ -524,18 +528,21 @@ html {
 #armario {
   top: -40px;
   left: 3px;
+  z-index: 5;
 }
 #armariobord {
   top: 280px;
   left: 217px;
   width: 278px;
   height: 425px;
+  background: #000000bf;
   border-top: 20px #121212 solid;
   border-bottom: 12px #121212 solid;
   border-right: 7px #121212 solid;
   border-left: 7px #121212 solid;
   box-shadow: #060606 0px 0px 0px 1px;
   cursor: pointer;
+
 }
 
 .armariobott {
@@ -700,11 +707,13 @@ html {
   filter: brightness(70%);
 }
 
-#computador > img {
+#computador {
   top: 467px;
   left: 1738px;
   width: 164px;
   height: 114px;
+  z-index: 3;
+  filter: brightness(40%);
 }
 
 #calculadora {
@@ -806,8 +815,9 @@ html {
   height: 115px;
   background-color: rgb(133, 133, 133);
   border-radius: 15px;
-  border: 10px solid rgb(52, 37, 24);
-  box-shadow: inset black 0px 0px 5px 0px, inset #00000066 0px 0px 30px 7px;
+  z-index: 4;
+  border: 10px solid #1a1715;
+  box-shadow: inset black 0px 0px 5px 0px, inset #00000066 0px 0px 30px 7px, #ffffff1a 0px 0px 30px 6px;
 }
 
 #time {
@@ -921,7 +931,78 @@ html {
 #escuro{
   top: -39px;
   left: -150px;
-  background-color: #000000;
+  background-color: #000000d4;
   width: 2313px;
   height: 810px;
+  z-index: 2;
+}
+
+/* OLHO MONTROSO*/
+#olho{
+  top: 303px;
+  left: 225px;
+  width: 160px;
+  height: 421px;
+  background:rgb(0, 0, 0);
+  box-shadow: inset red 0px -20px 37px -20px;
+}
+@keyframes move-eye-skew {
+  0% {
+    transform: none;
+  }
+  20% {
+    transform: translateX(-8px) translateY(10px) skewX(15deg) skewY(-10deg) scale(0.95);
+  }
+  25%, 44% {
+    transform: none;
+  }
+  50%, 60% {
+    transform: translateX(8px) translateY(-14px) skewX(5deg) skewY(2deg) scaleX(0.95);
+  }
+  66%, 100% {
+    transform: none;
+  }
+}
+
+.ball {
+  display: inline-block;
+  width: 171px;
+  height: 217px;
+  margin-top: 81px;
+  border-radius: 50%;
+  position: relative;
+  background: radial-gradient(circle at 50% 40%, #fcfcfc, #000000 66%, #9b5050 100%);
+}
+
+.iris {
+  width: 40%;
+  height: 40%;
+  margin: 30%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, #fefefe 0%, #000000 30%, #ff0000 100%);
+  transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg);
+  position: absolute;
+  animation: move-eye-skew 5s ease-out infinite;
+}
+.iris:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 37.5%;
+  height: 37.5%;
+  border-radius: 50%;
+  top: 31.25%;
+  left: 31.25%;
+  background: black;
+}
+.iris:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 31.25%;
+  height: 31.25%;
+  border-radius: 50%;
+  top: 18.75%;
+  left: 18.75%;
+  background: rgba(255, 255, 255, 0.2);
 }
