@@ -57,6 +57,12 @@ h1 {
     #00ffdc -10px 1px 5px, #ff0000ab 4px 4px 8px, #ffff0000 2px 9px 5px;
   box-shadow: inset rgb(0 0 0 / 50%) 1px 3px 10px;
 }
+#acento{
+  position: absolute;
+  transform: translate(151px, 9px);
+  font-size: 1rem;
+  text-shadow: black 0px 0px 3px, rgb(3 3 35) -6px 5px 20px, #00ffdc -10px 1px 5px, #ff0000b3 4px 4px 10px, #191301 -1px 1px 8px;
+}
 
 #snail {
   display: none;
