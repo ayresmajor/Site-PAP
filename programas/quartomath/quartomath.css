@@ -20,7 +20,13 @@ html {
   background-color: #1f0726;
   width: 1620px;
   height: 680px;
+  font-size: 11em;
+  padding-top:67px;
+  text-align: center;
+  color: #2d11323b;
   z-index: -20;
+  cursor: default;
+
 }
 .teto {
   background-color: #b3a9a9;
@@ -30,6 +36,17 @@ html {
   width: 1890px;
   height: 143px;
   transform: perspective(310px) rotateX(-52deg);
+
+}
+.teto span{
+  left: -176px;
+  top: -299px;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  font-size: 38em;
+  letter-spacing: -0.99em;
+  color: #0000002e;
+  cursor: default;
 }
 
 #luz {
@@ -137,6 +154,7 @@ html {
   width: 380px;
   height: 60px;
   border-radius: 10px;
+  box-shadow: #0000008a 0px 20px 10px -10px;
 }
 
 #colchaofrt {
@@ -329,6 +347,17 @@ html {
   width: 315px;
   height: 13487px;
   transform: rotateX(86deg) rotateY(-67deg) skewY(-72deg) skewX(0deg);
+}
+
+#tampasecre::after {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  top: 2854px;
+  left: -870px;
+  width: 81%;
+  height: 70%;
+  box-shadow: #0000003b 0px 0px 20px, inset #00000029 0px 0px 149px 10px;
 }
 
 #mesafrt {

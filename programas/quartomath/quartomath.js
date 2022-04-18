@@ -149,13 +149,13 @@ let seg_dot = document.querySelector('.seg_dot')
   minutos.innerHTML = m + "<span style='top: 0.1em;  letter-spacing: -0.4em;' >min</span>";
   segundos.innerHTML = se + "<span>s</span>";
 
-  hh.style.strokeDashoffset = 189 - (189 * h) / 12; // 12horas
+  hh.style.strokeDashoffset = 189 - (189 * h) / 24;
   mm.style.strokeDashoffset = 189 - (189 * m) / 60;
   ss.style.strokeDashoffset = 189 - (189 * se) / 60;
 
-  hr_dot.style.transform = `rotate(${-4.5 + (h * 30)}deg)`;
-  min_dot.style.transform = `rotate(${-4.5 + (m * 6)}deg)`;
-  seg_dot.style.transform = `rotate(${-4.5 + (se * 6)}deg)`;
+  hr_dot.style.transform = `rotate(${-5 + (h * 15)}deg)`;
+  min_dot.style.transform = `rotate(${-5 + (m * 6)}deg)`;
+  seg_dot.style.transform = `rotate(${-5 + (se * 6)}deg)`;
 });
 
 let paisagem = document.getElementById("paisagem");
