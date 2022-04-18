@@ -7,7 +7,7 @@ body,
 html {
   background-color: #000000;
   top: 15px;
-  left: 100px;
+  left: 150px;
 }
 #fechar {
   position: fixed;
@@ -349,17 +349,6 @@ html {
   transform: rotateX(86deg) rotateY(-67deg) skewY(-72deg) skewX(0deg);
 }
 
-#tampasecre::after {
-  content: "";
-  position: absolute;
-  background-color: transparent;
-  top: 2854px;
-  left: -870px;
-  width: 81%;
-  height: 70%;
-  box-shadow: #0000003b 0px 0px 20px, inset #00000029 0px 0px 149px 10px;
-}
-
 #mesafrt {
   top: 612px;
   left: 1908.5px;
@@ -379,6 +368,7 @@ html {
   border-top: 92px solid #050206;
   border-radius: 20px 0px 0px 0px;
   transform: rotate(11deg);
+  box-shadow: #000000af 126px 94px 33px -27px
 }
 
 #mesinhaconj {
