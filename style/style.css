@@ -14,7 +14,11 @@
   src: url("../fontes/cRAZY\ sTYLE.ttf") format("truetype");
   font-weight: normal;
 }
-
+@font-face {
+  font-family: "star";
+  src: url("../fontes/Shooting\ Star.ttf") format("truetype");
+  font-weight: normal;
+}
 :root {
   --cbranco: 245, 245, 245;
   --cazulcl: 67, 97, 238;
@@ -94,6 +98,7 @@ h1{
 header{
   position: sticky;
   top: -192px;
+  left: 0px;
   z-index: 1;
 }
 
@@ -156,7 +161,7 @@ header > div nav a:hover,.navbar a:hover, .dropdown:hover .dropbtn{
   position: absolute;
   left: 90px;
   border-radius: 10px;
-  background-color: rgb(var(--cazules),0.7);
+  background-color: rgb(var(--cazules),0.4);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -172,11 +177,20 @@ header > div nav a:hover,.navbar a:hover, .dropdown:hover .dropbtn{
   text-align: center;
   font-size: 1em;
   text-shadow: 0px 0px 10px black;
-}
 
+}
+.pro-euro{
+  font-family: 'star';
+}
+.pro-jok{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.pro-qua{ 
+  font-family: var(--fonte-padrao2);
+  text-transform: uppercase;
+}
 .dropdown-content a:hover {
   font-size: 1.1em;
-  background-color: transparent;
   text-shadow: rgb(var(--cvermelho)) 0px 1px 9px;
 }
 .dropdown:hover .dropdown-content {

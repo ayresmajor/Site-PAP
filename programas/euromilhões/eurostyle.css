@@ -160,6 +160,10 @@ div#estrelas1, div#estrelas2, div#estrelas3,div#estrelas4,div#estrelas5 {
     max-width: 600px;
     text-align: center;
 }
+
+#artigo01{
+    top: -30px
+}
 .descrbola{
     color: white;
     font-size: 1.3em;
@@ -225,5 +229,11 @@ div#estrelas1, div#estrelas2, div#estrelas3,div#estrelas4,div#estrelas5 {
         padding: 7px 0px;
         border: none;
         text-decoration: underline rgb(34, 48, 248);
+    }
+}
+
+@media(max-width:1200px){
+    #artigo01{
+      top: 5%;
     }
 }
