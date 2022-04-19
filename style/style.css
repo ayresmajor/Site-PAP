@@ -23,8 +23,9 @@
   --cvermelhocl: 219, 62, 80;
   --fonte-aleatorio: "Ahdn", cursive;
   --fonte-crazy: "Crazy", cursive;
-  --fonte-padrao: 'Kurale',"Times new Roman", "serif", cursive;
-  --fonte-pro: 'Chakra Petch', Verdana, sans-serif, cursive;
+  --fonte-padrao: 'Chakra Petch', Verdana, sans-serif, cursive;
+  --fonte-padrao2: 'Kurale',"Times new Roman", "serif", cursive;
+  
 }
 * {
   margin: 0px;
@@ -65,7 +66,7 @@ html,
 body {
   min-height: 100vh;
   background-color: rgb(var(--cbranco));
-  font-family: var(--fonte-padrao);
+  font-family: var(--fonte-padrao2);
   transition: all 0.5s;
 }
 
@@ -182,7 +183,7 @@ main, .principal{
   width: 380px;
   height: 250px;
   background-color: rgb(0, 0, 0);
-  background-image: url("/imagens/quartoluz.jpeg");
+  background-image: url("imagens/quartoluz.jpeg");
   background-size: contain;
   background-position: center center;
   border-radius:20px;
@@ -261,8 +262,8 @@ footer p {
 
 #iniciar {
   position: relative;
-  top: -35px;
-  left: 18vw;
+  top: -50px;
+  left: 315px;
   background-color: rgb(var(--cvermelho), 0.5);
   border-radius: 100px;
   box-shadow: black 0 -24px 44px -44px inset,
@@ -304,6 +305,10 @@ footer p {
   }
   #artigo01{
     top: 5%;
+  }
+  #iniciar{
+    position:static;
+    margin-bottom: 20px;
   }
 }
 @media(max-width:400px){

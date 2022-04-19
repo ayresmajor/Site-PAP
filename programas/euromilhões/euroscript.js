@@ -11,7 +11,8 @@ function fechar() {
 function iniciar() {
   document.getElementById("fundo").style.display = "block";
   document.getElementById("euroinput").focus();
-  document.getElementById("euroiniciar").style.display = "none";
+  document.getElementById("head").style.position="static";
+  document.getElementById("iniciar").style.display = "none";
 }
 
 function fecharinfo() {
