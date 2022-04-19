@@ -29,10 +29,6 @@ function fechar() {
   location.reload();
 }
 
-function restart(){
-  start();
- 
-}
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 function randint(min, max) {

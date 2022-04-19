@@ -14,6 +14,9 @@
   justify-content: center;
 }
 
+body{
+  overflow-x: visible;
+}
 h3 {
   display: inline;
   font-family: Arial, Helvetica, sans-serif;

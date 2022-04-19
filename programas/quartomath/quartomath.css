@@ -10,6 +10,7 @@ html {
   background-color: #000000;
   top: 15px;
   left: 150px;
+  overflow-x: visible;
 }
 #fechar {
   position: fixed;
@@ -26,7 +27,7 @@ html {
   font-size: 11em;
   padding-top:67px;
   text-align: center;
-  color: #2d11323b;
+  color: #92539d3b;
   z-index: -20;
   cursor: default;
 

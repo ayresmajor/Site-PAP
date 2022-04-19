@@ -19,6 +19,10 @@
   margin: auto;
 }
 
+body{
+  overflow-x: visible;
+}
+
 h3 {
   margin: auto;
   display: inline;
@@ -365,5 +369,46 @@ div#intrucoes{
     left:600px;
     top: 400px
 
+  }
+}
+
+.allprograms {
+  background-image: url("../../imagens/jokenpomenu.jpg");
+  animation:none;
+  animation: sliderjoken 15s infinite, dance 2s infinite ease-in-out alternate;
+}
+
+@keyframes sliderjoken{
+  0%{
+  background-color: rgb(0, 0, 0);
+  background-image: url("../../imagens/jokenpomenu.jpg");
+  }
+  23%{
+  background-color: rgb(255, 255, 255);
+  background-image: url("../../imagens/jokenpomenu.jpg");
+  }
+  25%{
+  background-color: rgb(0, 0, 0);
+  background-image: url("../../imagens/jokenpowin.jpg"); 
+  }
+  47%{
+  background-color: rgb(255, 255, 255);
+  background-image: url("../../imagens/jokenpowin.jpg"); 
+  }
+  50%{
+    background-color: rgb(0, 0, 0);
+    background-image: url("../../imagens/jokenpoempate.jpg");
+  }
+  73%{
+    background-color: rgb(255, 255, 255);
+    background-image: url("../../imagens/jokenpoempate.jpg");
+  }
+  75%{
+    background-color: rgb(0, 0, 0);
+    background-image: url("../../imagens/jokenpoperda.jpg");
+  }
+  97%{
+    background-color: rgb(255, 255, 255);
+    background-image: url("../../imagens/jokenpoperda.jpg");
   }
 }
