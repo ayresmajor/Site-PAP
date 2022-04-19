@@ -22,6 +22,9 @@ html{
   background-color:black;
 }
 
+header{
+  position:static;
+}
 h3 {
   margin: auto;
   display: inline;

@@ -23,7 +23,8 @@
   --cvermelhocl: 219, 62, 80;
   --fonte-aleatorio: "Ahdn", cursive;
   --fonte-crazy: "Crazy", cursive;
-  --fonte-padrao: 'Kurale',"Times new Roman","Verdana", "sans-serif", cursive;
+  --fonte-padrao: 'Kurale',"Times new Roman", "serif", cursive;
+  --fonte-pro: 'Chakra Petch', Verdana, sans-serif, cursive;
 }
 * {
   margin: 0px;
@@ -99,7 +100,7 @@ header > div {
   background-image: linear-gradient(to top, rgb(var(--cvermelho)), rgba(var(--cazules),0.6));
   padding: 20px 10px;
   border-radius: 0px 0px 10px 10px;
-  width: 100vw;
+  width: 98vw;
 }
 header > div h1 {
   position: absolute;
@@ -311,12 +312,16 @@ footer p {
  }
 }
 
-section{
-
-  line-height: 2em;
-  font-family: var(--fonte3);
+.protitulo{
+  text-align: center;
+  padding: 10px;
+  font-family: var(--fonte-pro);
+  background-image: linear-gradient(to top, rgb(var(--cvermelhocl)), rgba(var(--cazulcl),0.7));
+  text-shadow:black 0px 0px 20px;
+  color: white;
+  font-size: 2.5em;
+  box-shadow: inset rgba(0, 0, 0, 0.454) -2px -11px 20px 0px;
 }
-
 section > p{
   padding-bottom: 2em;
 }
@@ -332,18 +337,27 @@ section.imagem{
   background-attachment: fixed;
 }
 section.imagem > p{
+  position: relative;
+  width:200px;
   background-color: rgba(29, 29, 29, 0.534);
   display: inline-block;
-  padding: 5px;
+  padding: 15px;
+  margin-left: 20px;
   text-shadow: 1px 1px 0px black;
-  background-size: cover;   
-  
+  background-size: cover;     
 }
 section#img01{
-  background-image: url('../imagens/background001.jpg');
+  background-image: url('/imagens/paisagem.jpg');
   background-position: right center;
 }
 section#img02{
+  background-image: url('../imagens/background002.jpg');
+  background-position: right center;
+}
+section#img02 p{
+  right: calc(-100% + 280px);
+}
+section#img03{
   background-image: url('../imagens/background002.jpg');
   background-position: right center;
 }

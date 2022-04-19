@@ -13,6 +13,9 @@
     align-items: center;
     justify-content: center;
 }
+header{
+    position:static;
+}
 h3{
     display: inline;
     font-family: Arial, Helvetica, sans-serif;
