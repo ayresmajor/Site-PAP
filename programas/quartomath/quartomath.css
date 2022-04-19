@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;700&family=Exo:wght@200&display=swap");
+
 * {
   position: absolute;
   margin: 0px;
@@ -855,6 +857,7 @@ html {
   z-index: 4;
   border: 10px solid #1a1715;
   box-shadow: inset black 0px 0px 5px 0px, inset #00000066 0px 0px 30px 7px, #ffffff1a 0px 0px 30px 6px;
+  font-family: 'Chakra Petch', Verdana, sans-serif, cursive;
 }
 
 #time {
