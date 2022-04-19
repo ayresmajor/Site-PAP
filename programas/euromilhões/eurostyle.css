@@ -206,31 +206,26 @@ div#estrelas5 {
 }
 
 .allprograms {
+  background-image: url("../../imagens/euromilhoesjogo.jpg");
+  animation:none;
+  animation: slidereuro 7s infinite, dance 2s infinite ease-in-out alternate;
 }
-@keyframes sliderh {
+@keyframes slidereuro {
   0% {
     background-color: rgb(0, 0, 0);
-    background-image: url("../imagens/quartoluz.jpeg");
+    background-image: url("../../imagens/euromilhoesjogo.jpg");
   }
-  30% {
-    background-color: rgb(25, 25, 25);
-    background-image: url("../imagens/quartoluz.jpeg");
-  }
-  33% {
-    background-color: rgb(0, 0, 0);
-    background-image: url("../imagens/jokenpomenu.jpg");
-  }
-  60% {
+  40% {
     background-color: rgb(255, 255, 255);
-    background-image: url("../imagens/jokenpomenu.jpg");
+    background-image: url("../../imagens/euromilhoesjogo.jpg");
   }
-  66% {
+  56% {
     background-color: rgb(0, 0, 0);
-    background-image: url("../imagens/euromilhoesmenu.jpg");
+    background-image: url("../../imagens/euromilhoesmenu.jpg");
   }
   90% {
     background-color: rgb(255, 255, 255);
-    background-image: url("../imagens/euromilhoesmenu.jpg");
+    background-image: url("../../imagens/euromilhoesmenu.jpg");
   }
 }
 
