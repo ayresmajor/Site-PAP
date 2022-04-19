@@ -99,7 +99,7 @@ label#tesoura {
   left: 77px;
 }
 
-#startgame {
+#startgame, #restart {
   position: relative;
   top: 150px;
   margin: auto;
@@ -117,6 +117,7 @@ label#tesoura {
   box-shadow: inset #f000a06c 0px -20px 20px 0px,
     inset #30eaf05e 0px 20px 20px 0px;
   transition: all 0.5s;
+  cursor: pointer;
 }
 
 #startgame:hover {
