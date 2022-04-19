@@ -44,6 +44,11 @@
   display: table;
   margin: auto;
 }
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* width */
 ::-webkit-scrollbar {
@@ -66,12 +71,12 @@
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(114, 114, 114);
 }
-html,
 body {
   min-height: 100vh;
   background-color: rgb(var(--cbranco));
   font-family: var(--fonte-padrao2);
-  transition: all 0.5s;
+  overflow-x: hidden;
+  overscroll-behavior: none;
 }
 
 p {
@@ -165,7 +170,7 @@ header > div nav a:hover,.navbar a:hover, .dropdown:hover .dropbtn{
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  backdrop-filter: blur(10px)
+  backdrop-filter: blur(10px);
 }
 
 .dropdown-content a {
@@ -383,19 +388,17 @@ footer p {
   font-size: 2.5em;
   box-shadow: inset rgba(0, 0, 0, 0.454) -2px -11px 20px 0px;
 }
-section > p{
-  padding-bottom: 2em;
-}
-section.normal{
-  background-color: white;
-  color: rgb(0, 0, 0);
-}
 
+.principal{
+  height: 60%;
+  display: flexbox;
+}
 section.imagem{
   background-color: rgb(53, 53, 53);
   color: white;
   box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.445);
   background-attachment: fixed;
+  height:500px;
 }
 section.imagem > p{
   position: relative;
@@ -405,15 +408,18 @@ section.imagem > p{
   padding: 15px;
   margin-left: 20px;
   text-shadow: 1px 1px 0px black;
-  background-size: cover;     
+  background-size: cover;    
+  transition: all 5s; 
 }
 section#img01{
-  background-image: url('../imagens/backgroundjokenpo.jpg');
+  background-image: url('../imagens/backgroundjokenpowin.jpg');
   background-position: center center;
+  animation: slider01 30s infinite alternate;
 }
 section#img02{
-  background-image: url('../imagens/backgroundeuro.jpg');
+  background-image: url('../imagens/backgroundeurogame.jpg');
   background-position: top center;
+  animation: slider02 7s infinite alternate;
 }
 section#img02 p{
   right: calc(-100% + 280px);
@@ -421,5 +427,32 @@ section#img02 p{
 section#img03{
   background-image: url('../imagens/backgroundquarto.jpg');
   background-position: center center;
+  animation: slider03 15s infinite alternate;
 }
 
+@keyframes slider01{
+  from{
+    background-position: left center;
+  }
+  to{
+  background-position: right center;
+  }
+}
+
+@keyframes slider02{
+  from{
+    background-position: top center;
+  }
+  to{
+  background-position: bottom center;
+  }
+}
+
+@keyframes slider03{
+  from{
+    background-position: right center;
+  }
+  to{
+  background-position: left center;
+  }
+}
