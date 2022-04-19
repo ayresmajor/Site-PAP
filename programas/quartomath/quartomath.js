@@ -175,17 +175,6 @@ if(h > 6 && h <= 11){
   janelasbord.style.backgroundColor = "#16164c14"
 }
 
-
-
-
-
-
-
-
-
-
-
-
 //iluminação
 let ilumin = 1;
 
