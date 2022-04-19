@@ -28,9 +28,7 @@ function fechar() {
   document.getElementById("fundo").style.display = "none";
   location.reload();
 }
-async function restartgame(){
-  $( "#fundo" ).load(window.location.href + "#fundo" );
-}
+
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 function randint(min, max) {
