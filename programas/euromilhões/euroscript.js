@@ -62,7 +62,6 @@ window.addEventListener("keyup", async function (event) {
         this.window["estrelas" + c].style.display = "grid";
       }
       function seqrandom(numl, maxrand) {
-        numl += 1;
         maxrand += 1;
         if( ! Number.isInteger(numl)){
           numl = 2
@@ -70,29 +69,15 @@ window.addEventListener("keyup", async function (event) {
         if(maxrand < numl  || ! Number.isInteger(maxrand)){
           maxrand = numl;
         }
-        let num = [];
-        let compar = [];
-        let d = 0;
-        let n = 0;
-        for (let c = 0; c < numl; c++) {
-          n = randint(1, maxrand);
-          if (c > 0) {
-            num.push(n);
-          }
-          if (num.length >= 2) {
-            compar = num.slice(0, c - 1);
-            while (compar.includes(n)) {
-              d = num.indexOf(n);
-              n = randint(1, maxrand);
-              num[d] = n;
-            }
-          }
+        let num = new Set();
+        while(num.size < numl){
+            num.add(randint(1, maxrand));
         }
-        num.sort(function (a, b) {
-          return a - b;
-        });
-        return num;
+        let numArr = Array.from(num)
+        numArr.sort(function (a, b) {return a - b;});
+        return numArr;
       }
+      
       let numstr = [];
       for (let i = 0; i < palpite; i++) {
         let numeros = seqrandom(5, 50);
