@@ -35,14 +35,6 @@ h3 {
   transition: all 0.5s;
   width: 750px;
 }
-h4 {
-  color: white;
-  font-size: 1.5em;
-  font-weight: 700;
-  padding: 7px 200px;
-  border-bottom: 3px solid rgb(34, 48, 248);
-  text-shadow: rgb(34 48 248) 1px 0px 20px;
-}
 
 
 #fundo {

@@ -1,3 +1,14 @@
+function fechar() {
+  document.getElementById("fundo").style.display = "none";
+  location.reload();
+}
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+function randint(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
 // Variáveis
 let loading = document.getElementById("loadingjokenpo");
 let button = document.getElementById("startgame");
@@ -12,7 +23,7 @@ let startgame = document.getElementById("startgame");
 let win = document.getElementById("win");
 let escolhauto = "";
 var jogador = 7;
-let computador = randint(0, 3);
+let computador = randint(0, 3)
 var jogavel = false;
 var t = 0;
 
@@ -24,16 +35,6 @@ function iniciar() {
   document.getElementById("iniciar").style.display = "none";  
 }
 
-function fechar() {
-  document.getElementById("fundo").style.display = "none";
-  location.reload();
-}
-
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
-function randint(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
-}
 
 async function start() {
   button.style.display = "none";
@@ -61,8 +62,8 @@ async function start() {
   papel.setAttribute("onclick", "select(this.id)");
   tesoura.setAttribute("onclick", "select(this.id)");
   pedraimg.setAttribute("onclick", "select('pedra')");
-  papelimg.setAttribute("onclick",  "select('papel')");
-  tesouraimg.setAttribute("onclick",  "select('tesoura')");
+  papelimg.setAttribute("onclick", "select('papel')");
+  tesouraimg.setAttribute("onclick", "select('tesoura')");
   fundo.style.animation = "clarear 1200ms forwards";
   menu.style.animation = "crescer 1.5s forwards";
   let styles = {
