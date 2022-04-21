@@ -402,14 +402,44 @@ section.imagem{
 }
 section.imagem > p{
   position: relative;
-  width:200px;
-  background-color: rgba(29, 29, 29, 0.534);
+  max-width: 300px;
+  background-color: #121212d9;
+  color: rgb(255 255 255);
   display: inline-block;
-  padding: 15px;
+  padding: 15px 35px;
   margin-left: 20px;
+  text-shadow: 0px 0px 5px black;
+  box-shadow: #ffffff2e 5px 5px 20px 0px;
+  background-size: cover;
+  backdrop-filter: blur(5px); 
+  border-radius: 10px;
+  /*transition: all 5s; */
+}
+section.imagem > p::before{
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: calc(50% - 50px);
+  width:15px;
+  height:100px;
+  background-image: linear-gradient(to top, rgb(var(--cvermelhocl)), rgba(var(--cazulcl),0.7)); 
+  border-radius: 0px 5px;
+  animation: cores 6s infinite alternate;
+}
+section.imagem > p::after{
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: calc(50% - 50px);
+  width:15px;
+  height:100px;
+  background-image: linear-gradient(to top, rgb(var(--cvermelhocl)), rgba(var(--cazulcl),0.7)); 
+  border-radius: 5px 0px;  
+}
+section.imagem > p a{
+  color: rgb(255, 255, 255);
   text-shadow: 1px 1px 0px black;
   background-size: cover;    
-  transition: all 5s; 
 }
 section#img01{
   background-image: url('../imagens/backgroundjokenpowin.jpg');
@@ -422,7 +452,7 @@ section#img02{
   animation: slider02 7s infinite alternate;
 }
 section#img02 p{
-  right: calc(-100% + 280px);
+  right: calc(-100% + 300px);
 }
 section#img03{
   background-image: url('../imagens/backgroundquarto.jpg');
@@ -456,3 +486,14 @@ section#img03{
   background-position: left center;
   }
 }
+
+@keyframes cores{
+  0%{
+    background-image: linear-gradient(to top, rgb(219, 62, 80), rgb(67, 97, 238,0.7)); 
+  }
+  100%{
+    background-image: linear-gradient(to top, rgb(7, 1, 2), rgb(67, 97, 238,0.7)); 
+  }
+}
+
+/*background-image: linear-gradient(to top, rgb(17, 5, 87), rgba(210, 1, 25, 0.7)); 
