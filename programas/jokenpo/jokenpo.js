@@ -41,11 +41,11 @@ async function start() {
   await sleep(500);
   fundo.style.backgroundColor = "rgba(0, 0, 0, 1)";
   intrucoes.style.display = "flex";
-  await sleep(1500);
+  await sleep(500);
   intrucoes.innerText = "PAPEL";
-  await sleep(1500);
+  await sleep(750);
   intrucoes.innerText = "TESOURA";
-  await sleep(1500);
+  await sleep(500);
   pedra.setAttribute("onmouseout", "sair(this.id)");
   papel.setAttribute("onmouseout", "sair(this.id)");
   tesoura.setAttribute("onmouseout", "sair(this.id)");
