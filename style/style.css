@@ -76,7 +76,6 @@ body {
   background-color: rgb(var(--cbranco));
   font-family: var(--fonte-padrao2);
   overflow-x: hidden;
-  overscroll-behavior: none;
 }
 
 p {
@@ -422,9 +421,9 @@ section.imagem > p::before{
   top: calc(50% - 50px);
   width:15px;
   height:100px;
-  background-image: linear-gradient(to top, rgb(var(--cvermelhocl)), rgba(var(--cazulcl),0.7)); 
+  background-image: linear-gradient(-315deg, rgb(var(--cvermelhocl)), rgba(var(--cazulcl),0.7), rgba(var(--cazules)), rgba(var(--cvermelho)));  
   border-radius: 0px 5px;
-  animation: cores 6s infinite alternate;
+  animation: cores 15s ease infinite;
 }
 section.imagem > p::after{
   content: "";
@@ -433,7 +432,7 @@ section.imagem > p::after{
   top: calc(50% - 50px);
   width:15px;
   height:100px;
-  background-image: linear-gradient(to top, rgb(var(--cvermelhocl)), rgba(var(--cazulcl),0.7)); 
+  background-image: linear-gradient(315deg, rgb(var(--cvermelhocl)), rgba(var(--cazulcl),0.7), rgba(var(--cazules)), rgba(var(--cvermelho))); 
   border-radius: 5px 0px;  
 }
 section.imagem > p a{
@@ -486,14 +485,3 @@ section#img03{
   background-position: left center;
   }
 }
-
-@keyframes cores{
-  0%{
-    background-image: linear-gradient(to top, rgb(219, 62, 80), rgb(67, 97, 238,0.7)); 
-  }
-  100%{
-    background-image: linear-gradient(to top, rgb(7, 1, 2), rgb(67, 97, 238,0.7)); 
-  }
-}
-
-/*background-image: linear-gradient(to top, rgb(17, 5, 87), rgba(210, 1, 25, 0.7)); 

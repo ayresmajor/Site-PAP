@@ -90,11 +90,11 @@ label#tesoura {
   left: 77px;
 }
 
-#startgame, #restart {
+#startgame {
   position: relative;
   top: 150px;
   margin: auto;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   color: white;
   padding: 5px;
   border-radius: 50px;
