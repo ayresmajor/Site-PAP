@@ -45,7 +45,8 @@ h3 {
   background-color: rgba(0, 0, 0, 0.9);
   min-height: 720px;
   min-width: 1300px;
-  height: 100vh;
+  padding-bottom: 30px;
+  height: 100%;
   width: 100vw;
   background-attachment: fixed;
   scroll-behavior: smooth;
@@ -352,6 +353,7 @@ div#intrucoes{
   #fundo{
     position: relative;
     border-radius: 20px;
+    padding-bottom: 100px;
   }
   #headiv{
     width: 100%;
@@ -410,11 +412,15 @@ div#intrucoes{
 .button-49{
   visibility: hidden;
   transition: all 1s;
+  animation: pulse 1s infinite;
 }
 .button-49,
 .button-49:after {
+  position: relative;
+  top: 100px;
   width: 150px;
   height: 76px;
+  margin-top: 15px;
   line-height: 78px;
   font-family: "Bebas Neue", sans-serif;
   background: linear-gradient(45deg, transparent 5%, rgba(248, 248, 1, 0.811) 5%);
@@ -426,7 +432,6 @@ div#intrucoes{
   outline: transparent;
   text-shadow: rgb(48 234 240) -4px 3px 9px, rgb(255 224 51) -5px -3px 9px, #0000009e 0px 0px 20px;
   font-size: 1.2em;
-  position: relative;
   user-select: none;
   touch-action: manipulation;
   z-index: 10;
@@ -450,15 +455,12 @@ div#intrucoes{
   background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
   text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
   clip-path: var(--slice-0);
+  animation: 1.5s glitch infinite;
+  animation-timing-function: steps(2, end);
 }
 .button-49:hover{
   font-weight: bold;
 }
-.button-49:hover:after {
-  animation: 1s glitch;
-  animation-timing-function: steps(2, end);
-}
-
 @keyframes glitch {
   0% {
     clip-path: var(--slice-1);
@@ -503,14 +505,5 @@ div#intrucoes{
   100% {
     clip-path: var(--slice-1);
     transform: translate(0);
-  }
-}
-
-@media (min-width: 768px) {
-  .button-49,
-  .button-49:after {
-    width: 200px;
-    height: 86px;
-    line-height: 88px;
   }
 }
