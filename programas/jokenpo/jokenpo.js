@@ -3,6 +3,10 @@ function fechar() {
   location.reload();
 }
 
+function restart(){
+  location.reload();
+}
+
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 function randint(min, max) {
@@ -245,4 +249,5 @@ async function jokenpo(computer, user, selected) {
   };
   Object.assign(intrucoes.style, styles);
   intrucoes.innerHTML = `${resultado}, o Jokenpo jogou ${rescomp}`;
+  document.querySelector('.button-49').style.visibility = 'visible';
 }
