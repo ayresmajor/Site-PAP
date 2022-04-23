@@ -180,7 +180,7 @@ async function jokenpo(computer, user, selected) {
   if (selected == "pedra") {
     pedra.style.color = "red";
     pedraimg.style.animation =
-      "shadowout 1500ms forwards, selectedrotation 1s forwards, slide 2s forwards, roda 2s alternate infinite";
+      "slide 2s forwards, roda 2s alternate infinite";
     papelimg.style.animation = "fadeout 1500ms forwards";
     tesouraimg.style.animation = "fadeout 1500ms forwards";
     papelimg.style.display = "none";
@@ -188,7 +188,7 @@ async function jokenpo(computer, user, selected) {
   } else if (selected == "papel") {
     papel.style.color = "red";
     papelimg.style.animation =
-      "shadowout 1500ms forwards, selectedrotation 1s forwards, slidel 2s forwards, roda 2s alternate infinite";
+      "slide 2s forwards, roda 2s alternate infinite";
     pedraimg.style.animation = "fadeout 1500ms forwards";
     tesouraimg.style.animation = "fadeout 1500ms forwards";
     pedraimg.style.display = "none";
@@ -196,7 +196,7 @@ async function jokenpo(computer, user, selected) {
   } else {
     tesoura.style.color = "red";
     tesouraimg.style.animation =
-      "shadowout 1500ms forwards, selectedrotation 1s forwards, slide 2s forwards, roda 2s alternate infinite";
+      "slide 2s forwards, roda 2s alternate infinite";
     papelimg.style.animation = "fadeout 1500ms forwards";
     pedraimg.style.animation = "fadeout 1500ms forwards";
     papelimg.style.display = "none";

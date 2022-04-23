@@ -304,14 +304,6 @@ div#intrucoes{
     box-shadow: #ff494900 0px 0px 0px 0px, inset #ff494900 0px 0px 0px 0px;
   }
 }
-@keyframes selectedrotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 @keyframes fadeout {
   from {
     opacity: 100%;
@@ -320,32 +312,12 @@ div#intrucoes{
     opacity: 0%;
   }
 }
-@keyframes slidepedra {
-  from {
-    margin-top: 20px;
-    margin-left: 20px;
-  }
-  to {
-    margin-top: 100px;
-    margin-left: 490px;
-  }
-}
 @keyframes slide {
   from {
     margin-top: 20px;
   }
   to {
     margin-top: 100px;
-  }
-}
-@keyframes slidetesoura {
-  from {
-    margin-top: 20px;
-    margin-left: 20px;
-  }
-  to {
-    margin-top: 100px;
-    margin-left: -520px;
   }
 }
 /*fim das animações*/
