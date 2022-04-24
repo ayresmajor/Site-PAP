@@ -1,19 +1,5 @@
-@charset "UTF-8";
 
-.grid {
-  display: grid;
-  place-items: center;
-}
-.flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.center {
-  display: table;
-  margin: auto;
-}
 
 body{
   overflow-x: visible;
