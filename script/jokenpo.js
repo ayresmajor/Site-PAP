@@ -49,15 +49,15 @@ async function start() {
   await sleep(750);
   intrucoes.innerText = "TESOURA";
   await sleep(500);
-  pedra.setAttribute("onmouseout", "sair(this.id)");
-  papel.setAttribute("onmouseout", "sair(this.id)");
-  tesoura.setAttribute("onmouseout", "sair(this.id)");
+  pedra.setAttribute("onmouseleave", "sair(this.id)");
+  papel.setAttribute("onmouseleave", "sair(this.id)");
+  tesoura.setAttribute("onmouseleave", "sair(this.id)");
   pedra.setAttribute("onmouseenter", "entrar(this.id)");
   papel.setAttribute("onmouseenter", "entrar(this.id)");
   tesoura.setAttribute("onmouseenter", "entrar(this.id)");
-  pedraimg.setAttribute("onmouseout", "sair(this.id)");
-  papelimg.setAttribute("onmouseout", "sair(this.id)");
-  tesouraimg.setAttribute("onmouseout", "sair(this.id)");
+  pedraimg.setAttribute("onmouseleave", "sair(this.id)");
+  papelimg.setAttribute("onmouseleave", "sair(this.id)");
+  tesouraimg.setAttribute("onmouseleave", "sair(this.id)");
   pedraimg.setAttribute("onmouseenter", "entrar(this.id)");
   papelimg.setAttribute("onmouseenter", "entrar(this.id)");
   tesouraimg.setAttribute("onmouseenter", "entrar(this.id)");
@@ -130,15 +130,15 @@ function sair(clickedid) {
 }
 async function select(clickedid) {
   t = 20;
-  pedra.setAttribute("onmouseout", "");
-  papel.setAttribute("onmouseout", "");
-  tesoura.setAttribute("onmouseout", "");
+  pedra.setAttribute("onmouseleave", "");
+  papel.setAttribute("onmouseleave", "");
+  tesoura.setAttribute("onmouseleave", "");
   pedra.setAttribute("onmouseenter", "");
   papel.setAttribute("onmouseenter", "");
   tesoura.setAttribute("onmouseenter", "");
-  pedraimg.setAttribute("onmouseout", "");
-  papelimg.setAttribute("onmouseout", "");
-  tesouraimg.setAttribute("onmouseout", "");
+  pedraimg.setAttribute("onmouseleave", "");
+  papelimg.setAttribute("onmouseleave", "");
+  tesouraimg.setAttribute("onmouseleave", "");
   pedraimg.setAttribute("onmouseenter", "");
   papelimg.setAttribute("onmouseenter", "");
   tesouraimg.setAttribute("onmouseenter", "");
@@ -155,15 +155,15 @@ async function select(clickedid) {
 }
 
 async function jokenpo(computer, user, selected) {
-  pedra.setAttribute("onmouseout", "");
-  papel.setAttribute("onmouseout", "");
-  tesoura.setAttribute("onmouseout", "");
+  pedra.setAttribute("onmouseleave", "");
+  papel.setAttribute("onmouseleave", "");
+  tesoura.setAttribute("onmouseleave", "");
   pedra.setAttribute("onmouseenter", "");
   papel.setAttribute("onmouseenter", "");
   tesoura.setAttribute("onmouseenter", "");
-  pedraimg.setAttribute("onmouseout", "");
-  papelimg.setAttribute("onmouseout", "");
-  tesouraimg.setAttribute("onmouseout", "");
+  pedraimg.setAttribute("onmouseleave", "");
+  papelimg.setAttribute("onmouseleave", "");
+  tesouraimg.setAttribute("onmouseleave", "");
   pedraimg.setAttribute("onmouseenter", "");
   papelimg.setAttribute("onmouseenter", "");
   tesouraimg.setAttribute("onmouseenter", "");
