@@ -59,17 +59,16 @@ div.tituloimg img {
   animation: roda 2s alternate infinite;
 }
 
-label#pedra {
+label#pedra,label#papel,label#tesoura{
   position: relative;
+} 
+label#pedra {
   right: 40px;
 }
-
 label#papel {
-  position: relative;
   left: 25px;
 }
 label#tesoura {
-  position: relative;
   left: 77px;
 }
 

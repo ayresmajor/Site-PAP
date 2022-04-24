@@ -34,7 +34,6 @@ var t = 0;
 function iniciar() {
   document.body.style.aspectRatio =  "16/9";
   fundo.style.display = "block";
-  fundo.scrollLeft += 2000;
   document.getElementById("head").style.position="static";
   document.getElementById("iniciar").style.display = "none";  
 }

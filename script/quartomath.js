@@ -30,7 +30,7 @@ switch (calcpos) {
   case "2":
     calculadora.setAttribute(
       "style",
-      "top: 612px; left: 821px;  width: 74px; "
+      "top: 618px; left: 821px;  width: 74px; transform: rotate(-14deg);"
     );
     break;
   case "3":
