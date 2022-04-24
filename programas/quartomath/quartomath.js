@@ -164,10 +164,12 @@ let h = new Date().getHours();
 if(h > 6 && h <= 11){
   paisagem.style.filter = "brightness(120%)"
   janelasbord.style.backgroundColor = "transparent"
-}else if(h > 11 && h <=16){
+}
+else if(h > 11 && h <=16){
   paisagem.style.filter = "saturate(120%)"
   janelasbord.style.backgroundColor = "#ffa50038"
-}else if(h > 16 && h <=20){
+}
+else if(h > 16 && h <=20){
   paisagem.style.filter = "saturate(120% brightness(60%)"
   janelasbord.style.backgroundColor = "#ffa60010"
 } else {
