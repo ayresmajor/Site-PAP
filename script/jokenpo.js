@@ -28,7 +28,6 @@ let win = document.getElementById("win");
 let escolhauto = "";
 var jogador = 7;
 let computador = randint(0, 3)
-var jogavel = false;
 var t = 0;
 
 function iniciar() {
@@ -149,9 +148,7 @@ async function select(clickedid) {
   } else {
     jogador = 2;
   }
-
   jokenpo(computador, jogador, clickedid);
-
 }
 
 async function jokenpo(computer, user, selected) {
