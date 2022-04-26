@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'digital-7';
-    src: url('../../../fontes/monogram.ttf') format('truetype');
+    src: url('../fontes/monogram.ttf') format('truetype');
     font-weight: normal;
 }
 *{
@@ -21,7 +21,7 @@ body , html{
 .container {
     position: relative;
     width: 340px;
-    background-image: url(../../../imagens/motherboard.jpg);
+    background-image: url("../imagens/motherboard.jpg");
     padding: 40px 30px 30px;
     box-shadow: rgba(0, 0, 0, 0.495) 25px 25px 75px, rgba(0, 0, 0, 0.495) 10px 10px 70px, inset rgba(0, 0, 0, 0.5) -5px -5px 15px, inset rgba(0, 0, 0, 0.5) 5px 5px 15px;
     border-radius: 10px;

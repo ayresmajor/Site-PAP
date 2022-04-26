@@ -2,13 +2,13 @@
 
 @font-face {
   font-family: "snail-mail";
-  src: url("../../../fontes/kr-snail-mail.regular.ttf") format("truetype");
+  src: url("../fontes/kr-snail-mail.regular.ttf") format("truetype");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "KgTeacherHelpers";
-  src: url("../../../fontes/KgTeacherHelpers-q4J1.ttf") format("truetype");
+  src: url("../fontes/KgTeacherHelpers-q4J1.ttf") format("truetype");
   font-weight: bold;
 }
 
@@ -79,7 +79,7 @@ h1 {
   left: 14px;
   height: 65px;
   width: 100px;
-  background-image: url(../../../imagens/shell.png);
+  background-image: url("../imagens/shell.png");
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
