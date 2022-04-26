@@ -141,7 +141,7 @@ div#intrucoes{
 .pedraico,.papelico, .tesouraico {
   display: inline;
   position: relative;
-  background-image: url('../../imagens/pedrar100.ico');
+  background-image: url('../imagens/pedrar100.ico');
   background-repeat: no-repeat;
   background-size: contain;
   width: 100px; 
@@ -151,11 +151,11 @@ div#intrucoes{
 }
 
 .papelico{
-  background-image: url('../../imagens/papelr100.ico');
+  background-image: url('../imagens/papelr100.ico');
 }
 
 .tesouraico{
-  background-image: url('../../imagens/tesourar100.ico');
+  background-image: url('../imagens/tesourar100.ico');
   visibility: visible;
 }
 
@@ -320,7 +320,7 @@ div#intrucoes{
 }
 
 .allprograms {
-  background-image: url("../../imagens/jokenpomenu.jpg");
+  background-image: url("../imagens/jokenpomenu.jpg");
   animation:none;
   animation: sliderjoken 15s infinite, dance 2s infinite ease-in-out alternate;
 }
@@ -328,35 +328,35 @@ div#intrucoes{
 @keyframes sliderjoken{
   0%{
   background-color: rgb(0, 0, 0);
-  background-image: url("../../imagens/jokenpomenu.jpg");
+  background-image: url("../imagens/jokenpomenu.jpg");
   }
   23%{
   background-color: rgb(255, 255, 255);
-  background-image: url("../../imagens/jokenpomenu.jpg");
+  background-image: url("../imagens/jokenpomenu.jpg");
   }
   25%{
   background-color: rgb(0, 0, 0);
-  background-image: url("../../imagens/jokenpowin.jpg"); 
+  background-image: url("../imagens/jokenpowin.jpg"); 
   }
   47%{
   background-color: rgb(255, 255, 255);
-  background-image: url("../../imagens/jokenpowin.jpg"); 
+  background-image: url("../imagens/jokenpowin.jpg"); 
   }
   50%{
     background-color: rgb(0, 0, 0);
-    background-image: url("../../imagens/jokenpoempate.jpg");
+    background-image: url("../imagens/jokenpoempate.jpg");
   }
   73%{
     background-color: rgb(255, 255, 255);
-    background-image: url("../../imagens/jokenpoempate.jpg");
+    background-image: url("../imagens/jokenpoempate.jpg");
   }
   75%{
     background-color: rgb(0, 0, 0);
-    background-image: url("../../imagens/jokenpoperda.jpg");
+    background-image: url("../imagens/jokenpoperda.jpg");
   }
   97%{
     background-color: rgb(255, 255, 255);
-    background-image: url("../../imagens/jokenpoperda.jpg");
+    background-image: url("../imagens/jokenpoperda.jpg");
   }
 }
 

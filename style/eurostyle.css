@@ -199,19 +199,19 @@ div#estrelas5 {
 @keyframes slidereuro {
   0% {
     background-color: rgb(0, 0, 0);
-    background-image: url("../../imagens/euromilhoesjogo.jpg");
+    background-image: url("../imagens/euromilhoesjogo.jpg");
   }
   40% {
     background-color: rgb(255, 255, 255);
-    background-image: url("../../imagens/euromilhoesjogo.jpg");
+    background-image: url("../imagens/euromilhoesjogo.jpg");
   }
   56% {
     background-color: rgb(0, 0, 0);
-    background-image: url("../../imagens/euromilhoesmenu.jpg");
+    background-image: url("../imagens/euromilhoesmenu.jpg");
   }
   90% {
     background-color: rgb(255, 255, 255);
-    background-image: url("../../imagens/euromilhoesmenu.jpg");
+    background-image: url("../imagens/euromilhoesmenu.jpg");
   }
 }
 
