@@ -57,6 +57,7 @@ window.addEventListener("keyup", async function (event) {
       euroloading.style.display = "block";
       await sleep(500);
       euroloading.style.display = "none";
+      fundo.style.height = "auto";
       for (c = 1; c <= palpite; c++) {
         this.window["estrelas" + c].style.display = "grid";
       }

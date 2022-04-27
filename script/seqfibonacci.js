@@ -13,7 +13,7 @@ function skip(){
 async function sequenciar() {
   let num = document.getElementById("num");
   let quanterm = Number(num.value);
-  if (quanterm > 2) {
+  if (quanterm > 2 && Number.isInteger(quanterm)) {
     let snail = document.getElementById("snail");
     let slime = document.getElementById("slime");
     let titulo = document.getElementById("titulo");
@@ -81,7 +81,7 @@ async function sequenciar() {
        background.innerHTML += ` Fim da sequência  &#128012;<button id="voltar" class="button-29" role="button"  onclick="history.back()">VOLTAR</button>       <button id="formato" class="button-29" role="button"  onclick="format()" style="  display: grid;">Mudar formato: &#x2192; </button> `
   } else {
     num.value = "";
-    window.alert("Valor inválido");
+    window.alert("Somente números inteiros maiores que 2");
   }
 }
 
