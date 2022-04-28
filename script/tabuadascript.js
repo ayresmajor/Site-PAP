@@ -37,11 +37,6 @@ window.addEventListener("keyup", async function (event) {
       } else {
         res = a * i;
       }
-     /* if (Number.isInteger(res)) {
-        resfinal = res;
-      } else {
-        resfinal = res.toFixed(2);
-      }*/ // Só pra colocar no relatorio
       if(operador=="somar" || operador=="multiplicar"){
       tabuada.innerHTML += `<p>${a}  ${simbolo} ${i} = ${res}`;
       } else{
