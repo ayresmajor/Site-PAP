@@ -18,7 +18,6 @@ window.addEventListener("keyup", async function (event) {
     let a = Number(num.value);
     let simbolo = "&#215;";
     let res = 0;
-    //let resfinal = 0;
     let calc = 0;
     tabuada.innerHTML = "";
     for (var i = 1; i <= 10; i++) {

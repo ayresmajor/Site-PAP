@@ -81,7 +81,7 @@ async function sequenciar() {
        background.innerHTML += ` Fim da sequência  &#128012;<button id="voltar" class="button-29" role="button"  onclick="history.back()">VOLTAR</button>       <button id="formato" class="button-29" role="button"  onclick="format()" style="  display: grid;">Mudar formato: &#x2192; </button> `
   } else {
     num.value = "";
-    window.alert("Somente números inteiros maiores que 2");
+    window.alert("Somente números inteiros a partir de 3");
   }
 }
 
@@ -110,7 +110,3 @@ async function format(){
     formato.innerHTML="Mudar formato: ,&nbsp;"
    }
  }
-
-
-
-
