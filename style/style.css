@@ -293,7 +293,7 @@ footer {
   box-shadow: #00000033 11px 8px 20px 3px;
   padding: 1px;
   color: white;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 5px 5px 0px 0px;
 }
 footer p {
   text-align: center;
@@ -302,7 +302,6 @@ footer p {
 }
 
 /*Outras paginas*/
-
 #fechar {
   position: absolute;
   padding: 10px;

@@ -130,6 +130,9 @@ p#euroinfo {
   margin: 0px;
   display: none;
 }
+#eurodescriauto p{
+  text-align: center;
+}
 
 img#euroloading {
   border-radius: 50%;
@@ -212,13 +215,10 @@ div#estrelas5 {
 }
 
 @media (max-width: 600px) {
-  #fundo {
+  #titulo {
     font-size: 60%;
   }
-  .numeros {
-    padding: 0px;
-    text-indent: 22px;
-  }
+
   .numeros:hover {
     padding: 5px;
   }
