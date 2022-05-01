@@ -303,9 +303,6 @@ div#intrucoes{
     border-radius: 20px;
     padding-bottom: 100px;
   }
-  #headiv{
-    width: 100%;
-  }
   #win{
     position: absolute;
     left:600px;
@@ -367,8 +364,6 @@ div#intrucoes{
   position: relative;
   top: 100px;
   width: 150px;
-  height: 76px;
-  margin-top: 15px;
   line-height: 78px;
   font-family: "Bebas Neue", sans-serif;
   background: linear-gradient(45deg, transparent 5%, rgba(248, 248, 1, 0.811) 5%);

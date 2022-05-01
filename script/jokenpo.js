@@ -34,7 +34,8 @@ function iniciar() {
   document.body.style.aspectRatio =  "16/9";
   fundo.style.display = "block";
   document.getElementById("head").style.position="static";
-  document.getElementById("iniciar").style.display = "none";  
+  document.getElementById("iniciar").style.display = "none"; 
+  document.getElementById("headiv").style.width = "100%";
 }
 
 

@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86"
+    />
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style/style.css" />
     <title>Alleatório</title>
@@ -23,15 +26,22 @@
         <nav>
           <a href="index.html" target="_self" rel="next">Início</a>
           <span class="dropdown">
-            <button class="dropbtn">Programas 
+            <button class="dropbtn">
+              Programas
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-              <a href="programas/jokenpo/index.html" class="pro-jok">Pedra&#128074; Papel&#128400;Tesoura&#9996;</a>
-              <a href="programas/euromilhões/index.html" class="pro-euro">Euromilhões</a>
-              <a href="programas/quartomath/index.html" class="pro-qua">&#x222E;u&#x2206;rto M&#x2200;t&#x2208;mátic&#x2205;</a>
+              <a href="programas/jokenpo/index.html" class="pro-jok"
+                >Pedra&#128074; Papel&#128400;Tesoura&#9996;</a
+              >
+              <a href="programas/euromilhões/index.html" class="pro-euro"
+                >Euromilhões</a
+              >
+              <a href="programas/quartomath/index.html" class="pro-qua"
+                >&#x222E;u&#x2206;rto M&#x2200;t&#x2208;mátic&#x2205;</a
+              >
             </div>
-          </span> 
+          </span>
           <a href="agradecimentos/index.html" target="_self" rel="next"
             >Agradecimentos</a
           >
@@ -45,10 +55,10 @@
           Olá, bem-vindo ao site
           <strong style="font-family: var(--fonte-aleatorio)">AllEatório</strong
           >. Programas simples que estão destinados a passar o resto do seu
-          tempo em terminais de códigos, chegam a este site e ganham um
-          visual deslumbrante e uma maior interatividade. Venha, experimente,
-          descubra e inspire-se com estes programas, sem nenhum critério, já que
-          afinal é tudo aleatório.
+          tempo em terminais de códigos, chegam a este site e ganham um visual
+          deslumbrante e uma maior interatividade. Venha, experimente, descubra
+          e inspire-se com estes programas, sem nenhum critério, já que afinal é
+          tudo aleatório.
         </p>
       </article>
       <div class="allprograms"></div>
@@ -57,33 +67,62 @@
       <h2 class="protitulo">Pedra Papel Tesoura</h2>
       <section class="imagem" id="img01">
         <p>
-          PEDRA...<br/>
-          PAPEL...<br/>
-          TESOURA...<br/>
+          PEDRA...<br />
+          PAPEL...<br />
+          TESOURA...<br />
           Ganhei!!! Não acreditas?<br />
-          Então desafio-te para uma partida com o nosso campeão: O JOKENPO. <br>
-          <a href="programas/jokenpo/index.html" >Clica aqui</a> para seres desafiado.
+          Então desafio-te para uma partida com o nosso campeão: O JOKENPO.
+          <br />
+          <a href="programas/jokenpo/index.html">Clica aqui</a> para seres
+          desafiado.
         </p>
       </section>
       <h2 class="protitulo">Euromilhões</h2>
       <section class="imagem" id="img02">
         <p>
           A tua sorte não está em dia? Que tal experimentar novas estratégias?
-          Usa a mesma arma que eles e deixa tudo nas mãos do acaso.<br/>
-          <a href="programas/euromilhões/index.html" >Clica aqui</a> e obtém automaticamente números para o sorteio. Boa sorte!!
+          Usa a mesma arma que eles e deixa tudo nas mãos do acaso.<br />
+          <a href="programas/euromilhões/index.html">Clica aqui</a> e obtém
+          automaticamente números para o sorteio. Boa sorte!!
         </p>
       </section>
       <h2 class="protitulo">Quarto Matemático</h2>
       <section class="imagem" id="img03">
         <p>
-          Se és um fanático por matemática, este é um quarto perfeito pra ti. Além de um design moderno, existem 3 elementos que estão sempre a mudar de lugar. <br/>
-          <a href="programas/quartomath/index.html"> Clica aqui</a> para descobrires e procurares por eles.
-          
+          Se és um fanático por matemática, este é um quarto perfeito pra ti.
+          Além de um design moderno, existem 3 elementos que estão sempre a
+          mudar de lugar. <br />
+          <a href="programas/quartomath/index.html"> Clica aqui</a> para
+          descobrires e procurares por eles.
         </p>
       </section>
+    </section>
+    <section id="buttoncube" class="flex">
+      <div class="cube" onclick="prograndom()">
+        <div id="top"></div>
+        <div>
+          <span style="--i: 0">
+            <h3>AllEatório</h3>
+            <h3>AllEatório</h3>
+          </span>
+          <span style="--i: 1">
+            <h3>AllEatório</h3>
+            <h3>AllEatório</h3>
+          </span>
+          <span style="--i: 2">
+            <h3>AllEatório</h3>
+            <h3>AllEatório</h3>
+          </span>
+          <span style="--i: 3">
+            <h3>AllEatório</h3>
+            <h3>AllEatório</h3>
+          </span>
+        </div>
+      </div>
     </section>
     <footer>
       <p>Site criado por Ayres Major como Prova de Aptidão Profissional</p>
     </footer>
+    <script src="script/script.js"></script>
   </body>
 </html>

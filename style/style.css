@@ -20,7 +20,7 @@
   font-weight: normal;
 }
 :root {
-  --cbranco: 245, 245, 245;
+  --cbranco: 10, 10, 10;
   --cazulcl: 67, 97, 238;
   --cazules: 17, 5, 87;
   --cvermelho: 210, 1, 25;
@@ -70,9 +70,12 @@
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(114, 114, 114);
 }
+html{
+  background-color: white;
+}
 body {
   min-height: 100vh;
-  background-color: rgb(var(--cbranco));
+  background-color: rgb(var(--cbranco), 0.1);
   font-family: var(--fonte-padrao2);
   overflow-x: hidden;
 }
@@ -473,13 +476,12 @@ section#img03{
   background-position: center center;
   animation: slider03 15s infinite alternate;
 }
-
 @keyframes slider01{
   from{
     background-position: left center;
   }
   to{
-  background-position: right center;
+    background-position: right center;
   }
 }
 
@@ -488,7 +490,7 @@ section#img03{
     background-position: top center;
   }
   to{
-  background-position: bottom center;
+    background-position: bottom center;
   }
 }
 
@@ -497,6 +499,102 @@ section#img03{
     background-position: right center;
   }
   to{
-  background-position: left center;
+    background-position: left center;
   }
 }
+
+section#buttoncube{
+  box-sizing: border-box;
+  height:500px;
+  background-image: linear-gradient(to top,#050505, rgb(var(--cbranco)));
+  transition: all 0.5s;
+}
+.cube{
+  position: relative;
+  top: -50px;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transform: rotateX(-15deg);
+  animation: animate 6s linear infinite;
+  cursor:pointer;
+}
+
+@keyframes animate {
+  0%{
+    transform: rotateX(-15deg) rotateY(0deg);
+  }
+  50%{
+    transform: rotateX(-30deg) rotateY(180deg);
+  }
+  100%{
+    transform: rotateX(-15deg) rotateY(360deg);
+  }
+}
+.cube div{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+.cube div span{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom,rgb(var(--cazules)), rgb(var(--cvermelho)));
+  transform: rotateY(calc(90deg * var(--i))) translateZ(100px);
+  box-shadow: #00000042 0px 0px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+.cube h3{
+  position: absolute;
+  font-family: var(--fonte-aleatorio);
+  color: rgb(var(--cazules));
+  text-shadow: white 1px 1px 9px, #ffffff63 4px 3px 0px;
+  font-size: 2.7em;
+  transform: translateZ(30px)
+}
+.cube h3:nth-child(1){
+  transform: translateZ(0px) translateY(10px);
+  opacity: 50%;
+  text-shadow: white 1px 1px 9px, #ffffff63 4px 3px 0px;
+  font-size: 2.5em;
+  filter: blur(2px)
+}
+#top{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 200px;
+  height: 200px;
+  padding: 1px;
+  background-color: #00000085;
+  transform: rotateX(90deg) translateZ(100px);
+  box-shadow: inset rgb(var(--cazules)) 0px 0px 400px 50px;
+
+}
+
+#top::before{
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(var(--cvermelho));
+  transform: translateZ(-300px);
+  filter: blur(20px);
+  box-shadow: 0px 0px 120px rgb(var(--cvermelho)),
+  0px 0px 200px rgba(var(--cazules), 0.4),
+  0px 0px 300px rgba(var(--cvermelho), 0.6),
+  0px 0px 400px rgba(var(--cvermelho), 0.8),
+  0px 0px 500px rgba(var(--cvermelho), 1);
+}
+
