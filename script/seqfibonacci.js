@@ -78,7 +78,7 @@ async function sequenciar() {
         background.innerHTML+= `${lista[pos]} , `
         await sleep(100)
        }
-       background.innerHTML += ` Fim da sequência  &#128012;<button id="voltar" class="button-29" role="button"  onclick="history.back()">VOLTAR</button>       <button id="formato" class="button-29" role="button"  onclick="format()" style="  display: grid;">Mudar formato: &#x2192; </button> `
+       background.innerHTML += ` Fim da sequência  &#128012;<button id="voltar" class="button-29" role="button"  onclick="history.back()">VOLTAR</button> <button id="formato" class="button-29" role="button"  onclick="format()" style="  display: grid;">Mudar formato: &#x2192; </button> `
   } else {
     num.value = "";
     window.alert("Somente números inteiros a partir de 3");
@@ -92,7 +92,7 @@ async function format(){
     for(let pos in lista){
       background.innerHTML+= `${lista[pos]} , `
      }
-     background.innerHTML += ` Fim da sequência  &#128012;<button id="voltar" class="button-29" role="button"  onclick="history.back()">VOLTAR</button>       <button id="formato" class="button-29" role="button"  onclick="format()" style="  display: grid;">Mudar formato: ,&nbsp;</button> `
+     background.innerHTML += ` Fim da sequência  &#128012;<button id="voltar" class="button-29" role="button"  onclick="history.back()">VOLTAR</button> <button id="formato" class="button-29" role="button"  onclick="format()" style="  display: grid;">Mudar formato: ,&nbsp;</button> `
      let formato = document.getElementById("formato");
      formato.style.backgroundImage=" linear-gradient(to right, #000000 0%, #434343  51%, #000000  100%)"
      formato.style.boxShadow="rgb(0 0 0 / 87%) 0 2px 20px 0px "
@@ -102,7 +102,7 @@ async function format(){
     for(let pos in lista){
       background.innerHTML+= `${lista[pos]} &#x2192; `
      }
-     background.innerHTML += ` Fim da sequência  &#128012;<button id="voltar" class="button-29" role="button"  onclick="history.back()">VOLTAR</button>       <button id="formato" class="button-29" role="button"  onclick="format()" style="  display: grid;">Olá</button> `
+     background.innerHTML += ` Fim da sequência  &#128012;<button id="voltar" class="button-29" role="button"  onclick="history.back()">VOLTAR</button> <button id="formato" class="button-29" role="button"  onclick="format()" style="  display: grid;">Olá</button> `
      let formato = document.getElementById("formato");
      formato.style.backgroundImage=" linear-gradient(to right, #ffffff 0%, #cecece 51%, #ffffff 100%)"
      formato.style.boxShadow="inset rgb(0 0 0) 0 2px 3px 0px "
