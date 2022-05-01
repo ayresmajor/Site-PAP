@@ -289,16 +289,11 @@ main, .principal{
 }
 
 footer {
-  position: fixed;
-  left: 0px;
-  bottom: 0px;
-  width: 100%;
   background-color: rgb(var(--cazules));
   box-shadow: #00000033 11px 8px 20px 3px;
   padding: 1px;
   color: white;
   border-radius: 10px 10px 0px 0px;
-
 }
 footer p {
   text-align: center;
@@ -373,9 +368,6 @@ footer p {
   #iniciar{
     position:static;
     margin-bottom: 20px;
-  }
-  footer{
-    position: static;
   }
 }
 @media(max-width:400px){
