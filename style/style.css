@@ -292,9 +292,9 @@ main, .principal{
 }
 
 footer {
-  background-color: rgb(var(--cazules));
+  background-image: linear-gradient(to bottom,#050505, rgb(var(--cazules)));
   box-shadow: #00000033 11px 8px 20px 3px;
-  padding: 1px;
+  padding: 10px;
   color: white;
   border-radius: 5px 5px 0px 0px;
 }
@@ -302,6 +302,18 @@ footer p {
   text-align: center;
   font-weight: 500;
   font-size: 0.8em;
+}
+
+footer a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #282828;
+  border-radius: 2px;
+  color: #ffffff;
+  text-align: center;
+  transition:all .25s;
+  padding: 2px 5px 7px 5px; 
 }
 
 /*Outras paginas*/
@@ -508,6 +520,7 @@ section#buttoncube{
   height:500px;
   background-image: linear-gradient(to top,#050505, rgb(var(--cbranco)));
   transition: all 0.5s;
+  padding-bottom: 50px;
 }
 .cube{
   position: relative;
