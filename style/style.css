@@ -144,6 +144,7 @@ header > div nav a {
   text-align: justify;
   color: white;
   font-size: 1.2em;
+  transition: all 0.5s;
 }
 
 header > div nav a:hover,.navbar a:hover, .dropdown:hover .dropbtn{
@@ -164,6 +165,7 @@ header > div nav a:hover,.navbar a:hover, .dropdown:hover .dropbtn{
   background-color: inherit;
   font-family: inherit;
   margin: 0;
+  transition: all 0.5s;
 }
 .dropdown-content {
   display: none;
@@ -204,6 +206,10 @@ header > div nav a:hover,.navbar a:hover, .dropdown:hover .dropbtn{
 }
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.dropdown:hover i {
+  transform: rotate(-180deg);
 }
 
 #imglogo{
@@ -475,6 +481,11 @@ section.imagem > p a{
   -webkit-user-select: none;
   touch-action: manipulation;  
 }
+
+section.imagem > p a:hover{
+  box-shadow: inset rgba(255, 255, 255, 0.354) 0px 0px 5px, rgba(255, 255, 255, 0.354) 0px 0px 5px;
+}
+
 section#img01{
   background-image: url('../imagens/backgroundjokenpowin.jpg');
   background-position: center center;
