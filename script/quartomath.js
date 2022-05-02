@@ -6,6 +6,13 @@ function randint(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
+function safari(){
+  if( navigator.userAgent.indexOf("Safari") !== -1){
+    window.alert("Aqui não funciona")
+    window.location.href = "quartosafari.html";
+  }
+}
+
 //aleatorização das posições dos itens principais
 let calculadora = document.getElementById("calculadora");
 let tabuada = document.getElementById("tabuada");

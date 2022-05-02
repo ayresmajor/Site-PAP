@@ -427,7 +427,7 @@ section.imagem{
   background-attachment: fixed;
   height:500px;
 }
-section.imagem > p{
+section.imagem > p, .test{
   position: relative;
   max-width: 300px;
   background-color: #121212d9;
@@ -442,7 +442,7 @@ section.imagem > p{
   border-radius: 10px;
   /*transition: all 5s; */
 }
-section.imagem > p::before{
+section.imagem > p::before, .test::before{
   content: "";
   position: absolute;
   left: 0px;
@@ -453,7 +453,7 @@ section.imagem > p::before{
   border-radius: 0px 5px;
   animation: cores 15s ease infinite;
 }
-section.imagem > p::after{
+section.imagem > p::after, .test::after{
   content: "";
   position: absolute;
   right: 0px;
