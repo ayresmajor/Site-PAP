@@ -5,7 +5,7 @@
   padding: 0px;
 }
 body {
-  background-image: url("../../imagens/quartodarkwallp.jpg");
+  background-image: url("../imagens/quartodarkwallp.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left center;
@@ -14,12 +14,12 @@ body {
 }
 @keyframes animatedwall{
   0%{
-    background-image: url("../../imagens/quartodarkwallp.jpg");
+    background-image: url("../imagens/quartodarkwallp.jpg");
     background-position: left center;
     box-shadow: inset rgb(0 0 0 / 26%) 0px 0px 200px 100px;
   }
   100%{
-    background-image: url("../../imagens/quartoluzwallp.jpg");
+    background-image: url("../imagens/quartoluzwallp.jpg");
     background-position: right center;
     box-shadow: inset rgba(255, 255, 255, 0.26) 0px 0px 200px 100px;
   }
