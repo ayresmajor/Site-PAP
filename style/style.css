@@ -72,11 +72,15 @@
 }
 html{
   background-color: white;
+  overscroll-behavior: none;
 }
 body {
   min-height: 100vh;
   background-color: rgb(var(--cbranco), 0.1);
   font-family: var(--fonte-padrao2);
+  overflow: auto;
+  overscroll-behavior-y: contain;
+  scroll-behavior: smooth;
 }
 
 p {
