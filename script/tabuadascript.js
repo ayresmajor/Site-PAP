@@ -1,7 +1,7 @@
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 let num = document.getElementById("num");
-window.addEventListener("click", async function () {
+window.addEventListener("click", function () {
   if (document.activeElement.id == "voltar") {
     history.back()
   }else if (document.activeElement.id == "operadores") {
@@ -20,7 +20,6 @@ window.addEventListener("keyup", async function (event) {
     let calc = 0;
     tabuada.innerHTML = "";
     for (var i = 1; i <= 10; i++) {
-
       if (operador == "somar") {
         res = a + i;
         simbolo = "+";
