@@ -24,7 +24,7 @@ async function prograndom() {
     await sleep(1000)
     cube.style.animation = "animate 0.2s linear infinite"
     await sleep(500)
-    let random = randint(0,2)
+    let random = randint(0,3)
     switch (random){
       case 0:
         window.location.href = "programas/jokenpo/index.html";
@@ -35,8 +35,5 @@ async function prograndom() {
       case 2:
         window.location.href = "programas/quartomath/index.html";
         break;
-    }
-    
-    
-
+    }  
 }
