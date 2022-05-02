@@ -237,6 +237,10 @@ main, .principal{
   border-radius: 10px;
   font-size: 1.1em;
 }
+
+#artigo01 p{
+  padding: 0px 11px;
+}
 .allprograms{
   position: relative;
   top: 0px;
@@ -315,7 +319,9 @@ footer a{
   transition:all .25s;
   padding: 2px 5px 7px 5px; 
 }
-
+footer a:hover{
+  background-color: #343333;
+}
 /*Outras paginas*/
 #fechar {
   position: absolute;
