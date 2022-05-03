@@ -4,16 +4,16 @@ function randint(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-
 //Filtro de Browser
-let browser = navigator.userAgent.indexOf("Chrome")
-let version = navigator.userAgent[browser + 7]
-version += navigator.userAgent[browser + 8]
+let browser = navigator.userAgent.indexOf("Chrome");
+let version = navigator.userAgent[browser + 7];
+version += navigator.userAgent[browser + 8];
 if(version == 10){
-  version += navigator.userAgent[browser + 9]
+  version += navigator.userAgent[browser + 9];
 }
 if(navigator.userAgent.indexOf("Chrome") == -1 || version < 99){
-    window.alert("Para uma experiência completa utilize um browser de base Chromium como: Google Chrome, OperaGX/Opera ou Microsoft Edge. Caso esteja a utilizar um destes atualize para versão mais recente. Obrigado pela compreensão")}
+    window.alert("Para uma experiência completa utilize um browser de base Chromium como: Google Chrome, OperaGX/Opera ou Microsoft Edge. Caso esteja a utilizar um destes atualize para versão mais recente. Obrigado pela compreensão.");
+  }
 
 let buttoncube = document.getElementById("buttoncube");
 let foot = document.getElementById("foot");
