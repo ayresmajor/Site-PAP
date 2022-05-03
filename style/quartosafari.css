@@ -83,3 +83,7 @@ main {
 .blocoart h2{
   padding: 20px 0px;
 }
+
+footer{
+  position: static;
+}
