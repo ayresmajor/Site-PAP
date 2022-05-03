@@ -39,9 +39,9 @@ async function sequenciar() {
     snail.style.display = "block";
     slime.style.display = "block";
     simbolo.style.display = "block";
-    if(navigator.userAgent.indexOf("Mac") !== -1){
+    /*if(navigator.userAgent.indexOf("Mac") !== -1){
       simbolo.style.display = "none";
-    }
+    }*/
     lgbtsnail.style.animation = "desce 2s forwards linear alternate infinite";
     pular.style.visibility="visible";
     pular.style.animation =
