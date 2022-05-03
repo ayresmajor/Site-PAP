@@ -20,7 +20,7 @@ let foot = document.getElementById("foot");
 foot.style.backgroundImage= "linear-gradient(to bottom,rgba(5, 5, 5,0), rgb(var(--cazules)))"
 window.addEventListener("scroll", function () {
   let value = Number(window.scrollY);
-  let gradient = value * (1/1700);
+  let gradient = value * (1/1750);
   if (gradient > 1){
     gradient = 1;
   }
@@ -30,6 +30,7 @@ window.addEventListener("scroll", function () {
     buttoncube.style.boxShadow= "rgb(var(--cbranco)) 1px -100px 120px 0px";
   }else{
     buttoncube.style.boxShadow= "none";
+    foot.style.backgroundImage= "linear-gradient(to bottom,rgba(5, 5, 5,0), rgb(var(--cazules)))"
   }
 });
 

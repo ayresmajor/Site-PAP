@@ -151,7 +151,7 @@ header > div nav a:hover,.navbar a:hover, .dropdown:hover .dropbtn{
   text-shadow: rgb(var(--cazulcl)) 0px 1px 9px;
   transition-duration: 0.5s;
   border-radius: 20px;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 .dropdown .dropbtn {
@@ -207,9 +207,11 @@ header > div nav a:hover,.navbar a:hover, .dropdown:hover .dropbtn{
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
+.dropdown i{
+  margin: 5px;
+}
 .dropdown:hover i {
-  transform: rotate(-180deg);
+  transform: scaleY(-1);
 }
 
 #imglogo{
@@ -230,8 +232,7 @@ main, .principal{
   max-width: 1200px;
   margin: auto;
   border-radius: 5px;
-  border-inline: rgb(var(--cvermelho));
-  border-width: thin;
+  border: rgb(var(--cvermelho)) 0.05em;
   border-style: none solid;
   box-shadow: hsla(0, 0%, 0%, 0.302) 0px 7px 20px 0px;
   align-items: center;
@@ -423,10 +424,6 @@ z-index: 3;
   box-shadow: inset rgba(0, 0, 0, 0.454) -2px -11px 20px 0px;
 }
 
-.principal{
-  height: 60%;
-  display: flexbox;
-}
 section.imagem{
   background-color: rgb(53, 53, 53);
   color: white;
@@ -601,7 +598,7 @@ section#buttoncube{
   color: rgb(var(--cazules));
   text-shadow: white 1px 1px 9px, #ffffff63 4px 3px 0px;
   font-size: 2.7em;
-  transform: translateZ(30px)
+  transform: translateZ(30px);
 }
 .cube h3:nth-child(1){
   transform: translateZ(0px) translateY(10px);
