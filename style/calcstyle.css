@@ -34,7 +34,7 @@ body , html{
     width: 100%;
     height: 100%;
     background: rgba(133, 133, 133, 0.09);
-    box-shadow: rgb(0 0 0 / 50%) 25px 25px 75px, rgb(0 0 0 / 50%) 10px 10px 70px, inset rgb(54 54 54 / 83%) 1px 5px 20px 5px, inset rgb(79 77 77 / 1%) 5px 5px 15px;
+    box-shadow:rgb(0 0 0 / 50%) 0px 0px 75px, rgb(0 0 0 / 50%) 10px 10px 70px, inset rgb(54 54 54 / 83%) 1px 5px 20px 5px, inset rgb(79 77 77 / 1%) 5px 5px 15px;
     backdrop-filter: blur(1px);
     border-radius: 10px;
 }
