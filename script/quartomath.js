@@ -7,8 +7,8 @@ function randint(min, max) {
 }
 
 function safari(){
-  if( navigator.userAgent.indexOf("Safari") !== -1){
-    window.alert("Devido a falta de suporte deste browser para algumas funções, não será possível mostrar o quarto. Será reedirecionado para outra página. Caso queira a experiencia completa use outro browser (Edge, Chrome, Opera). Obrigado pela compreensão.")
+  if(navigator.userAgent.indexOf("Mac") !== -1){
+    window.alert("Devido a falta de suporte deste browser para algumas propriedades CSS, não será possível mostrar o quarto. Será reedirecionado para outra página. Caso queira a experiência completa utilize outro browser (Edge, Chrome, Opera). Obrigado pela compreensão.")
     window.location.href = "quartosafari.html";
   }
 }

@@ -3,6 +3,10 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 function randint(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
+  /*if(navigator.userAgent.indexOf("Chrome") == -1 || navigator.userAgent.indexOf("Chrome/100") == -1){
+    window.alert("Para uma experiência completa utilize um browser de base Chronomiun como: Google Chrome, OperaGX ou Microsoft")}*/
+    
+
 
 let buttoncube = document.getElementById("buttoncube");
 window.addEventListener("scroll", function () {
@@ -13,7 +17,7 @@ window.addEventListener("scroll", function () {
   }
   document.body.style.backgroundColor = "rgb(var(--cbranco)," +  gradient + ")";
   if(gradient == 1){
-    buttoncube.style.boxShadow= "rgb(var(--cbranco)) 0px -20px 60px 100px";
+    buttoncube.style.boxShadow= "rgb(var(--cbranco)) 1px -100px 120px 0px";
   }else{
     buttoncube.style.boxShadow= "none";
   }

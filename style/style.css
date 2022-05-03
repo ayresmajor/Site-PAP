@@ -108,7 +108,7 @@ header{
   position: sticky;
   top: -192px;
   left: 0px;
-  z-index: 1;
+  z-index: 2;
 }
 
 header > div {
@@ -224,6 +224,7 @@ header > div nav a:hover,.navbar a:hover, .dropdown:hover .dropbtn{
 }
 
 main, .principal{
+  position: relative;
   background-color: white;
   min-width: 200px;
   max-width: 1200px;
@@ -234,6 +235,7 @@ main, .principal{
   border-style: none solid;
   box-shadow: hsla(0, 0%, 0%, 0.302) 0px 7px 20px 0px;
   align-items: center;
+  z-index: 1;
 }
 
 #artigo01 {
@@ -305,6 +307,9 @@ main, .principal{
 }
 
 footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
   background-image: linear-gradient(to bottom,#050505, rgb(var(--cazules)));
   box-shadow: #00000033 11px 8px 20px 3px;
   padding: 10px;
@@ -318,7 +323,6 @@ footer p {
 }
 
 footer a{
-  display: inline-block;
   width: 35px;
   height: 35px;
   background-color: #282828;
@@ -536,11 +540,13 @@ section#img03{
 }
 
 section#buttoncube{
+  position: relative;
   box-sizing: border-box;
   height:500px;
   background-image: linear-gradient(to top,#050505, rgb(var(--cbranco)));
   transition: all 0.5s;
   padding-bottom: 50px;
+  z-index: 1;
 }
 .cube{
   position: relative;

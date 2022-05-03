@@ -39,7 +39,11 @@ async function sequenciar() {
     snail.style.display = "block";
     slime.style.display = "block";
     simbolo.style.display = "block";
+    if(navigator.userAgent.indexOf("Mac") !== -1){
+      simbolo.style.display = "none";
+    }
     lgbtsnail.style.animation = "desce 2s forwards linear alternate infinite";
+    pular.style.visibility="visible";
     pular.style.animation =
       "fadein 15000ms forwards, bounce 4s  infinite"
     while (cont <= quanterm) {
@@ -50,13 +54,13 @@ async function sequenciar() {
       t1 = t2;
       t2 = t3;
       if (cont % 2 == 0) {
-        numesq.innerHTML = `${t1}`;
+        numesq.innerHTML = t1;
         folha1.style.animation = "fadeout 500ms forwards infinite";
-      } else {
-        numdir.innerHTML = `${t1}`;
+      }else if(cont % 2 != 0) {
+        numdir.innerHTML = t1;
         folha2.style.animation = "fadeout 500ms forwards infinite";
       }
-      resultado.innerHTML = `${t3}`;
+      resultado.innerHTML = t3;
       await sleep(tempo);
       cont += 1;
     }
