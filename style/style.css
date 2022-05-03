@@ -310,8 +310,7 @@ footer {
   position: sticky;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to bottom,#050505, rgb(var(--cazules)));
-  box-shadow: #00000033 11px 8px 20px 3px;
+  background-image:linear-gradient(to bottom,rgb(5, 5, 5), rgb(var(--cazules)));
   padding: 10px;
   color: white;
   border-radius: 5px 5px 0px 0px;
