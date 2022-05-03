@@ -57,11 +57,12 @@ h1 {
     #00ffdc -10px 1px 5px, #ff0000ab 4px 4px 8px, #ffff0000 2px 9px 5px;
   box-shadow: inset rgb(0 0 0 / 50%) 1px 3px 10px;
 }
-#acento{
+#acento {
   position: absolute;
   transform: translate(151px, 9px);
   font-size: 1rem;
-  text-shadow: black 0px 0px 3px, rgb(3 3 35) -6px 5px 20px, #00ffdc -10px 1px 5px, #ff0000b3 4px 4px 10px, #191301 -1px 1px 8px;
+  text-shadow: black 0px 0px 3px, rgb(3 3 35) -6px 5px 20px,
+    #00ffdc -10px 1px 5px, #ff0000b3 4px 4px 10px, #191301 -1px 1px 8px;
 }
 
 #snail {
@@ -72,7 +73,8 @@ h1 {
   width: 120px;
   position: absolute;
   z-index: 1;
-  animation: 2.5s snailCrawl cubic-bezier(0.46, 0.03, 0.52, 0.96) alternate infinite;;
+  animation: 2.5s snailCrawl cubic-bezier(0.46, 0.03, 0.52, 0.96) alternate
+    infinite;
 }
 #snail #shell {
   top: 10px;
@@ -137,7 +139,8 @@ h1 {
   background: linear-gradient(to right, rgba(183, 223, 45, 0) 0%, #b7df2d 100%);
   position: absolute;
   z-index: 0;
-  animation: 2.5s slimeSpread cubic-bezier(0.46, 0.03, 0.52, 0.96) alternate infinite;
+  animation: 2.5s slimeSpread cubic-bezier(0.46, 0.03, 0.52, 0.96) alternate
+    infinite;
   border-radius: 3px;
 }
 /* animações*/
@@ -479,7 +482,7 @@ h1 {
     #5a3f37 100%
   );
   font-family: consolas, "Courier New", monospace;
-  font-size: 1em;
+  font-size: 0.5em;
   font-weight: bold;
   border-radius: 20px;
   padding: 5px;
@@ -499,14 +502,14 @@ h1 {
   );
   box-shadow: rgb(0 0 0 / 87%) 0 2px 20px 0px;
   font-family: consolas, "Courier New", monospace;
-  font-size: 1em;
+  font-size: 0.5em;
   font-weight: bold;
   padding: 5px;
   height: auto;
 }
 
 #simbolo {
-display: none;
+  display: none;
   position: absolute;
   top: 99px;
   font-size: 20em;
@@ -516,27 +519,29 @@ display: none;
   font-family: "KgTeacherHelpers", "Verdana", "sans-serif", cursive;
   text-shadow: 10px 10px 25px rgb(0 255 17), -10px 10px 25px rgb(0 255 17),
     -10px -10px 25px rgb(0 255 17), 10px -10px 25px rgb(0 255 17);
-    animation: tshadow 2.5s  linear infinite;
-    animation-delay: 1.30s;
-border-radius: 50%;
-width:  1em;
-text-align: center;
-box-shadow: rgb(29, 232, 42) 0px  0px 20px;
+  animation: tshadow 2.5s linear infinite;
+  animation-delay: 1.3s;
+  border-radius: 50%;
+  width: 1em;
+  text-align: center;
+  box-shadow: rgb(29, 232, 42) 0px 0px 20px;
 }
 
 @keyframes tshadow {
-  90%{
+  90% {
     top: 134px;
     font-size: 16em;
-    text-shadow: 10px 10px 25px rgb(0 255 17 / 21%), -10px 10px 25px rgb(0 255 17 / 28%), -10px -10px 25px rgb(0 255 17 / 26%), 10px -10px 25px rgb(0 255 17 / 28%);
+    text-shadow: 10px 10px 25px rgb(0 255 17 / 21%),
+      -10px 10px 25px rgb(0 255 17 / 28%), -10px -10px 25px rgb(0 255 17 / 26%),
+      10px -10px 25px rgb(0 255 17 / 28%);
   }
-  100%{
+  100% {
     top: 99px;
     font-size: 20em;
     color: #021603;
     -webkit-text-stroke: 3px #33422ac4;
     text-shadow: 10px 10px 25px rgb(0 255 17), -10px 10px 25px rgb(0 255 17),
-    -10px -10px 25px rgb(0 255 17), 10px -10px 25px rgb(0 255 17);
+      -10px -10px 25px rgb(0 255 17), 10px -10px 25px rgb(0 255 17);
     box-shadow: rgb(0 255 17) 1px 20px 5px -25px;
   }
 }
