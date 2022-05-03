@@ -3,11 +3,17 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 function randint(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
-  /*if(navigator.userAgent.indexOf("Chrome") == -1 || navigator.userAgent.indexOf("Chrome/100") == -1){
-    window.alert("Para uma experiência completa utilize um browser de base Chronomiun como: Google Chrome, OperaGX ou Microsoft")}*/
-    
 
 
+//Filtro de Browser
+let browser = navigator.userAgent.indexOf("Chrome")
+let version = navigator.userAgent[browser + 7]
+version += navigator.userAgent[browser + 8]
+if(version == 10){
+  version += navigator.userAgent[browser + 9]
+}
+if(navigator.userAgent.indexOf("Chrome") == -1 || version < 99){
+    window.alert("Para uma experiência completa utilize um browser de base Chromium como: Google Chrome, OperaGX/Opera ou Microsoft Edge. Caso esteja a utilizar um destes atualize para versão mais recente.")}
 let buttoncube = document.getElementById("buttoncube");
 window.addEventListener("scroll", function () {
   let value = Number(window.scrollY);
