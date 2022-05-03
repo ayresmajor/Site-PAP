@@ -17,13 +17,13 @@ if(navigator.userAgent.indexOf("Chrome") == -1 || version < 99){
 
 let buttoncube = document.getElementById("buttoncube");
 let foot = document.getElementById("foot");
+foot.style.backgroundImage= "linear-gradient(to bottom,rgba(5, 5, 5,0), rgb(var(--cazules)))"
 window.addEventListener("scroll", function () {
   let value = Number(window.scrollY);
   let gradient = value * (1/1700);
   if (gradient > 1){
     gradient = 1;
   }
-  foot.style.backgroundImage= `linear-gradient(to bottom,rgba(5, 5, 5,0), rgb(var(--cazules)))`
   document.body.style.backgroundColor = `rgba(var(--cbranco),${gradient})`;
   if(gradient == 1){
     foot.style.backgroundImage= `linear-gradient(to bottom,rgb(5, 5, 5), rgb(var(--cazules)))`
