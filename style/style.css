@@ -38,7 +38,6 @@
   display: grid;
   place-items: center;
 }
-
 .center {
   display: table;
   margin: auto;

@@ -6,6 +6,7 @@ function randint(min, max) {
 
 
 //Filtro de Browser
+alert(navigator.userAgent)
 let browser = navigator.userAgent.indexOf("Chrome")
 let version = navigator.userAgent[browser + 7]
 version += navigator.userAgent[browser + 8]
@@ -14,6 +15,7 @@ if(version == 10){
 }
 if(navigator.userAgent.indexOf("Chrome") == -1 || version < 99){
     window.alert("Para uma experiência completa utilize um browser de base Chromium como: Google Chrome, OperaGX/Opera ou Microsoft Edge. Caso esteja a utilizar um destes atualize para versão mais recente.")}
+
 let buttoncube = document.getElementById("buttoncube");
 window.addEventListener("scroll", function () {
   let value = Number(window.scrollY);
