@@ -177,6 +177,7 @@ header > div nav a:hover,.navbar a:hover, .dropdown:hover .dropbtn{
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   backdrop-filter: blur(10px);
+  z-index: 3;
 }
 
 .dropdown-content a {
@@ -350,6 +351,9 @@ footer a:hover{
 #fechar:hover {
   transform: rotate(-360deg);
   text-shadow: 0 0 0 rgb(255, 255, 255), 0px 0px 7px rgb(0, 0, 0);
+}
+#fundo{
+z-index: 3;
 }
 
 #iniciar {
