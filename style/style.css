@@ -564,7 +564,7 @@ section#buttoncube{
     transform: rotateX(-15deg) rotateY(0deg);
   }
   50%{
-    transform: rotateX(-30deg) rotateY(180deg);
+    transform: rotateX(-35deg) rotateY(180deg);
   }
   100%{
     transform: rotateX(-15deg) rotateY(360deg);
