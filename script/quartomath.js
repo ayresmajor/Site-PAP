@@ -6,12 +6,12 @@ function randint(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-/*function safari(){
+function safari(){
   if(navigator.userAgent.indexOf("Mac") !== -1){
     window.alert("Devido a falta de suporte deste browser para algumas propriedades CSS, não será possível mostrar o quarto. Será redirecionado para outra página. Caso queira a experiência completa utilize outro browser (Edge, Chrome, Opera). Obrigado pela compreensão.")
     window.location.href = "quartosafari.html";
   }
-}*/
+}
 
 //aleatorização das posições dos itens principais
 let calculadora = document.getElementById("calculadora");
