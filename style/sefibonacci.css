@@ -561,7 +561,6 @@ h1 {
   animation: tshadow 2.5s linear infinite;
   animation-delay: 1.3s;
   border-radius: 50%;
-  height: 1em;
   width: 1em;
   text-align: center;
   box-shadow: yellow 0px 0px 20px, rgba(16, 92, 1, 0.348) 0px 0px 60px;
