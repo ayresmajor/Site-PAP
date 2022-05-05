@@ -116,7 +116,6 @@ header > div {
   border-radius: 0px 0px 10px 10px;
   width: 100vw;
   max-width: 1600px;
-  margin: 0;
 }
 header > div h1 {
   position: relative;
@@ -165,7 +164,6 @@ header > div nav a:hover,.navbar a:hover, .dropdown:hover .dropbtn{
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
-  margin: 0;
   transition: all 0.5s;
 }
 .dropdown-content {
