@@ -17,7 +17,8 @@ if(navigator.userAgent.indexOf("Chrome") == -1 || version < 99){
 
 let buttoncube = document.getElementById("buttoncube");
 let foot = document.getElementById("foot");
-foot.style.backgroundImage= "linear-gradient(to bottom,rgba(5, 5, 5,0), rgb(var(--cazules)))"
+foot.style.backgroundImage= "linear-gradient(to bottom,rgba(5, 5, 5,0), rgb(var(--cazules)))";
+foot.style.boxShadow="none";
 window.addEventListener("scroll", function () {
   let value = Number(window.scrollY);
   let gradient = value * (1/1750);
@@ -26,11 +27,11 @@ window.addEventListener("scroll", function () {
   }
   document.body.style.backgroundColor = `rgba(var(--cbranco),${gradient})`;
   if(gradient == 1){
-    foot.style.backgroundImage= `linear-gradient(to bottom,rgb(5, 5, 5), rgb(var(--cazules)))`
+    foot.style.backgroundImage= `linear-gradient(to bottom,rgb(5, 5, 5), rgb(var(--cazules)))`;
     buttoncube.style.boxShadow= "rgb(var(--cbranco)) 1px -100px 120px 0px";
   }else{
     buttoncube.style.boxShadow= "none";
-    foot.style.backgroundImage= "linear-gradient(to bottom,rgba(5, 5, 5,0), rgb(var(--cazules)))"
+    foot.style.backgroundImage= "linear-gradient(to bottom,rgba(5, 5, 5,0), rgb(var(--cazules)))";
   }
 });
 
