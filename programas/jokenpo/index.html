@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.86">
+    <meta name="viewport" content="width=device-width, initial-scale=0.86" id="viewport-meta">
     <link
       rel="shortcut icon"
       href="../../imagens/favicon.ico"
@@ -56,6 +56,10 @@
         </article>
         <input type="button" value="Iniciar" id="iniciar" onclick="iniciar()">
     </main>
+    <div id="mobile">
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_kNRxSw/rotate_05.json"  background="rgba(16, 16, 16, 0)"  speed="0.5"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+    </div>
     <div id="fundo" class="center">
       <label id="fechar"onclick="fechar()"><span>&#x274C;</span></label>
       <div id="menu" class="center">
@@ -96,21 +100,23 @@
               src="https://assets10.lottiefiles.com/private_files/lf30_vzqrg39e.json"
               background="transparent"
               speed="1"
-              style="position: absolute; top:50%; left:50%; display:flex; width: 91vh; height: auto; transform: translate(-830px, -410px);"
+              style="width: 35vw; min-width: 500px;"
               loop
               autoplay
             ></lottie-player>
           </div>
         <!-- confetti-->
-          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-          <lottie-player id="confetti"
-            src="https://assets4.lottiefiles.com/packages/lf20_ISbOsd.json"
-            background="transparent"
-            speed="1"
-            style=" position: absolute; top:50%; left:50%;display:flex; width: 80vh; height: 500px; transform: translate(-290px, -150px);"
-            loop
-            autoplay
-          ></lottie-player>
+          <div id="confetti">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player id="confetti"
+              src="https://assets4.lottiefiles.com/packages/lf20_ISbOsd.json"
+              background="transparent"
+              speed="1"
+              style="width: 30vw; min-width: 400px;"
+              loop
+              autoplay
+            ></lottie-player>
+          </div>
         <!-- firework 2-->
           <div id="firework2">
             <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -118,7 +124,7 @@
               src="https://assets10.lottiefiles.com/private_files/lf30_vzqrg39e.json"
               background="transparent"
               speed="1"
-              style="position: absolute; top:50%; left:50%;display:flex; width: 90vh; height: auto;  transform: scaleX(-1) translate(-170px, -410px);"
+              style="width: 35vw; min-width: 500px;"
               loop
               autoplay
             ></lottie-player>

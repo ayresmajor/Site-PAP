@@ -17,9 +17,9 @@ h3 {
 
 #fundo {
   display: none;
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  position: relative;
+  border-radius: 20px;
+  padding-bottom: 100px;
   background-color: rgba(0, 0, 0, 0.9);
   min-height: 720px;
   min-width: 1300px;
@@ -130,6 +130,10 @@ div#intrucoes{
 
 #win{
   display: none;
+  position: absolute;
+  top: 150px;
+  left: 0px;
+  width: 100%;
   opacity: 80%;
 }
 
@@ -296,20 +300,6 @@ div#intrucoes{
     margin-top: 100px;
   }
 }
-/*fim das animações*/
-@media(max-width:1100px){
-  #fundo{
-    position: relative;
-    border-radius: 20px;
-    padding-bottom: 100px;
-  }
-  #win{
-    position: absolute;
-    left:600px;
-    top: 400px
-
-  }
-}
 
 .allprograms {
   background-image: url("../imagens/jokenpomenu.jpg");
@@ -361,8 +351,7 @@ div#intrucoes{
 }
 .button-49,
 .button-49:after {
-  position: relative;
-  top: 100px;
+  margin-top: 110px;
   width: 150px;
   line-height: 78px;
   font-family: "Bebas Neue", sans-serif;
@@ -450,3 +439,16 @@ div#intrucoes{
     transform: translate(0);
   }
 }
+
+#mobile{
+  display:none;
+  position: absolute;
+  z-index:10;
+  left: calc(50vw - 160px);
+  top: calc(100vh - calc(50% - 10px));
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  box-shadow: rgb(0, 0, 0) 0px 0px  0px 100vh, inset black 0px 0px 20px;  
+  padding: 20px;
+}
+

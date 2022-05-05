@@ -11,7 +11,7 @@ version += navigator.userAgent[browser + 8];
 if(version == 10){
   version += navigator.userAgent[browser + 9];
 }
-if(navigator.userAgent.indexOf("Chrome") == -1 || version < 99){
+if(navigator.userAgent.indexOf("Chrome") == -1 || version < 96){
     window.alert("Para uma experiência completa utilize um browser de base Chromium como: Google Chrome, OperaGX/Opera ou Microsoft Edge. Caso esteja a utilizar um destes atualize para versão mais recente. Obrigado pela compreensão.");
   }
 

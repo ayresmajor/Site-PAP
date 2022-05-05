@@ -25,15 +25,20 @@ let papelimg = document.getElementById("papelimg");
 let tesouraimg = document.getElementById("tesouraimg");
 let startgame = document.getElementById("startgame");
 let win = document.getElementById("win");
+let mobile = document.getElementById("mobile");
 let escolhauto = "";
 var jogador = 7;
 let computador = randint(0, 3)
 var t = 0;
 
-function iniciar() {
-  document.body.style.aspectRatio =  "16/9";
+async function iniciar() {
+  if(screen.width < 710){
+    mobile.style.display= "block";
+    mobile.style.animation = "fadeout 0.5s reverse forwards, fadeout 1s 4.5s"
+    await sleep(5000)
+  }
+  mobile.style.display= "none";
   fundo.style.display = "block";
-  document.getElementById("head").style.position="static";
   document.getElementById("iniciar").style.display = "none"; 
   document.getElementById("headiv").style.width = "100%";
 }
@@ -234,7 +239,7 @@ async function jokenpo(computer, user, selected) {
     }
   }
   if (resultado == "Venceste"){
-    win.style.display = 'block'
+    win.style.display = 'flex'
   }else if(resultado == "Perdeste"){
     fundo.style.animation = "derrota 1200ms forwards";
   }else{
