@@ -115,7 +115,8 @@ header > div {
   padding: 20px 0px;
   border-radius: 0px 0px 10px 10px;
   width: calc(100vw - 10px);
- padding-left: 10px;
+  padding-left: 10px;
+  min-width: 300px;
   max-width: 1600px;
 }
 header > div h1 {
