@@ -79,7 +79,6 @@ body {
   font-family: var(--fonte-padrao2);
   overflow: auto;
   overscroll-behavior-y: contain;
-  scroll-behavior: smooth;
 }
 
 p {
@@ -108,18 +107,21 @@ header{
   top: -192px;
   left: 0px;
   z-index: 2;
+  width: 100vw;
+  background-image: linear-gradient(to top, rgb(var(--cvermelho)), rgba(var(--cazules),0.6));
 }
 
 header > div {
-  background-image: linear-gradient(to top, rgb(var(--cvermelho)), rgba(var(--cazules),0.6));
-  padding: 20px 10px;
+  padding: 20px 0px;
   border-radius: 0px 0px 10px 10px;
-  width: 98vw;
+  width: 100vw;
+  max-width: 1600px;
+  margin: 0;
 }
 header > div h1 {
-  position: absolute;
-  top: 120px;
-  left: 100px;
+  position: relative;
+  top: 9px;
+  left: -65px;
   display: inline;
   font-family: var(--fonte-aleatorio);
   font-size: 3.3em;
@@ -132,11 +134,11 @@ header > div h1 {
 }
 
 header > div nav, .dropdown{
-  margin: auto;
   font-family: var(--fonte-crazy);
-  margin-top: 10px;
-  padding: 15px;
+  position: relative;
+  padding: 15px 0px;
   line-height: 2.2em;
+  max-width:70%;
 }
 header > div nav a {
   padding: 10px;
@@ -312,7 +314,7 @@ footer {
   bottom: 0;
   left: 0;
   background-image:linear-gradient(to bottom,rgb(5, 5, 5), rgb(var(--cazules)));
-  padding: 10px;
+  padding: 10px 0px;
   color: white;
   border-radius: 5px 5px 0px 0px;
   box-shadow: 0px 80px 50px 40px rgb(var(--cazules));
@@ -416,7 +418,7 @@ z-index: 3;
 
 .protitulo{
   text-align: center;
-  padding: 10px;
+  padding: 10px 0px;
   font-family: var(--fonte-pro);
   background-image: linear-gradient(to top, rgb(var(--cvermelhocl)), rgba(var(--cazulcl),0.7));
   text-shadow:black 0px 0px 20px;
