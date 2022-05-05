@@ -39,6 +39,7 @@ async function iniciar() {
   }
   mobile.style.display= "none";
   fundo.style.display = "block";
+  fundo.scrollIntoView({behavior: 'smooth'});
   document.getElementById("iniciar").style.display = "none"; 
   document.getElementById("headiv").style.width = "100%";
 }
