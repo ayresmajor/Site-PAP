@@ -462,6 +462,23 @@ h1 {
   text-shadow: 0px 0px 20px black;
 }
 
+#bolinha{
+  position: absolute;
+  top: 250px;
+  background-color: #47b813a2;
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+}
+
+@keyframes addlr {
+  100%{
+    top: 650px;
+    margin-right: 50vw;
+    margin-left: 50vw;
+  }
+}
+
 #resultado {
   opacity: 0%;
   display: none;
@@ -540,14 +557,14 @@ h1 {
   color: #6a995f;
   -webkit-text-stroke: 3px #47341fc4;
   font-family: "KgTeacherHelpers", "Verdana", "sans-serif", cursive;
-  text-shadow: 10px 10px 25px rgb(0 255 17), -10px 10px 25px rgb(0 255 17),
-    -10px -10px 25px rgb(0 255 17), 10px -10px 25px rgb(0 255 17);
+  text-shadow: 10px 10px 25px rgb(208, 255, 0), -10px 10px 25px rgb(217, 255, 0),
+    -10px -10px 25px rgb(208, 255, 0), 10px -10px 25px rgb(208, 255, 0);
   animation: tshadow 2.5s linear infinite;
   animation-delay: 1.3s;
   border-radius: 50%;
   width: 1em;
   text-align: center;
-  box-shadow: rgb(29, 232, 42) 0px 0px 20px;
+  box-shadow: rgb(195, 255, 0) 0px 0px 20px;
 }
 
 @keyframes tshadow {
@@ -555,8 +572,8 @@ h1 {
     top: 134px;
     font-size: 16em;
     text-shadow: 10px 10px 25px rgb(0 255 17 / 21%),
-      -10px 10px 25px rgb(0 255 17 / 28%), -10px -10px 25px rgb(0 255 17 / 26%),
-      10px -10px 25px rgb(0 255 17 / 28%);
+      -10px 10px 25px rgba(200, 255, 0, 0.28), -10px -10px 25px rgb(0 255 17 / 26%),
+      10px -10px 25px rgba(191, 255, 0, 0.28);
   }
   100% {
     top: 99px;

@@ -5,9 +5,11 @@ let form= 0;
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 let pular = document.getElementById("pular");
 let background = document.getElementById("background");
-var tempo = 2500;
+var tempo = 2000;
+var temfolha = 500;
 function skip(){
     tempo = 0;
+    temfolha =0;
     pular.innerText="Aguarde..."
 }
 async function sequenciar() {
@@ -25,6 +27,7 @@ async function sequenciar() {
     let resultado = document.getElementById("resultado");
     let numesq = document.getElementById("numesq");
     let numdir = document.getElementById("numdir");
+    let bolinha = document.getElementById("bolinha");
     let t1 = 0;
     let t2 = 1;
     let cont = 3;
@@ -39,29 +42,42 @@ async function sequenciar() {
     snail.style.display = "block";
     slime.style.display = "block";
     simbolo.style.display = "block";
-    /*if(navigator.userAgent.indexOf("Mac") !== -1){
+    if(navigator.userAgent.indexOf("Mac") !== -1){
       simbolo.style.display = "none";
-    }*/
+    }
     lgbtsnail.style.animation = "desce 2s forwards linear alternate infinite";
     pular.style.visibility="visible";
     pular.style.animation =
       "fadein 15000ms forwards, bounce 4s  infinite"
+      bolinha.style.animation ="addlr 2.4s infinite cubic-bezier(1, 0.02, 0.72, -0.14)"
     while (cont <= quanterm) {
       folha1.style.animation = "none";
       folha2.style.animation = "none";
+      folha2.style.background="#47b813";
+      folha1.style.background="#47b813";
       let t3 = t1 + t2;
       lista.push(t3);
       t1 = t2;
       t2 = t3;
       if (cont % 2 == 0) {
+        numdir.innerHTML= t2
         numesq.innerHTML = t1;
-        folha1.style.animation = "fadeout 500ms forwards infinite";
+        bolinha.className = "numberesq"
+        folha2.style.animation = "fadeout 150ms 2";
+        folha2.style.background = "yellow"
       }else if(cont % 2 != 0) {
+        numesq.innerHTML= t2
         numdir.innerHTML = t1;
-        folha2.style.animation = "fadeout 500ms forwards infinite";
+        bolinha.className = "numberdir"
+        folha1.style.animation = "fadeout 150ms 2";
+        folha1.style.background = "yellow"
       }
       resultado.innerHTML = t3;
+      await sleep(temfolha);
+      folha2.style.background="#47b813";
+      folha1.style.background="#47b813";
       await sleep(tempo);
+      bolinha.style.animation ="addlr 2.5s infinite cubic-bezier(1, 0.02, 0.72, -0.14) 2.5s"
       cont += 1;
     }
     let background = document.getElementById("background");
