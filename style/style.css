@@ -114,7 +114,8 @@ header{
 header > div {
   padding: 20px 0px;
   border-radius: 0px 0px 10px 10px;
-  width: 100vw;
+  width: calc(100vw - 10px);
+ padding-left: 10px;
   max-width: 1600px;
 }
 header > div h1 {
@@ -134,10 +135,8 @@ header > div h1 {
 
 header > div nav, .dropdown{
   font-family: var(--fonte-crazy);
-  position: relative;
   padding: 15px 0px;
   line-height: 2.2em;
-  max-width:70%;
 }
 header > div nav a {
   padding: 10px;
