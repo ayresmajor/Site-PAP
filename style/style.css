@@ -554,20 +554,17 @@ section#buttoncube{
   width: 200px;
   height: 200px;
   transform-style: preserve-3d;
-  transform: rotateX(-15deg);
+  transform: rotateX(-30deg);
   animation: animate 7s linear infinite;
   cursor:pointer;
 }
 
 @keyframes animate {
   0%{
-    transform: rotateX(-15deg) rotateY(0deg);
-  }
-  50%{
-    transform: rotateX(-30deg) rotateY(180deg);
+    transform: rotateX(-30deg) rotateY(0deg);
   }
   100%{
-    transform: rotateX(-15deg) rotateY(360deg);
+    transform: rotateX(-30deg) rotateY(360deg);
   }
 }
 .cube div{
@@ -628,12 +625,33 @@ section#buttoncube{
   width: 200px;
   height: 200px;
   background-color: rgb(var(--cvermelho));
-  transform: translateZ(-300px);
+  transform: translateZ(-350px);
   filter: blur(20px);
   box-shadow: 0px 0px 120px rgb(var(--cvermelho)),
   0px 0px 200px rgba(var(--cazules), 0.4),
   0px 0px 300px rgba(var(--cvermelho), 0.6),
   0px 0px 400px rgba(var(--cvermelho), 0.8),
   0px 0px 500px rgba(var(--cvermelho), 1);
+  animation: shadowcube 1.75s linear alternate infinite;
 }
 
+@keyframes shadowcube {
+  0%{
+    box-shadow: 0px 0px 120px rgb(var(--cvermelho)),
+    0px 0px 200px rgba(var(--cazules), 0.4),
+    0px 0px 300px rgba(var(--cvermelho), 0.6),
+    0px 0px 400px rgba(var(--cvermelho), 0.8),
+    0px 0px 500px rgba(var(--cvermelho), 1);
+    background-color: rgb(var(--cvermelho));
+
+  }
+  100%{
+    box-shadow: 0px 0px 120px rgb(var(--cazules)),
+    0px 0px 200px rgba(var(--cvermelho), 0.4),
+    0px 0px 300px rgba(var(--cazules), 0.6),
+    0px 0px 400px rgba(var(--cazulcl), 0.8),
+    0px 0px 500px rgba(var(--cazules), 1);
+    background-color: rgb(var(--cazulcl), 0.5);
+
+  }
+}
