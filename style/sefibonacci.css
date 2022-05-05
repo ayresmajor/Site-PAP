@@ -96,8 +96,7 @@ h1 {
   width: 120px;
   position: absolute;
   z-index: 1;
-  animation: 2.5s snailCrawl cubic-bezier(0.46, 0.03, 0.52, 0.96) alternate
-    infinite;
+  animation: 2.5s snailCrawl cubic-bezier(0.46, 0.03, 0.52, 0.96) alternate infinite;
 }
 #snail #shell {
   top: 10px;
@@ -180,7 +179,7 @@ h1 {
   }
   100% {
     transform: scaleX(-1);
-    left: 80vw;
+    left: 82vw;
   }
 }
 @keyframes slimeSpread {
@@ -562,9 +561,10 @@ h1 {
   animation: tshadow 2.5s linear infinite;
   animation-delay: 1.3s;
   border-radius: 50%;
+  height: 1em;
   width: 1em;
   text-align: center;
-  box-shadow: rgb(195, 255, 0) 0px 0px 20px;
+  box-shadow: yellow 0px 0px 20px, rgba(16, 92, 1, 0.348) 0px 0px 60px;
 }
 
 @keyframes tshadow {

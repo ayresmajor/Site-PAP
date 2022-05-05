@@ -48,7 +48,7 @@ async function sequenciar() {
     lgbtsnail.style.animation = "desce 2s forwards linear alternate infinite";
     pular.style.visibility="visible";
     pular.style.animation =
-      "fadein 15000ms forwards, bounce 4s  infinite"
+      "fadein 15000ms forwards, bounce 2.5s  infinite"
       bolinha.style.animation ="addlr 2.4s infinite cubic-bezier(1, 0.02, 0.72, -0.14)"
     while (cont <= quanterm) {
       folha1.style.animation = "none";
