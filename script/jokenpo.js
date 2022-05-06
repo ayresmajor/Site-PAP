@@ -3,7 +3,7 @@ function fechar() {
   location.reload();
 }
 
-function restart(){
+function restart() {
   location.reload();
 }
 
@@ -12,7 +12,6 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 function randint(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
-
 // Variáveis
 let loading = document.getElementById("loadingjokenpo");
 let button = document.getElementById("startgame");
@@ -28,45 +27,43 @@ let win = document.getElementById("win");
 let mobile = document.getElementById("mobile");
 let escolhauto = "";
 var jogador = 7;
-let computador = randint(0, 3)
+let computador = randint(0, 3);
 var t = 0;
-
-test.innerText = screen.width
+var resize = false;
 async function iniciar() {
- if(screen.width < 710){
-    mobile.style.display= "block";
-    mobile.style.animation = "fadeout 0.5s reverse forwards, fadeout 1s 4.5s"
+  resize = true;
+  if (screen.width < 1200) {
+    a = screen.width / 1200;
     document.querySelector(".allprograms").style.visibility = "hidden";
-    await sleep(5000)
-    mobile.style.display= "none";
-  }
- if(screen.width < 1200){
-    a = screen.width/1200
-    document.getElementById("head").style.maxWidth = `${screen.width + 60}px`
-    document.getElementById("principal").style.width = `${screen.width + 60}px`
-    document.getElementById("rodape").style.maxWidth = `${screen.width + 60}px`
-    fundo.style.transform = `scale(${a})`
-    fundo.style.transformOrigin = "left top"
-    fundo.style.top = "-300px"
-    fundo.style.marginBottom = "-750px";
-    fundo.style.marginLeft = "10px"
-    document.getElementById("principal").style.margin = "0px"
-  }
-else{
-  fundo.style.display = "block";
-  fundo.scrollIntoView({behavior: 'smooth'});
-  document.getElementById("iniciar").style.display = "none"; 
-  document.getElementById("head").style.width = "100%";
+    document.getElementById("head").style.maxWidth = `${screen.width + 60}px`;
+    document.getElementById("principal").style.width = `${screen.width + 60}px`;
+    document.getElementById("rodape").style.maxWidth = `${screen.width + 60}px`;
+    let styles = {
+      transform: `scale(${a})`,
+      transformOrigin: "left top",
+      top: "-300px",
+      marginBottom: "-750px",
+      marginRight: "-850px",
+      marginLeft: "1vw",
+    };
+    Object.assign( fundo.style, styles);
+    document.getElementById("principal").style.margin = "0px";
+  } else {
+    fundo.style.display = "block";
+    fundo.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("iniciar").style.display = "none";
+    document.getElementById("head").style.width = "100%";
   }
   fundo.style.display = "block";
-  document.getElementById("iniciar").style.display = "none"; 
+  document.getElementById("iniciar").style.display = "none";
   document.getElementById("head").style.width = "100%";
 }
-window.addEventListener("scroll", function () {
-  let value = Number(window.scrollY);
-  window.scrollTo(0, value);
-});
-
+window.addEventListener("resize", resizeListener);
+function resizeListener() {
+  if (resize) {
+    iniciar();
+  }
+}
 async function start() {
   button.style.display = "none";
   await sleep(500);
@@ -204,16 +201,14 @@ async function jokenpo(computer, user, selected) {
   loading.style.display = "none";
   if (selected == "pedra") {
     pedra.style.color = "red";
-    pedraimg.style.animation =
-      "slide 2s forwards, roda 2s alternate infinite";
+    pedraimg.style.animation = "slide 2s forwards, roda 2s alternate infinite";
     papelimg.style.animation = "fadeout 1500ms forwards";
     tesouraimg.style.animation = "fadeout 1500ms forwards";
     papelimg.style.display = "none";
     tesouraimg.style.display = "none";
   } else if (selected == "papel") {
     papel.style.color = "red";
-    papelimg.style.animation =
-      "slide 2s forwards, roda 2s alternate infinite";
+    papelimg.style.animation = "slide 2s forwards, roda 2s alternate infinite";
     pedraimg.style.animation = "fadeout 1500ms forwards";
     tesouraimg.style.animation = "fadeout 1500ms forwards";
     pedraimg.style.display = "none";
@@ -237,42 +232,42 @@ async function jokenpo(computer, user, selected) {
   } else {
     rescomp = 'tesoura<i class="tesouraico"></i>';
   }
-  let resultado = ""
+  let resultado = "";
   if (computer == user) {
-    resultado = 'Empataste'
+    resultado = "Empataste";
   } else {
     if (user == 0) {
       if (computer == 1) {
-        resultado = 'Perdeste'
+        resultado = "Perdeste";
       } else if (computer == 2) {
-        resultado = 'Venceste'
+        resultado = "Venceste";
       }
     } else if (user == 1) {
       if (computer == 0) {
-        resultado = 'Venceste'
+        resultado = "Venceste";
       } else if (computer == 2) {
-        resultado = 'Perdeste'
+        resultado = "Perdeste";
       }
     } else if (user == 2) {
       if (computer == 0) {
-        resultado = 'Perdeste'
+        resultado = "Perdeste";
       } else if (computer == 1) {
-        resultado = 'Venceste'
+        resultado = "Venceste";
       }
     }
   }
-  if (resultado == "Venceste"){
-    win.style.display = 'flex'
-  }else if(resultado == "Perdeste"){
+  if (resultado == "Venceste") {
+    win.style.display = "flex";
+  } else if (resultado == "Perdeste") {
     fundo.style.animation = "derrota 1200ms forwards";
-  }else{
+  } else {
     fundo.style.animation = "empate 1200ms forwards";
   }
   let styles = {
     transition: "all 1s",
-    top: "110px"
+    top: "110px",
   };
   Object.assign(intrucoes.style, styles);
   intrucoes.innerHTML = `${resultado}, o Jokenpo jogou ${rescomp}`;
-  document.querySelector('.button-49').style.visibility = 'visible';
+  document.querySelector(".button-49").style.visibility = "visible";
 }
