@@ -33,22 +33,39 @@ var t = 0;
 
 test.innerText = screen.width
 async function iniciar() {
-  if(screen.width < 710){
+ /* if(screen.width < 710){
     mobile.style.display= "block";
     mobile.style.animation = "fadeout 0.5s reverse forwards, fadeout 1s 4.5s"
     await sleep(5000)
-  }
- /* if(screen.width < 1200){
-    a = screen.width/1200
-    alert(a)
-    document.getElementById("head").style.maxWidth = `${screen.width}px`
-    document.getElementById("principal").style.maxWidth = `${screen.width}px`
-    document.getElementById("rodape").style.maxWidth = `${screen.width}px`
-    fundo.style.transform = `scale(${a})`
   }*/
+ if(screen.width < 1200){
+    a = screen.width/1200
+    document.getElementById("head").style.maxWidth = `${screen.width + 60}px`
+    document.getElementById("principal").style.width = `${screen.width + 60}px`
+    document.getElementById("rodape").style.maxWidth = `${screen.width + 60}px`
+    fundo.style.transform = `scale(${a})`
+    fundo.style.transformOrigin = "left top"
+    fundo.style.marginBottom = "-500px";
+    fundo.style.marginLeft = "20px"
+
+    document.getElementById("principal").style.margin = "0px"
+  }
+ /*if(screen.width < 1200){
+    a = (screen.width/1200)
+    document.body.style.transform = `scale(${a})`
+    document.body.style.transformOrigin = "left top"
+    document.body.style.width = "100%";
+    head.scrollIntoView(true);
+    document.getElementById("rodape").style.position = `static`
+    document.body.style.overflow = "hidden";
+  }*/else{
   mobile.style.display= "none";
   fundo.style.display = "block";
   fundo.scrollIntoView({behavior: 'smooth'});
+  document.getElementById("iniciar").style.display = "none"; 
+  document.getElementById("head").style.width = "100%";
+  }
+  fundo.style.display = "block";
   document.getElementById("iniciar").style.display = "none"; 
   document.getElementById("head").style.width = "100%";
 }
