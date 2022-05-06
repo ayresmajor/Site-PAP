@@ -31,12 +31,21 @@ var jogador = 7;
 let computador = randint(0, 3)
 var t = 0;
 
+test.innerText = screen.width
 async function iniciar() {
   if(screen.width < 710){
     mobile.style.display= "block";
     mobile.style.animation = "fadeout 0.5s reverse forwards, fadeout 1s 4.5s"
     await sleep(5000)
   }
+ /* if(screen.width < 1200){
+    a = screen.width/1200
+    alert(a)
+    document.getElementById("head").style.maxWidth = `${screen.width}px`
+    document.getElementById("principal").style.maxWidth = `${screen.width}px`
+    document.getElementById("rodape").style.maxWidth = `${screen.width}px`
+    fundo.style.transform = `scale(${a})`
+  }*/
   mobile.style.display= "none";
   fundo.style.display = "block";
   fundo.scrollIntoView({behavior: 'smooth'});
