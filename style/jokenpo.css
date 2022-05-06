@@ -30,8 +30,6 @@ h3 {
   padding-bottom: 30px;
   height: 100%;
   width: 100vw;
-  background-attachment: fixed;
-  scroll-behavior: smooth;
   transition: all 0.5s;
   box-shadow:  #0000009c 23px 21px 62px 20px;
 }
