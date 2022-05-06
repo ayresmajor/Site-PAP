@@ -2,6 +2,10 @@ html,body{
 overflow-x: hidden;
 }
 
+#head{
+  width: 100%;
+}
+
 h3 {
   margin: auto;
   display: inline;
@@ -29,6 +33,7 @@ h3 {
   background-attachment: fixed;
   scroll-behavior: smooth;
   transition: all 0.5s;
+  box-shadow:  #0000009c 23px 21px 62px 20px;
 }
 
 #menu {

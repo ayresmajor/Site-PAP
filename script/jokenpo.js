@@ -35,28 +35,20 @@ async function iniciar() {
   if (screen.width < 1200) {
     a = screen.width / 1200;
     document.querySelector(".allprograms").style.visibility = "hidden";
-    document.getElementById("head").style.maxWidth = `${screen.width + 60}px`;
-    document.getElementById("principal").style.width = `${screen.width + 60}px`;
-    document.getElementById("rodape").style.maxWidth = `${screen.width + 60}px`;
     let styles = {
       transform: `scale(${a})`,
       transformOrigin: "left top",
       top: "-300px",
-      marginBottom: "-750px",
-      marginRight: "-850px",
-      marginLeft: "1vw",
+      marginBottom: "-80vh",
+      marginRight: "-1000px",
+      marginLeft: "3.5vw",
     };
     Object.assign( fundo.style, styles);
     document.getElementById("principal").style.margin = "0px";
-  } else {
-    fundo.style.display = "block";
-    fundo.scrollIntoView({ behavior: "smooth" });
-    document.getElementById("iniciar").style.display = "none";
-    document.getElementById("head").style.width = "100%";
   }
   fundo.style.display = "block";
+  fundo.scrollIntoView({ behavior: "smooth" });
   document.getElementById("iniciar").style.display = "none";
-  document.getElementById("head").style.width = "100%";
 }
 window.addEventListener("resize", resizeListener);
 function resizeListener() {

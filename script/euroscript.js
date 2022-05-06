@@ -10,6 +10,7 @@ function fechar() {
 
 function iniciar() {
   document.getElementById("fundo").style.display = "block";
+  fundo.scrollIntoView(true);
   document.getElementById("euroinput").focus();
   document.getElementById("head").style.position="static";
   document.getElementById("iniciar").style.display = "none";
@@ -55,6 +56,7 @@ window.addEventListener("keyup", async function (event) {
     euroinput.value = "";
     if (palpite >= 1 && palpite <= 5) {
       euroloading.style.display = "block";
+      euroloading.scrollIntoView({ behavior: "smooth" });
       await sleep(500);
       euroloading.style.display = "none";
       fundo.style.height = "auto";

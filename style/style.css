@@ -109,6 +109,7 @@ header{
   z-index: 2;
   width: 100vw;
   background-image: linear-gradient(to top, rgb(var(--cvermelho)), rgba(var(--cazules),0.6));
+  min-width: 400px;
 }
 
 header > div {
@@ -228,7 +229,7 @@ header > div nav a:hover,.navbar a:hover, .dropdown:hover .dropbtn{
 main, .principal{
   position: relative;
   background-color: white;
-  min-width: 200px;
+  min-width: 400px;
   max-width: 1200px;
   margin: auto;
   border-radius: 5px;
@@ -316,6 +317,7 @@ footer {
   color: white;
   border-radius: 5px 5px 0px 0px;
   box-shadow: 0px 80px 50px 40px rgb(var(--cazules));
+  min-width: 400px;
 }
 footer p {
   text-align: center;
@@ -410,7 +412,7 @@ z-index: 3;
 }
 @media(max-width:400px){
  header > div{
-  min-width: 400px;
+  width: 100%;
  }
 }
 
