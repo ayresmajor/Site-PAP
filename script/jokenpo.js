@@ -46,7 +46,7 @@ function iniciar() {
     document.getElementById("principal").style.margin = "0px";
   }
   fundo.style.display = "block";
-  fundo.scrollIntoView({ behavior: "smooth" });
+  button.scrollIntoView({ behavior: "smooth" });
   document.getElementById("iniciar").style.display = "none";
 }
 window.addEventListener("resize", resizeListener);
