@@ -30,9 +30,10 @@ var jogador = 7;
 let computador = randint(0, 3);
 var t = 0;
 var resize = false;
-async function iniciar() {
+
+function iniciar() {
   resize = true;
-  if (screen.width < 1200) {
+  if (screen.width <= 1200) {
     a = screen.width / 1200;
     document.querySelector(".allprograms").style.visibility = "hidden";
     let styles = {
@@ -51,6 +52,7 @@ async function iniciar() {
   document.getElementById("iniciar").style.display = "none";
 }
 window.addEventListener("resize", resizeListener);
+
 function resizeListener() {
   if (resize) {
     iniciar();
