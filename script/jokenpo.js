@@ -25,6 +25,7 @@ let tesouraimg = document.getElementById("tesouraimg");
 let startgame = document.getElementById("startgame");
 let win = document.getElementById("win");
 let mobile = document.getElementById("mobile");
+let head = document.getElementById("head");
 let escolhauto = "";
 var jogador = 7;
 let computador = randint(0, 3);
@@ -33,18 +34,16 @@ var resize = false;
 
 function iniciar() {
   resize = true;
-  if (screen.width <= 1200) {
-    a = screen.width / 1200;
+  test.innerHTML= head.offsetWidth
+  if (head.offsetWidth <= 1200) {
+    a = (head.offsetWidth - (head.offsetWidth / 13)) / 1200 
     document.querySelector(".allprograms").style.visibility = "hidden";
-    let styles = {
-      transform: `scale(${a})`,
-      transformOrigin: "left top",
-      top: "-300px",
-      marginBottom: "-80vh",
-      marginRight: "-1000px",
-      marginLeft: "3.5vw",
-    };
-    Object.assign( fundo.style, styles);
+    fundo.style.transform = `scale(${a})`
+    fundo.style.transformOrigin = "left top"
+    fundo.style.top = "-300px"
+    fundo.style.marginBottom = "-80vh";
+    fundo.style.marginRight = "-1000px"    
+    fundo.style.marginLeft = "0px"
     document.getElementById("principal").style.margin = "0px";
   }
   fundo.style.display = "block";
