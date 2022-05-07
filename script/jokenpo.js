@@ -34,7 +34,6 @@ var resize = false;
 
 function iniciar() {
   resize = true;
-  test.innerHTML= head.offsetWidth
   if (head.offsetWidth <= 1200) {
     a = (head.offsetWidth - (head.offsetWidth / 13)) / 1200 
     document.querySelector(".allprograms").style.visibility = "hidden";
