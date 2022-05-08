@@ -343,33 +343,32 @@ div#intrucoes{
 }
 
 
-/* CSS */
 .button-49{
   visibility: hidden;
   transition: all 1s;
   animation: pulse 1s infinite;
+  margin-top: 110px;
+  font-size: 1.3em;
+  font-family: var(--fonte-padrao);
+  font-weight:500
 }
 .button-49,
 .button-49:after {
-  margin-top: 110px;
   width: 150px;
   line-height: 78px;
-  font-family: "Bebas Neue", sans-serif;
   background: linear-gradient(45deg, transparent 5%, rgba(248, 248, 1, 0.811) 5%);
   border: 0px;
-  color: rgb(255, 255, 255);
+  color: rgb(215, 6, 6);
   letter-spacing: 3px;
   box-shadow: rgb(0 230 246) 6px 0px 0px;
   filter: drop-shadow(rgba(255, 224, 51, 0.651) 0px 0px 10px);
   outline: transparent;
   text-shadow: rgb(48 234 240) -4px 3px 9px, rgb(255 224 51) -5px -3px 9px, #0000009e 0px 0px 20px;
-  font-size: 1.2em;
   user-select: none;
   touch-action: manipulation;
   z-index: 10;
   cursor: pointer;
 }
-
 .button-49:after {
   --slice-0: inset(50% 50% 50% 50%);
   --slice-1: inset(80% -6px 0 0);
@@ -387,12 +386,18 @@ div#intrucoes{
   background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
   text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
   clip-path: var(--slice-0);
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+  font-size: 1.2em;
+  font-weight: normal;
   animation: 1.5s glitch infinite;
   animation-timing-function: steps(2, end);
 }
 .button-49:hover{
-  font-weight: bold;
+  font-size: 1.4em;
+  color: rgb(252, 0, 0);
 }
+
 @keyframes glitch {
   0% {
     clip-path: var(--slice-1);
