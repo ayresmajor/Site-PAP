@@ -43,14 +43,12 @@ function iniciar() {
     fundo.style.marginBottom = "-80vh";
     fundo.style.marginRight = "-1000px"    
     fundo.style.marginLeft = "0px"
-    document.getElementById("principal").style.margin = "0px";
   }
   fundo.style.display = "block";
-  button.scrollIntoView({ behavior: "smooth" });
+  fundo.scrollIntoView({ behavior: "smooth" });
   document.getElementById("iniciar").style.display = "none";
 }
 window.addEventListener("resize", resizeListener);
-
 function resizeListener() {
   if (resize) {
     iniciar();

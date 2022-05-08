@@ -1,6 +1,7 @@
 let modo = "";
 let cont = 0;
 let cont2 = 0;
+var tempo = 1000;
 
 function fechar() {
   document.getElementById("fundo").style.display = "none";
@@ -49,20 +50,13 @@ function automatizar() {
 window.addEventListener("keyup", async function (event) {
   if (event.key === "Enter" || modo == "automatico") {
     euroinput = document.getElementById("euroinput");
+    if (modo == "automatico") {tempo = 0;}
     for (c = 1; c <= 5; c++) {
       this.window["estrelas" + c].style.display = "none";
     }
     let palpite = Number(euroinput.value);
     euroinput.value = "";
     if (palpite >= 1 && palpite <= 5) {
-      euroloading.style.display = "block";
-      euroloading.scrollIntoView({ behavior: "smooth" });
-      await sleep(500);
-      euroloading.style.display = "none";
-      fundo.style.height = "auto";
-      for (c = 1; c <= palpite; c++) {
-        this.window["estrelas" + c].style.display = "grid";
-      }
       function seqrandom(numl, maxrand) {
         maxrand += 1;
         if( ! Number.isInteger(numl)){
@@ -88,11 +82,21 @@ window.addEventListener("keyup", async function (event) {
       }
       let jogo = numstr.split(",");
       jogo.pop();
-      for (c = 0; c <= palpite * 7; c++) {
+      for (c = 0; c <= 34; c++) {
         if (jogo[c] < 10) {
           jogo[c] = "0" + jogo[c];
         }
         window["bola" + c].innerText = jogo[c];
+      }
+      euroloading.style.display = "block";
+      euroloading.scrollIntoView({ behavior: "smooth" });
+      await sleep(tempo);
+      euroloading.style.display = "none";
+      fundo.style.height = "auto";
+      for (c = 1; c <= palpite; c++) {
+        this.window["estrelas" + c].style.display = "grid";
+        this.window["estrelas" + c].scrollIntoView({ behavior: "smooth" });
+        await sleep(tempo)
       }
     } else {
       fundo.style.height = "100vh";
