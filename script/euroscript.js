@@ -47,10 +47,18 @@ function automatizar() {
     return (modo = "automatico");
   }
 }
+function topo(){
+  window.scrollTo({
+    top: 0,
+    left: 100,
+    behavior: 'smooth'
+  });
+}
 window.addEventListener("keyup", async function (event) {
   if (event.key === "Enter" || modo == "automatico") {
+    document.getElementById("topo").style.display="none";
     euroinput = document.getElementById("euroinput");
-    if (modo == "automatico") {tempo = 0;}
+    modo == "automatico"? tempo = 0 : tempo = 1000
     for (c = 1; c <= 5; c++) {
       this.window["estrelas" + c].style.display = "none";
     }
@@ -98,6 +106,7 @@ window.addEventListener("keyup", async function (event) {
         this.window["estrelas" + c].scrollIntoView({ behavior: "smooth" });
         await sleep(tempo)
       }
+      document.getElementById("topo").style.display="grid";
     } else {
       fundo.style.height = "100vh";
       euroinfo.innerHTML += `<br>Valor inválido tente novamente`;

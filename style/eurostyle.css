@@ -250,6 +250,20 @@ div#estrelas5 {
   }
 }
 
+#topo{
+  display: none;
+  margin: auto;
+  font-weight: normal;
+  font-family: var(--fonte-padrao2);
+  padding: 0px;
+  font-size: 1.5em;
+  position: absolute;
+  bottom: 20px;
+  right: 30vw;
+  z-index: 99;
+  transition: all 1s;
+}
+
 @media (max-width: 1200px) {
   #artigo01 {
     top: 5%;
