@@ -72,6 +72,7 @@
 html{
   background-color: white;
   overscroll-behavior: none;
+  overflow-x: hidden;
 }
 body {
   min-height: 100vh;

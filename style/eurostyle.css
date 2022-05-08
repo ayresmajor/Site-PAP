@@ -260,8 +260,7 @@ div#estrelas5 {
   position: absolute;
   bottom: 20px;
   right: 30vw;
-  z-index: 99;
-  transition: all 1s;
+  cursor: pointer;
 }
 
 @media (max-width: 1200px) {
