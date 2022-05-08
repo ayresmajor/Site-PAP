@@ -56,7 +56,8 @@ function topo(){
 }
 window.addEventListener("keyup", async function (event) {
   if (event.key === "Enter" || modo == "automatico") {
-    document.getElementById("topo").style.display="none";
+    let topo =  document.getElementById("topo");
+    topo.style.display="none";
     euroinput = document.getElementById("euroinput");
     modo == "automatico"? tempo = 0 : tempo = 1000
     for (c = 1; c <= 5; c++) {
@@ -107,7 +108,8 @@ window.addEventListener("keyup", async function (event) {
         this.window["estrelas" + c].scrollIntoView({ behavior: "smooth" });
         await sleep(tempo * 3)
       }
-      document.getElementById("topo").style.display="grid";
+      topo.style.display="grid";
+      topo.scrollIntoView({ behavior: "smooth" });
     } else {
       fundo.style.height = "100vh";
       euroinfo.innerHTML += `<br>Valor inválido tente novamente`;
