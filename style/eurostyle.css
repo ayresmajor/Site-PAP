@@ -262,6 +262,13 @@ div#estrelas5 {
   right: 30vw;
   cursor: pointer;
 }
+#topo::after{
+  content: "";
+  left: -25%;
+  position: absolute;
+  width: 150%;
+  height: 150%;
+}
 
 @media (max-width: 1200px) {
   #artigo01 {

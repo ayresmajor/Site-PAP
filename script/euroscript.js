@@ -65,6 +65,7 @@ window.addEventListener("keyup", async function (event) {
     let palpite = Number(euroinput.value);
     euroinput.value = "";
     if (palpite >= 1 && palpite <= 5) {
+      document.getElementById("euroinput").blur();
       function seqrandom(numl, maxrand) {
         maxrand += 1;
         if( ! Number.isInteger(numl)){
@@ -104,7 +105,7 @@ window.addEventListener("keyup", async function (event) {
       for (c = 1; c <= palpite; c++) {
         this.window["estrelas" + c].style.display = "grid";
         this.window["estrelas" + c].scrollIntoView({ behavior: "smooth" });
-        await sleep(tempo)
+        await sleep(tempo * 3)
       }
       document.getElementById("topo").style.display="grid";
     } else {
