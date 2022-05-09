@@ -106,7 +106,7 @@ window.addEventListener("keyup", async function (event) {
       for (c = 1; c <= palpite; c++) {
         this.window["estrelas" + c].style.display = "grid";
         this.window["estrelas" + c].scrollIntoView({ behavior: "smooth" });
-        await sleep(tempo * 2)
+        c == palpite? await sleep(500): await sleep(tempo * 2)
       }
       topo.style.display="grid";
       topo.scrollIntoView({ behavior: "smooth" });
