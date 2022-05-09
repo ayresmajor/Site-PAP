@@ -184,6 +184,7 @@ div#estrelas5 {
   font-size: 2em;
   box-shadow: inset rgb(255 254 34) 3px 3px 20px 3px, #da7610 1px 0px 13px 0px;
   transition: all 0.5s;
+  cursor: default;
 }
 
 .numeros:hover {
