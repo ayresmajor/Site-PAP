@@ -4,7 +4,8 @@ function fechar() {
 }
 
 function restart() {
-  location.reload();
+  iniciar();
+  document.getElementById("recomecar").style.display="none"
 }
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -33,16 +34,28 @@ var t = 0;
 var resize = false;
 
 function iniciar() {
+  loading.removeAttribute('style');
+  button.removeAttribute('style');
+  intrucoes.removeAttribute('style');
+  fundo.removeAttribute('style');
+  menu.removeAttribute('style');
+  titulo.removeAttribute('style');
+  pedraimg.removeAttribute('style');
+  papelimg.removeAttribute('style');
+  tesouraimg.removeAttribute('style');
+  startgame.removeAttribute('style');
+  win.removeAttribute('style');
+  mobile = document.getElementById("mobile");
   resize = true;
   if (head.offsetWidth <= 1200) {
-    a = (head.offsetWidth - (head.offsetWidth / 13)) / 1200 
+    a = (head.offsetWidth - head.offsetWidth / 13) / 1200;
     document.querySelector(".allprograms").style.visibility = "hidden";
-    fundo.style.transform = `scale(${a})`
-    fundo.style.transformOrigin = "left top"
-    fundo.style.top = "-300px"
+    fundo.style.transform = `scale(${a})`;
+    fundo.style.transformOrigin = "left top";
+    fundo.style.top = "-300px";
     fundo.style.marginBottom = "-80vh";
-    fundo.style.marginRight = "-1000px"    
-    fundo.style.marginLeft = "0px"
+    fundo.style.marginRight = "-1000px";
+    fundo.style.marginLeft = "0px";
   }
   fundo.style.display = "block";
   fundo.scrollIntoView({ behavior: "smooth" });
