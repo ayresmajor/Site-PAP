@@ -32,9 +32,9 @@ var t = 0;
 var resize = false;
 function restart() {
   document.querySelector(".button-49").style.display = "none";
+  t = 0;
   iniciar();
   start();
-  t = 0;
 }
 
 function iniciar() {
