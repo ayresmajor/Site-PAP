@@ -24,7 +24,7 @@ h3 {
   padding-bottom: 30px;
   height: 100%;
   width: 100vw;
-  transition: all 0.2s;
+  transition: all 0.3s;
   box-shadow:  #0000009c 23px 21px 62px 20px;
 }
 
@@ -50,6 +50,14 @@ div.tituloimg img {
   margin: 20px;
   border-radius: 30%;
   animation: roda 2s alternate infinite;
+}
+
+#pedraimg {
+  margin: 55px 20px
+}
+
+#tesouraimg {
+  margin: 35px 20px
 }
 
 label#pedra,label#papel,label#tesoura{
@@ -341,7 +349,7 @@ div#intrucoes{
 
 
 .button-49{
-  visibility: hidden;
+  display:none;
   transition: all 1s;
   animation: pulse 1s infinite;
   margin-top: 110px;

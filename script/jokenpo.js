@@ -3,11 +3,6 @@ function fechar() {
   location.reload();
 }
 
-function restart() {
-  iniciar();
-  document.getElementById("recomecar").style.display="none"
-}
-
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 function randint(min, max) {
@@ -20,32 +15,29 @@ let intrucoes = document.getElementById("intrucoes");
 let fundo = document.getElementById("fundo");
 let menu = document.getElementById("menu");
 let titulo = document.getElementById("titulo");
+let tituloimg  = document.querySelector(".tituloimg")
 let pedraimg = document.getElementById("pedraimg");
 let papelimg = document.getElementById("papelimg");
 let tesouraimg = document.getElementById("tesouraimg");
+let pedra = document.getElementById("pedra");
+let papel = document.getElementById("papel");
+let tesoura = document.getElementById("tesoura");
 let startgame = document.getElementById("startgame");
 let win = document.getElementById("win");
-let mobile = document.getElementById("mobile");
 let head = document.getElementById("head");
 let escolhauto = "";
 var jogador = 7;
 let computador = randint(0, 3);
 var t = 0;
 var resize = false;
+function restart() {
+  document.querySelector(".button-49").style.display = "none";
+  iniciar();
+  start();
+  t = 0;
+}
 
 function iniciar() {
-  loading.removeAttribute('style');
-  button.removeAttribute('style');
-  intrucoes.removeAttribute('style');
-  fundo.removeAttribute('style');
-  menu.removeAttribute('style');
-  titulo.removeAttribute('style');
-  pedraimg.removeAttribute('style');
-  papelimg.removeAttribute('style');
-  tesouraimg.removeAttribute('style');
-  startgame.removeAttribute('style');
-  win.removeAttribute('style');
-  mobile = document.getElementById("mobile");
   resize = true;
   if (head.offsetWidth <= 1200) {
     a = (head.offsetWidth - head.offsetWidth / 13) / 1200;
@@ -68,10 +60,26 @@ function resizeListener() {
   }
 }
 async function start() {
+  fundo.style.animation = "none"
+  loading.removeAttribute('style');
+  button.removeAttribute('style');
+  intrucoes.removeAttribute('style');
+  menu.removeAttribute('style');
+  titulo.removeAttribute('style');
+  pedraimg.removeAttribute('style');
+  papelimg.removeAttribute('style');
+  tesouraimg.removeAttribute('style');
+  pedra.removeAttribute('style');
+  papel.removeAttribute('style');
+  tesoura.removeAttribute('style');
+  startgame.removeAttribute('style');
+  win.removeAttribute('style');
   button.style.display = "none";
+  fundo.style.backgroundColor = "rgba(0, 0, 0.9)";
   await sleep(500);
   fundo.style.backgroundColor = "rgba(0, 0, 0, 1)";
   intrucoes.style.display = "flex";
+  intrucoes.innerText = "PEDRA";
   await sleep(500);
   intrucoes.innerText = "PAPEL";
   await sleep(750);
@@ -129,22 +137,22 @@ async function start() {
 
 function entrar(clickedid) {
   let algo = document.getElementById(clickedid);
-  algo.style.animation = "aumentartxt 1500ms forwards";
+  algo.style.animation = "aumentartxt 500ms forwards";
   if (clickedid == "pedra" || clickedid == "pedraimg") {
     pedraimg.style.animation =
-      "roda 2s alternate infinite, shadowin 1000ms forwards";
+      "roda 2s alternate infinite, shadowin 500ms forwards";
   } else if (clickedid == "papel" || clickedid == "papelimg") {
     papelimg.style.animation =
-      "roda 2s alternate infinite, shadowin 1000ms forwards";
+      "roda 2s alternate infinite, shadowin 500ms forwards";
   } else {
     tesouraimg.style.animation =
-      "roda 2s alternate infinite, shadowin 1000ms forwards";
+      "roda 2s alternate infinite, shadowin 500ms forwards";
   }
 }
 
 function sair(clickedid) {
   let algo = document.getElementById(clickedid);
-  algo.style.animation = "diminuirtxt 1500ms forwards";
+  algo.style.animation = "diminuirtxt 1000ms forwards";
   if (clickedid == "pedra" || clickedid == "pedraimg") {
     pedraimg.style.animation =
       "roda 2s alternate infinite, shadowout 1500ms forwards";
@@ -158,18 +166,6 @@ function sair(clickedid) {
 }
 async function select(clickedid) {
   t = 20;
-  pedra.setAttribute("onmouseleave", "");
-  papel.setAttribute("onmouseleave", "");
-  tesoura.setAttribute("onmouseleave", "");
-  pedra.setAttribute("onmouseenter", "");
-  papel.setAttribute("onmouseenter", "");
-  tesoura.setAttribute("onmouseenter", "");
-  pedraimg.setAttribute("onmouseleave", "");
-  papelimg.setAttribute("onmouseleave", "");
-  tesouraimg.setAttribute("onmouseleave", "");
-  pedraimg.setAttribute("onmouseenter", "");
-  papelimg.setAttribute("onmouseenter", "");
-  tesouraimg.setAttribute("onmouseenter", "");
   if (clickedid == "pedra" || clickedid == "pedraimg") {
     jogador = 0;
   } else if (clickedid == "papel" || clickedid == "papelimg") {
@@ -205,23 +201,16 @@ async function jokenpo(computer, user, selected) {
   if (selected == "pedra") {
     pedra.style.color = "red";
     pedraimg.style.animation = "slide 2s forwards, roda 2s alternate infinite";
-    papelimg.style.animation = "fadeout 1500ms forwards";
-    tesouraimg.style.animation = "fadeout 1500ms forwards";
     papelimg.style.display = "none";
     tesouraimg.style.display = "none";
   } else if (selected == "papel") {
     papel.style.color = "red";
     papelimg.style.animation = "slide 2s forwards, roda 2s alternate infinite";
-    pedraimg.style.animation = "fadeout 1500ms forwards";
-    tesouraimg.style.animation = "fadeout 1500ms forwards";
     pedraimg.style.display = "none";
     tesouraimg.style.display = "none";
   } else {
     tesoura.style.color = "red";
-    tesouraimg.style.animation =
-      "slide 2s forwards, roda 2s alternate infinite";
-    papelimg.style.animation = "fadeout 1500ms forwards";
-    pedraimg.style.animation = "fadeout 1500ms forwards";
+    tesouraimg.style.animation = "slide 2s forwards, roda 2s alternate infinite";
     papelimg.style.display = "none";
     pedraimg.style.display = "none";
   }
@@ -272,5 +261,5 @@ async function jokenpo(computer, user, selected) {
   };
   Object.assign(intrucoes.style, styles);
   intrucoes.innerHTML = `${resultado}, o Jokenpo jogou ${rescomp}`;
-  document.querySelector(".button-49").style.visibility = "visible";
+  document.querySelector(".button-49").style.display = "grid";
 }
