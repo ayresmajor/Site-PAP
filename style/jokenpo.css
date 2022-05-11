@@ -115,6 +115,7 @@ div#intrucoes{
   white-space: nowrap;
   padding: 0px;
   animation: tpulse 1500ms infinite;
+  cursor: default;
 }
 #loadingjokenpo {
   position:  relative;
