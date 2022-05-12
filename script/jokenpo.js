@@ -33,6 +33,7 @@ var resize = false;
 function restart() {
   document.querySelector(".button-49").style.display = "none";
   t = 0;
+  computador = randint(0, 3);
   iniciar();
   start();
 }
