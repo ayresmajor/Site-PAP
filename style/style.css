@@ -121,6 +121,7 @@ header > div {
   min-width: 300px;
   max-width: 1600px;
 }
+
 header > div h1 {
   position: relative;
   top: 9px;
