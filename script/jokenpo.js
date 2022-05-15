@@ -25,12 +25,20 @@ let tesoura = document.getElementById("tesoura");
 let startgame = document.getElementById("startgame");
 let win = document.getElementById("win");
 let head = document.getElementById("head");
+let nvitoria = document.getElementById("nvitoria");
+let nderrota = document.getElementById("nderrota");
+let nempate = document.getElementById("nempate");
 let escolhauto = "";
 var jogador = 7;
 let computador = randint(0, 3);
 var t = 0;
+let vitor = 0;
+let derrot = 0;
+let empat = 0;
+
 var resize = false;
 function restart() {
+  document.getElementById("stats").style.display = "block";
   document.querySelector(".button-49").style.display = "none";
   t = 0;
   computador = randint(0, 3);
@@ -251,10 +259,16 @@ async function jokenpo(computer, user, selected) {
   }
   if (resultado == "Venceste") {
     win.style.display = "flex";
+    vitor += 1;
+    nvitoria.innerHTML = `Nº Vitória: ${vitor}`
   } else if (resultado == "Perdeste") {
     fundo.style.animation = "derrota 1200ms forwards";
+    derrot += 1;
+    nderrota.innerHTML = `Nº Derrota: ${derrot}`
   } else {
     fundo.style.animation = "empate 1200ms forwards";
+    empat += 1;
+    nempate.innerHTML = `Nº Empate: ${empat}`
   }
   let styles = {
     transition: "all 1s",
