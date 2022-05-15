@@ -168,6 +168,7 @@ header > div nav a:hover,.navbar a:hover, .dropdown:hover .dropbtn{
   background-color: inherit;
   font-family: inherit;
   transition: all 0.5s;
+  z-index: 99;
 }
 .dropdown-content {
   display: none;

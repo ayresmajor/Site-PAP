@@ -66,7 +66,9 @@ window.addEventListener("keyup", async function (event) {
     let palpite = Number(euroinput.value);
     euroinput.value = "";
     if (palpite >= 1 && palpite <= 5) {
+      if(modo != "automatico"){
       document.getElementById("euroinput").blur();
+      }
       function seqrandom(numl, maxrand) {
         maxrand += 1;
         if( ! Number.isInteger(numl)){
