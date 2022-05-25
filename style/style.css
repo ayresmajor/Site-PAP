@@ -196,6 +196,8 @@ header > div nav a:hover,.navbar a:hover, .dropdown:hover .dropbtn{
 }
 .pro-euro{
   font-family: 'star';
+  padding: 0px;
+  padding-left: 15px;
 }
 .pro-jok{
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
